@@ -244,3 +244,7 @@ If a path  $\pmb{Q}$ of length $n | n>2$ is given (i.e. more than just $Q_{init}
 ***
 ### References
 [1] Biagiotti, L., & Melchiorri, C. (2009). _[Trajectory Planning for Automatic Machines and Robots](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)_. Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+***
+### Discussion
+Please feel free to start a discussion [on GitHub](https://github.com/slater1/blog/issues).
