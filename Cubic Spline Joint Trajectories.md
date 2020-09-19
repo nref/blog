@@ -44,7 +44,7 @@ We start by finding the coefficients $A$, $B$, $C$, and $D$.
 $$
 \begin{aligned}
 Duration &=  \textit{(To be Determined)} \\
-Displacement &= Q_{final} - Q_{init} = \pi/2 - 0 \\
+Displacement &= Q_{final} - Q_{init} \\
 A &= \frac{(2  \cdot  -Displacement / Duration + V_{init} + V_{final})}{Duration^2} \\
 B &= \frac{(3  \cdot  Displacement / Duration - 2  \cdot  V_{init} - V_{final})}{Duration} \\
 C &= V_{init} \\
