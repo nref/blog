@@ -12,7 +12,7 @@ Q_{final} &= \pi/2
 \end{aligned}
 $$
 
-[![](https://1.bp.blogspot.com/-8IalrglE5Nc/X1mD2eoTd5I/AAAAAAAAJ44/PskYs1aCz1IujjHN3hEVlFH1KEJmf9iNACLcBGAsYHQ/w640-h500/joint0_noframe.png)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
+[![](https://drive.google.com/uc?export=view&id=1m5GK-sDcSwYTzq65qyWgDwImKPglIG3j)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
 _Figure: The joint start and goal_
 
 We don't care how long it takes, but the joint must start from rest and and end at rest.
@@ -137,7 +137,7 @@ We can see that the joint at  $t = 22.5s$ has position $Q = \pi/2 \>rad$ and vel
 ### Task Space Constraints
 Let's add another constraint. Let's say the frame attached to the tip of the joint has maximum translational speed and angular velocity components.
 
-[![](https://1.bp.blogspot.com/-7ti74cf_hdQ/X1mCFwBe9aI/AAAAAAAAJ4s/JsYbHe3q_nEMepjm2Sbt3yL6ujY2AVCYwCLcBGAsYHQ/w640-h500/joint0.png)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
+[![](https://drive.google.com/uc?export=view&id=1SyYM1NDXyL0JCjo4HGCioj08uTcVwQxJ)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
 _Figure: Diagram of a frame at the joint tip. The frame is right-handed, i.e. Z points out of the page._
 
 $$
@@ -235,7 +235,11 @@ The maximum task space ratio is $16.7$, which is less than the previous value of
 
 ***
 ### Multiple Joints
-The same approach applies to robots with more than one joint. In this case, $a_{scale}$ and $v_{scale}$ must be calculated for each joint. The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of these ratios yields the optimal trajectory duration.
+The same approach applies to robots with more than one joint. 
+
+In this case, if we have $m$ joints, then we will have $m$ cubic splines, and $a_{scale}$ and $v_{scale}$ must be calculated for each joint. 
+
+The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.
 
 ***
 ### Longer Paths
