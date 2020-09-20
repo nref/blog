@@ -70,9 +70,9 @@ $$
   
 Plugging these values back into the cubic equations, we can see in the figure that the joint at $t = 1s$ has position $Q = \pi/2\>rad$ and velocity $v = 0\>rad/s$.
 
-![](https://1.bp.blogspot.com/-QsZzP5zjyfQ/X1lNqmo_-SI/AAAAAAAAJ4U/iXMfNwBC4Vga8TI-nzXIiMiCp22SadpxwCLcBGAsYHQ/w640-h522/demos1.png)
-_Figure: Joint Position, Velocity, and Acceleration over Time_ 
-[Plot it on Desmos](https://www.desmos.com/calculator/nh0v7rgioh)
+<iframe src="https://www.desmos.com/calculator/nmbmjya7ds?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+_Figure: Joint Position, Velocity, and Acceleration over Time_
 
 ***
 ### Joint Constraints
@@ -128,9 +128,9 @@ D &= 0 \\
 \end{aligned}
 $$
 
-![](https://1.bp.blogspot.com/-pj5O4FjVstI/X1lz3sIkvzI/AAAAAAAAJ4g/Cxb97ORkT3UCbztGnn8OXYguSFXXkN5lgCLcBGAsYHQ/w640-h322/desmos2.png)
+<iframe src="https://www.desmos.com/calculator/uarkx6wols?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 _Figure: Scaled Joint Position, Velocity, and Acceleration over Time_
-[Plot it on Desmos](https://www.desmos.com/calculator/bht7zrbuia)
 
 We can see that the joint at  $t = 22.5s$ has position $Q = \pi/2 \>rad$ and velocity $v = 0 \>rad/s$. The maximum velocity is at $t = 11.25s$ with $v = 0.104719755 \>rad/s$. The maximum acceleration is at $t = 0$ and $t = 22.5s$ with $a = 0.0186 \>rad/s^2$ and $a = -0.0186 \>rad/s^2$, respectively. The joint velocity and acceleration constraints are satisfied. $\blacksquare$
 
@@ -304,9 +304,9 @@ We now find the maximum velocity, acceleration, and resulting time scale for eac
 
 *Note:* The topic of finding polynomial minima or maxima is well-covered elsewhere and can be deferred to a [good algebra library](https://en.wikipedia.org/wiki/Comparison_of_linear_algebra_libraries). Here, we just use Desmos.
 
-![](https://drive.google.com/uc?export=view&id=1pYxo0m9rgZbs7JSitgeHaE-o2354oLjI)
+<iframe src="https://www.desmos.com/calculator/lt2t9hn9jd?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 _Figure: Joint-space velocities, two-joint manipulator._
-[Plot it on Desmos](https://www.desmos.com/calculator/dcezjybfk6)
 
 First Joint
 
@@ -336,9 +336,8 @@ Without considering task space velocity, the time-optimal duration is $1s \cdot 
 
 Let's now consider the space velocity.
 
-![](https://drive.google.com/uc?export=view&id=1H6OUq9jyBM7vgYhJ1dpnOhpDQ3jyVaXC)
+<iframe src="https://www.desmos.com/calculator/bkieqkwpew?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 _Figure: Task-space velocities, two-joint manipulator._
-[Plot it on Desmos](https://www.desmos.com/calculator/0hdmdasviv)
 
 $$
 \begin{aligned}
