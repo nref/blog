@@ -156,7 +156,7 @@ $$
 
 Similar to joint space constraints, we can meet task space constraints by scaling the duration of the trajectory, but we need to know the relation from joint space to task space.
 
-The relation from joint space to task space is known as  *[forward kinematics](https://en.wikipedia.org/wiki/Forward_kinematic)*. Conversion from joint position to task space position is  *forward position*, and conversion from joint velocity to task space velocity is  *forward velocity*. This topic is widely covered elsewhere.
+The relation from joint space to task space is known as  *[forward kinematics](https://en.wikipedia.org/wiki/Forward_kinematics)*. Conversion from joint position to task space position is  *forward position*, and conversion from joint velocity to task space velocity is  *forward velocity*. This topic is widely covered elsewhere.
 
 Let's say our robot joint has position $Q$, angular velocity $\dot{Q}$ (also known as $V(t)$), and radius $r$ from its center of rotation to the tip frame. Then the following relations apply:
 
