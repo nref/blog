@@ -8,7 +8,7 @@ Say we have a robotic arm with one revolute joint, and we want to rotate its joi
 $$
 \begin{aligned}
 Q_{init} &= 0 \\
-Q_{final} &= \pi/2
+Q_{final} &= \pi/2 \\
 \end{aligned}
 $$
 
@@ -20,7 +20,7 @@ We don't care how long it takes, but the joint must start from rest and and end 
 $$
 \begin{aligned}
 V_{init} &= 0 \\
-V_{final} &= 0
+V_{final} &= 0 \\
 \end{aligned}
 $$
 
@@ -71,7 +71,8 @@ $$
 Plugging these values back into the cubic equations, we can see in the figure that the joint at $t = 1s$ has position $Q = \pi/2\>rad$ and velocity $v = 0\>rad/s$.
 
 ![](https://1.bp.blogspot.com/-QsZzP5zjyfQ/X1lNqmo_-SI/AAAAAAAAJ4U/iXMfNwBC4Vga8TI-nzXIiMiCp22SadpxwCLcBGAsYHQ/w640-h522/demos1.png)
-_Figure: Joint Position, Velocity, and Acceleration over Time_
+_Figure: Joint Position, Velocity, and Acceleration over Time_ 
+[Plot it on Desmos](https://www.desmos.com/calculator/nh0v7rgioh)
 
 ***
 ### Joint Constraints
@@ -92,7 +93,7 @@ $$
 \begin{aligned}
 V_{max} &=  3\pi/4, t = 0.5s \\
 A_{max} &=  3\pi, t = 0s \\
-           &= -3\pi, t = 1s
+           &= -3\pi, t = 1s \\
 \end{aligned}
 $$
   
@@ -129,6 +130,7 @@ $$
 
 ![](https://1.bp.blogspot.com/-pj5O4FjVstI/X1lz3sIkvzI/AAAAAAAAJ4g/Cxb97ORkT3UCbztGnn8OXYguSFXXkN5lgCLcBGAsYHQ/w640-h322/desmos2.png)
 _Figure: Scaled Joint Position, Velocity, and Acceleration over Time_
+[Plot it on Desmos](https://www.desmos.com/calculator/bht7zrbuia)
 
 We can see that the joint at  $t = 22.5s$ has position $Q = \pi/2 \>rad$ and velocity $v = 0 \>rad/s$. The maximum velocity is at $t = 11.25s$ with $v = 0.104719755 \>rad/s$. The maximum acceleration is at $t = 0$ and $t = 22.5s$ with $a = 0.0186 \>rad/s^2$ and $a = -0.0186 \>rad/s^2$, respectively. The joint velocity and acceleration constraints are satisfied. $\blacksquare$
 
@@ -156,7 +158,7 @@ Similar to joint space constraints, we can meet task space constraints by scalin
 
 The relation from joint space to task space is known as  *[forward kinematics](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)*. Conversion from joint position to task space position is  *forward position*, and conversion from joint velocity to task space velocity is  *forward velocity*. This topic is widely covered elsewhere.
 
-Let's say our robot joint has position $Q$, angular velocity $\dot{Q}$, and radius $r$ from its center of rotation to the tip frame. Then the following relations apply:
+Let's say our robot joint has position $Q$, angular velocity $\dot{Q}$ (also known as $V(t)$), and radius $r$ from its center of rotation to the tip frame. Then the following relations apply:
 
 $$
 \begin{aligned}
@@ -167,7 +169,7 @@ R_x &= 0 \\
 R_y &= 0 \\
 R_z &= Q \\
 \\
-\dot{X} &= \dot{Q} \cdot r \cdot sin(Q) \\
+\dot{X} &= -\dot{Q} \cdot r \cdot sin(Q) \\
 \dot{Y} &= \dot{Q} \cdot r \cdot cos(Q) \\
 \dot{Z} &= 0 \\
 \dot{Rx} &= 0 \\
@@ -196,12 +198,14 @@ $$
 X &= 0m \\
 Y &= 1m \\
 R_z &= 0m \\
-\dot{X} &= 1 \>m/s \\
+\dot{X} &= -1 \>m/s \\
 \dot{Y} &= 0 \>m/s \\
 \dot{R_z} &= \pi \> rad/s \\
 \end{aligned}
 $$
-  
+ 
+For details, see this [video lecture](https://robotacademy.net.au/masterclass/robotic-arms-and-forward-kinematics/?lesson=260).
+ 
 Going back to our 1-second trajectory, since the joint velocity is a parabola, which is symmetric, the maximum occurs at any of $t = 0$, $t = 0.5$, or $t = 1$. Since $V_{init} = V_{final} = 0$, the maximum occurs at $t = 0.5$. This results in the following task space velocities:
 
 $$
@@ -240,6 +244,112 @@ In this case, if we have $m$ joints, then we will have $m$ cubic splines, and $a
 
 The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.
 
+#### Example
+Consider adding a second joint to the previous example to create a two-joint manipulator.
+
+![](https://drive.google.com/uc?export=view&id=1YFmbgUtKW6srb9yDHVx6TMgpF5-3maH1)
+_Figure: A robot with two joints._
+
+The first spline is unchanged.
+
+$$
+\begin{array}{c}
+\begin{aligned}
+Q_{init_0} &= 0 & A_0 &= -\pi \\
+Q_{final_0} &= \pi/2  & B_0 &= 3\pi/2 \\
+V_{init_0} &= 0 & C_0 &= 0 \\
+V_{final_0} &= 0 & D_0 &= 0 \\
+\end{aligned}
+\end{array}
+$$
+
+Here is the second spline. 
+
+$$
+\begin{array}{c}
+\begin{aligned}
+Q_{init_1} &= \pi/2 & A_1 &=2\pi \\
+Q_{final_1} &= -\pi/2 & B_1 &= -3\pi \\
+V_{init_1} &= 0 & C_1 &= 0 \\
+V_{final_1} &= 0 & D_1 &= \pi/2 \\
+\end{aligned}
+\end{array}
+$$
+
+Here is the relation of joint space to task space.
+
+$$
+\begin{aligned}
+X &= r_1 \cdot cos(Q_1) + r_2 \cdot cos(Q_1 + Q_2) \\
+Y &= r_1 \cdot sin(Q_1) + r_2 \cdot sin(Q_1 + Q_2) \\
+Z &= 0 \\
+R_x &= 0 \\
+R_y &= 0 \\
+R_z &= Q_1 + Q_2 \\
+\\
+\dot{X} &= -\dot{Q_1} \cdot r_1 \cdot sin(Q_1) - \dot{Q_1} \cdot \dot{Q_2} \cdot r_2 \cdot sin(Q_1 + Q_2) \\
+\dot{Y} &= \dot{Q_1} \cdot r_1 \cdot cos(Q_1) + \dot{Q_1} \cdot \dot{Q_2} \cdot r_2 \cdot cos(Q_1 + Q_2)\\
+\dot{Z} &= 0 \\
+\dot{Rx} &= 0 \\
+\dot{Ry} &= 0 \\
+\dot{Rz} &= \dot{Q_1} + \dot{Q_2}\\
+\end{aligned}
+$$
+
+For details, see the derivation of position [here](https://robotacademy.net.au/masterclass/robotic-arms-and-forward-kinematics/?lesson=262) and the derivation of velocity [here](https://robotacademy.net.au/masterclass/velocity-kinematics-in-2d/?lesson=321).
+
+We now find the maximum velocity, acceleration, and resulting time scale for each joint.
+
+*Note:* The topic of finding polynomial minima or maxima is well-covered elsewhere and can be deferred to a [good algebra library](https://en.wikipedia.org/wiki/Comparison_of_linear_algebra_libraries). Here, we just use Desmos.
+
+![](https://drive.google.com/uc?export=view&id=1pYxo0m9rgZbs7JSitgeHaE-o2354oLjI)
+_Figure: Joint-space velocities, two-joint manipulator._
+[Plot it on Desmos](https://www.desmos.com/calculator/dcezjybfk6)
+
+First Joint
+
+$$
+\begin{aligned}
+V_{1_{max}} &=  3\pi/4, t = 0.5s \\
+A_{1_{max}} &=  3\pi, t = 0s \\
+           &= -3\pi, t = 1s \\
+V_{1_{scale}} &= \frac{|3π/4|}{0.10471975}  = 22.5 \\
+A_{1_{scale}} &= \sqrt{\frac{|3π|}{0.0523599}}  = 13.417 \\
+ \end{aligned}
+$$
+
+Second Joint
+
+$$
+\begin{aligned}
+V_{2_{max}} &=  3\pi/2, t = 0.5s \\
+A_{2_{max}} &=  6\pi, t = 0s \\
+           &= -6\pi, t = 1s \\
+V_{2_{scale}} &= \frac{|3π/2|}{0.10471975}  = 45 \\
+A_{2_{scale}} &= \sqrt{\frac{|6π|}{0.0523599}}  = 18.974 \\
+\end{aligned}
+$$
+
+Without considering task space velocity, the time-optimal duration is $1s \cdot max(22.5, 13.417, 45, 18.974)=45s$. Clearly, since the second joint has twice as far to rotate as the first joint, it constrains the duration of the movement.
+
+Let's now consider the space velocity.
+
+![](https://drive.google.com/uc?export=view&id=1H6OUq9jyBM7vgYhJ1dpnOhpDQ3jyVaXC)
+_Figure: Task-space velocities, two-joint manipulator._
+[Plot it on Desmos](https://www.desmos.com/calculator/0hdmdasviv)
+
+$$
+\begin{aligned}
+\dot{X}_{max} &= |3.245|m/s, t=0.3624s \\
+\dot{Y}_{max} &= |-3.245|m/s, t=0.6376s \\
+\dot{R_z}_{max} &= -3\pi/4 rad/s, t=0.5s \\
+X_{ratio} &= 3245/100  = 32.45 \\
+Y_{ratio} &= 3245/100  = 32.45 \\
+R_{z_{ratio}} &= \frac{\frac{3\pi}{4} \>rad/s}{9°/s} = 15 \\
+\end{aligned}
+$$
+
+Since $32.45 > 45$,  the task space constraints dominate the joint space constraints. *The time-optimal duration is $1s \cdot max(45, 32.45, 15)=32.45s$.* $\blacksquare$
 ***
 ### Longer Paths
 If a path  $\pmb{Q}$ of length $n | n>2$ is given (i.e. more than just $Q_{init}$ and $Q_{final}$ are given), and if the joint begins and ends with zero velocity ($V_{init} = V_{final} = 0$), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated automatically following the method described by Melchiorri [1]. The $n-1$ resulting cubic splines must each be scaled by the method described previously, taking care to forward-propagate the resulting segment positions and velocities to not-yet scaled segments. Coverage of these algorithms is planned for a future blog post.
