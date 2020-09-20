@@ -26,7 +26,7 @@ $$
 
 ***
 ### Initial Solution
-We can satisfy these constraints by interpolating the joint position, velocity, and acceleration with a  [cubic spline](https://mathworld.wolfram.com/CubicSpline.htm),
+We can satisfy these constraints by interpolating the joint position, velocity, and acceleration with a  [cubic spline](https://mathworld.wolfram.com/CubicSpline.html),
 
 $$
 \begin{aligned}
