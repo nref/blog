@@ -12,7 +12,7 @@ Q_{final} &= \pi/2
 \end{aligned}
 $$
 
-[![](https://drive.google.com/uc?export=view&id=1m5GK-sDcSwYTzq65qyWgDwImKPglIG3j)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
+![](https://drive.google.com/uc?export=view&id=1m5GK-sDcSwYTzq65qyWgDwImKPglIG3j)
 _Figure: The joint start and goal_
 
 We don't care how long it takes, but the joint must start from rest and and end at rest.
@@ -26,7 +26,7 @@ $$
 
 ***
 ### Initial Solution
-We can satisfy these constraints by interpolating the joint position, velocity, and acceleration with a  [cubic spline](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#),
+We can satisfy these constraints by interpolating the joint position, velocity, and acceleration with a  [cubic spline](https://mathworld.wolfram.com/CubicSpline.htm),
 
 $$
 \begin{aligned}
@@ -70,8 +70,7 @@ $$
   
 Plugging these values back into the cubic equations, we can see in the figure that the joint at $t = 1s$ has position $Q = \pi/2\>rad$ and velocity $v = 0\>rad/s$.
 
-[![](https://1.bp.blogspot.com/-QsZzP5zjyfQ/X1lNqmo_-SI/AAAAAAAAJ4U/iXMfNwBC4Vga8TI-nzXIiMiCp22SadpxwCLcBGAsYHQ/w640-h522/demos1.png)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
-
+![](https://1.bp.blogspot.com/-QsZzP5zjyfQ/X1lNqmo_-SI/AAAAAAAAJ4U/iXMfNwBC4Vga8TI-nzXIiMiCp22SadpxwCLcBGAsYHQ/w640-h522/demos1.png)
 _Figure: Joint Position, Velocity, and Acceleration over Time_
 
 ***
@@ -128,7 +127,7 @@ D &= 0 \\
 \end{aligned}
 $$
 
-[![](https://1.bp.blogspot.com/-pj5O4FjVstI/X1lz3sIkvzI/AAAAAAAAJ4g/Cxb97ORkT3UCbztGnn8OXYguSFXXkN5lgCLcBGAsYHQ/w640-h322/desmos2.png)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
+![](https://1.bp.blogspot.com/-pj5O4FjVstI/X1lz3sIkvzI/AAAAAAAAJ4g/Cxb97ORkT3UCbztGnn8OXYguSFXXkN5lgCLcBGAsYHQ/w640-h322/desmos2.png)
 _Figure: Scaled Joint Position, Velocity, and Acceleration over Time_
 
 We can see that the joint at  $t = 22.5s$ has position $Q = \pi/2 \>rad$ and velocity $v = 0 \>rad/s$. The maximum velocity is at $t = 11.25s$ with $v = 0.104719755 \>rad/s$. The maximum acceleration is at $t = 0$ and $t = 22.5s$ with $a = 0.0186 \>rad/s^2$ and $a = -0.0186 \>rad/s^2$, respectively. The joint velocity and acceleration constraints are satisfied. $\blacksquare$
@@ -137,7 +136,7 @@ We can see that the joint at  $t = 22.5s$ has position $Q = \pi/2 \>rad$ and vel
 ### Task Space Constraints
 Let's add another constraint. Let's say the frame attached to the tip of the joint has maximum translational speed and angular velocity components.
 
-[![](https://drive.google.com/uc?export=view&id=1SyYM1NDXyL0JCjo4HGCioj08uTcVwQxJ)](https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#)
+![](https://drive.google.com/uc?export=view&id=1SyYM1NDXyL0JCjo4HGCioj08uTcVwQxJ)
 _Figure: Diagram of a frame at the joint tip. The frame is right-handed, i.e. Z points out of the page._
 
 $$
