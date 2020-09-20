@@ -250,6 +250,8 @@ Consider adding a second joint to the previous example to create a two-joint man
 ![](https://drive.google.com/uc?export=view&id=1YFmbgUtKW6srb9yDHVx6TMgpF5-3maH1)
 _Figure: A robot with two joints._
 
+[Simulate this robot on Desmos](https://www.desmos.com/calculator/mnga15rnud). Use the $q_1$ and $q_2$ sliders.
+
 The first spline is unchanged.
 
 $$
