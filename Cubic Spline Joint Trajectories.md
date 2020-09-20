@@ -245,7 +245,14 @@ In this case, if we have $m$ joints, then we will have $m$ cubic splines, and $a
 The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.
 
 #### Example
-Consider adding a second joint to the previous example to create a two-joint manipulator.
+Consider adding a second joint to the previous example to create a two-joint manipulator. This joint has the same velocity and acceleration limits.
+
+$$
+\begin{aligned}
+V_{limit} &= 0.104719755 \> rad/s \\
+A_{limit} &= 0.0523599 \> rad/s^2
+\end{aligned}
+$$
 
 ![](https://drive.google.com/uc?export=view&id=1YFmbgUtKW6srb9yDHVx6TMgpF5-3maH1)
 _Figure: A robot with two joints._
@@ -351,7 +358,7 @@ R_{z_{ratio}} &= \frac{\frac{3\pi}{4} \>rad/s}{9°/s} = 15 \\
 \end{aligned}
 $$
 
-Since $32.45 > 45$,  the task space constraints dominate the joint space constraints. *The time-optimal duration is $1s \cdot max(45, 32.45, 15)=32.45s$.* $\blacksquare$
+Since $32.45 < 45$,  the joint space constraints dominate the task space constraints. *The time-optimal duration is $1s \cdot max(45, 32.45, 15)=45s$.* $\blacksquare$
 ***
 ### Longer Paths
 If a path  $\pmb{Q}$ of length $n | n>2$ is given (i.e. more than just $Q_{init}$ and $Q_{final}$ are given), and if the joint begins and ends with zero velocity ($V_{init} = V_{final} = 0$), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated automatically following the method described by Melchiorri [1]. The $n-1$ resulting cubic splines must each be scaled by the method described previously, taking care to forward-propagate the resulting segment positions and velocities to not-yet scaled segments. Coverage of these algorithms is planned for a future blog post.
