@@ -255,10 +255,10 @@ The first spline is unchanged.
 $$
 \begin{array}{c}
 \begin{aligned}
-Q_{init_0} &= 0 & A_0 &= -\pi \\
-Q_{final_0} &= \pi/2  & B_0 &= 3\pi/2 \\
-V_{init_0} &= 0 & C_0 &= 0 \\
-V_{final_0} &= 0 & D_0 &= 0 \\
+Q_{init_1} &= 0 & A_0 &= -\pi \\
+Q_{final_1} &= \pi/2  & B_0 &= 3\pi/2 \\
+V_{init_1} &= 0 & C_0 &= 0 \\
+V_{final_1} &= 0 & D_0 &= 0 \\
 \end{aligned}
 \end{array}
 $$
@@ -268,10 +268,10 @@ Here is the second spline.
 $$
 \begin{array}{c}
 \begin{aligned}
-Q_{init_1} &= \pi/2 & A_1 &=2\pi \\
-Q_{final_1} &= -\pi/2 & B_1 &= -3\pi \\
-V_{init_1} &= 0 & C_1 &= 0 \\
-V_{final_1} &= 0 & D_1 &= \pi/2 \\
+Q_{init_2} &= \pi/2 & A_1 &=2\pi \\
+Q_{final_2} &= -\pi/2 & B_1 &= -3\pi \\
+V_{init_2} &= 0 & C_1 &= 0 \\
+V_{final_2} &= 0 & D_1 &= \pi/2 \\
 \end{aligned}
 \end{array}
 $$
