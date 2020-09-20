@@ -334,7 +334,7 @@ $$
 
 Without considering task space velocity, the time-optimal duration is $1s \cdot max(22.5, 13.417, 45, 18.974)=45s$. Clearly, since the second joint has twice as far to rotate as the first joint, it constrains the duration of the movement.
 
-Let's now consider the space velocity.
+Let's now consider task space velocity.
 
 <iframe src="https://www.desmos.com/calculator/bkieqkwpew?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 _Figure: Task-space velocities, two-joint manipulator._
