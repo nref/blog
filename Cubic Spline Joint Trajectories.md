@@ -337,6 +337,7 @@ Without considering task space velocity, the time-optimal duration is $1s \cdot 
 Let's now consider task space velocity.
 
 <iframe src="https://www.desmos.com/calculator/bkieqkwpew?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 _Figure: Task-space velocities, two-joint manipulator._
 
 $$
