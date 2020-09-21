@@ -448,6 +448,7 @@ $$
 
 *Reminder*: There are $n-1$ splines interpolating $n$ control points (also called knots), and our indexing starts at $1$, not $0$. Therefore,  $i==1$ refers to the first spline, and $i == n-1$ refers to the last spline.
 
+*Aside:* [Here](https://github.com/roboticslibrary/rl/blob/cba76ed3e54676d430205a0dfdf03ce33ed3850c/src/rl/math/Spline.h#L108) is an example implementation of the above algorithm. 
 ##### Joint 1
 
 We solve for $V_{1_{intermediate}}$.
