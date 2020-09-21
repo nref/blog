@@ -70,7 +70,9 @@ $$
   
 Plugging these values back into the cubic equations, we can see in the figure that the joint at $t = 1s$ has position $Q = \pi/2\>rad$ and velocity $v = 0\>rad/s$.
 
+<center>
 <iframe src="https://www.desmos.com/calculator/nmbmjya7ds?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
 
 _Figure: Joint Position, Velocity, and Acceleration over Time_
 
@@ -128,7 +130,9 @@ D &= 0 \\
 \end{aligned}
 $$
 
+<center>
 <iframe src="https://www.desmos.com/calculator/uarkx6wols?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
 
 _Figure: Scaled Joint Position, Velocity, and Acceleration over Time_
 
@@ -311,11 +315,13 @@ We now find the maximum velocity, acceleration, and resulting time scale for eac
 
 *Note:* The topic of finding polynomial minima or maxima is well-covered elsewhere and can be deferred to a [good algebra library](https://en.wikipedia.org/wiki/Comparison_of_linear_algebra_libraries). Here, we just use Desmos.
 
+<center>
 <iframe src="https://www.desmos.com/calculator/lt2t9hn9jd?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
 
 _Figure: Joint-space velocities, two-joint manipulator._
 
-First Joint
+##### First Joint
 
 $$
 \begin{aligned}
@@ -327,7 +333,7 @@ A_{1_{scale}} &= \sqrt{\frac{|3π|}{0.0523599}}  = 13.417 \\
  \end{aligned}
 $$
 
-Second Joint
+##### Second Joint
 
 $$
 \begin{aligned}
@@ -343,7 +349,9 @@ Without considering task space velocity, the time-optimal duration is $1s \cdot 
 
 Let's now consider task space velocity.
 
+<center>
 <iframe src="https://www.desmos.com/calculator/bkieqkwpew?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
 
 _Figure: Task-space velocities, two-joint manipulator._
 
@@ -361,7 +369,221 @@ $$
 Since $32.45 < 45$,  the joint space constraints dominate the task space constraints. *The time-optimal duration is $1s \cdot max(45, 32.45, 15)=45s$.* $\blacksquare$
 ***
 ### Longer Paths
-If a path  $\pmb{Q}$ of length $n | n>2$ is given (i.e. more than just $Q_{init}$ and $Q_{final}$ are given), and if the joint begins and ends with zero velocity ($V_{init} = V_{final} = 0$), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated automatically following the method described by Melchiorri [1]. The $n-1$ resulting cubic splines must each be scaled by the method described previously, taking care to forward-propagate the resulting segment positions and velocities to not-yet scaled segments. Coverage of these algorithms is planned for a future blog post.
+If a path  $\pmb{Q}_j$ of length $n | n>2$ is given for joint $j$, i.e. intermediate points between $Q_{init}$ and $Q_{final}$ are given, and if the joint begins and ends with zero velocity ($V_{init} = V_{final} = 0$), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1]. 
+
+#### Example
+Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position. 
+
+$$
+\begin{aligned}
+\pmb{Q}_1 &= [Q_{1_{init}} Q_{1_{intermediate}} Q_{1_{final}}] \\
+\pmb{Q}_2 &= [Q_{2_{init}} Q_{2_{intermediate}} Q_{2_{final}}] \\
+\end{aligned}
+$$
+
+Let the given intermediate positions be
+
+$$
+\begin{aligned}
+Q_{1_{intermediate}} &= \pi/4 \\
+Q_{2_{intermediate}} &= 0
+\end{aligned}
+$$
+
+...along with the initial and final velocities.
+
+$$V_{1_{init}} = V_{1_{final}} = V_{2_{init}} = V_{2_{final}}= 0$$
+
+We must find the intermediate velocities $V_{1_{intermediate}}$ and $V_{2_{intermediate}}$. We can do this by solving the system
+
+$$
+A\pmb{v} = \pmb{c}
+$$
+
+where
+
+$$
+A=
+\begin{bmatrix}
+2(T_1+T_2) & T_1 \\
+T_3 &2(T_2+T_3) &T_2 \\
+& & \ddots \ddots \ddots \\
+& & &  T_{n-2} & 2(T_{n-3}+T_{n-2}) & T_{n-3} \\
+& & & & T_{n-1} & 2(T_{n-2} + T_{n-1})  
+\end{bmatrix}
+$$
+
+$$
+\pmb{v} =
+\begin{bmatrix}
+V_2 \\
+V_3 \\
+\vdots \\
+V_{n-2} \\
+V_{n-1} \\
+\end{bmatrix}
+$$
+
+$$
+\pmb{c} =
+\begin{bmatrix}
+\frac{3}{T_1T_2}[T_1^2(Q_3-Q_2)+T_2^2(Q_2-Q_1)] \pmb{- T_2V_1} \\
+\frac{3}{T_2T_3}[T_2^2(Q_4-Q_3)+T_3^2(Q_3-Q_2)] \\
+\vdots \\
+\frac{3}{T_{n-3}T_{n-2}}[T_{n-3}^2(Q_{n-1}-Q_{n-2})+T_{n-2}^2(Q_{n-2}-Q_{n-3})] \\
+\frac{3}{T_{n-2}T_{n-1}}[T_{n-2}^2(Q_{n}-Q_{n-1})+T_{n-1}^2(Q_{n-1}-Q_{n-2})] \pmb{- T_{n-2}V_n}\\
+\end{bmatrix}
+$$
+
+and
+
+$$
+\begin{aligned}
+T_i &= Duration_i & \text{// The duration of segment $i$} \\
+Q_i &= Q_{i_{init}} & \text{// The initial position of segment $i$ } \\
+V_i &= V_{i_{init}} & \text{// The initial velocity of segment $i$} \\
+V_n &= V_{n_{final}} & \text{ // The final velocity of the last segment} \\
+\end{aligned}
+$$
+
+*Reminder*: There are $n-1$ splines interpolating $n$ control points (also called knots), and our indexing starts at $1$, not $0$. Therefore,  $i==1$ refers to the first spline, and $i == n-1$ refers to the last spline.
+
+##### Joint 1
+
+We solve for $V_{1_{intermediate}}$.
+
+$$
+\begin{array}{ccc}
+\begin{bmatrix}
+2(T_1+T_2)
+\end{bmatrix}
+\begin{bmatrix} 
+V_{1_{intermediate}}
+\end{bmatrix} 
+&=
+\begin{bmatrix} 
+\frac{3}{T_1T_2}[T_1^2(Q_{1_{final}}-Q_{1_{intermediate}})+T_2^2(Q_{1_{intermediate}}-Q_{1_{init}})]-T_2 \cdot V_{1_{init}}
+\end{bmatrix}
+\end{array}
+$$
+
+If we choose again arbitrarily that each segment should have 1 second of duration, then $T_1=1$ and $T_2=2$. Then
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+2(1+1)
+\end{bmatrix}
+\begin{bmatrix} 
+V_{1_{intermediate}}
+\end{bmatrix} 
+&=
+\begin{bmatrix} 
+\frac{3}{1 \cdot 1}[1^2(\pi/2-\pi/4)+1^2(\pi/4-0)]-2\cdot 0 
+\end{bmatrix}
+\\
+4 \cdot V_{1_{intermediate}}&=
+\begin{bmatrix} 
+3[\pi/4+\pi/4] 
+\end{bmatrix}
+\\
+V_{1_{intermediate}} &= 3\pi/8 \ rad/s
+\end{aligned}
+$$
+
+We can now plot the two splines.
+
+$$
+\begin{aligned}
+Duration_{1 \rightarrow 2} &= 1 \\
+Displacement_{1 \rightarrow 2} &= \pi/4 \\
+A_{1 \rightarrow 2} &= \frac{(2 \cdot - \pi/4 + 0 + 3\pi/8)}{1^2} &&= -\pi/8\\
+B_{1 \rightarrow 2} &= \frac{(3 \cdot \pi/4 - 2 \cdot 0 - 3\pi/8)}{1} &&= 3\pi/8\\
+C_{1 \rightarrow 2} &= V_{init} &&= 0\\
+D_{1 \rightarrow 2} &= Q_{init} &&= 0\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Duration_{2 \rightarrow 3} &= 1 \\
+Displacement_{2 \rightarrow 3} &= \pi/4 \\
+A_{2 \rightarrow 3} &= \frac{(2 \cdot - \pi/4 + 3\pi/8 + 0)}{1^2} &&= -\pi/8\\
+B_{2 \rightarrow 3} &= \frac{(3 \cdot \pi/4 - 2 \cdot 3\pi/8 - 0)}{1} &&= 0\\
+C_{2 \rightarrow 3} &= V_{init} &&= 3\pi/8\\
+D_{2 \rightarrow 3} &= Q_{init} &&= \pi/4\\
+\end{aligned}
+$$
+
+<center>
+<iframe src="https://www.desmos.com/calculator/2vstdsov0i?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
+
+_Figure: Two cubic splines for joint 1. Can you see where they meet? Hint: Each spline has 1s of duration.$_
+
+We only see one spline, but there are actually two. The first spline is valid on the interval $t=(0,1)$, and the second spline is valid on the interval $t=(1,2)$. The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, it this movement could have been interpolated by a single spline. 
+
+##### Joint 2
+
+We solve for $V_{2_{intermediate}}$.
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+2(1+1)
+\end{bmatrix}
+\begin{bmatrix} 
+V_{2_{intermediate}}
+\end{bmatrix} 
+&=
+\begin{bmatrix} 
+\frac{3}{1 \cdot 1}[1^2(-\pi/2-0)+1^2(0-\pi/2)]-2\cdot 0 
+\end{bmatrix}
+\\
+4 \cdot V_{2_{intermediate}}&=
+\begin{bmatrix} 
+3[-\pi/2-\pi/2] 
+\end{bmatrix}
+\\
+V_{2_{intermediate}} &= -3\pi/4 \ rad/s
+\end{aligned}
+$$
+
+$$
+A = \frac{(2  \cdot  -Displacement / Duration + V_{init} + V_{final})}{Duration^2} \\
+B = \frac{(3  \cdot  Displacement / Duration - 2  \cdot  V_{init} - V_{final})}{Duration} \\
+$$
+
+$$
+\begin{aligned}
+Duration_{1 \rightarrow 2} &= 1 \\
+Displacement_{1 \rightarrow 2} &= -\pi/2 \\
+A_{1 \rightarrow 2} &= \frac{(2 \cdot - (- \pi/2) + 0 + (- 3\pi/4))}{1^2} &&= \pi/4\\
+B_{1 \rightarrow 2} &= \frac{(3 \cdot (- \pi/2) - 2 \cdot  0 - (-3\pi/4))}{1} &&= -3\pi/4\\
+C_{1 \rightarrow 2} &= V_{init} &&= 0\\
+D_{1 \rightarrow 2} &= Q_{init} &&= \pi/2\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Duration_{2 \rightarrow 3} &= 1 \\
+Displacement_{2 \rightarrow 3} &= -\pi/2 \\
+A_{2 \rightarrow 3} &= \frac{(2 \cdot - (-\pi/2) + (- 3\pi/4) + 0)}{1^2} &&= \pi/4\\
+B_{2 \rightarrow 3} &= \frac{(3 \cdot (- \pi/2) - 2 \cdot  (-3\pi/4) - 0)}{1} &&= 0\\
+C_{2 \rightarrow 3} &= V_{init} &&= -3\pi/4\\
+D_{2 \rightarrow 3} &= Q_{init} &&= 0\\
+\end{aligned}
+$$
+
+<center>
+<iframe src="https://www.desmos.com/calculator/ouilnuznpg?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
+
+_Figure: Two cubic splines for joint 2. They meet at $t=0s$._
+
+#### Scaling 
+The $m(n-1)$ resulting cubic splines ($m=$ number of joints, $n$ = number of control points) must each be scaled by the method described previously. For each segment $i$, $m$ ratios are calculated, one for each joint, and the task space ratio is calculated. The maximum ratio $r_{max}$ is selected. Then all $m$ splines at segment $i$ are scaled by $r_{max}$. Finally, the start and finish time of each subsequent spline $s_{j|j>i}$ must be increased by difference between the old duration and new duration, $T_{i_{new}} - T_{i_{old}}$ and the resulting polynomial coefficients recomputed.  This is called forward-propagation.
 
 ***
 ### References
