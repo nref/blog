@@ -581,7 +581,7 @@ $$
 <iframe src="https://www.desmos.com/calculator/ouilnuznpg?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 </center>
 
-_Figure: Two cubic splines for joint 2. They meet at $t=0s$._
+_Figure: Two cubic splines for joint 2. They meet at $t=1s$._
 
 #### Scaling Longer Trajectories
 
