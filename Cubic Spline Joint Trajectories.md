@@ -594,16 +594,16 @@ In order to satisfy joint-space and task-space velocity and acceleration limits,
 // task_space_limit: e.g. Xlim = 100, Ylim = 100mm/s, etc.
 void scale(segments, task_space_limit): 
 
-	foreach (segment in segments):
+  for segment in segments:
 
-	  joints = segment.joints // joints: container of size m
+    joints = segment.joints // joints: container of size m
 	  
-      // get_scale: See Joint Constraints section
-	  joint_space_ratio = joints.max(joint => joint.get_scale()) 
-	  task_space_ratio = joints.forward_velocity() / task_space_limit
-	  
-	  r_max = max(joint_space_ratio, task_space_ratio)
-	  scale(segment, r_max)
+    // get_scale: See Joint Constraints section
+    joint_space_ratio = joints.max(joint => joint.get_scale()) 
+    task_space_ratio = joints.forward_velocity() / task_space_limit
+	
+	r_max = max(joint_space_ratio, task_space_ratio)
+    scale(segment, r_max)
 ```
 *Above:* For each segment $i$, $m$ ratios are calculated, one for each joint, and the task space ratio is calculated. The maximum ratio $r_{max}$ is selected. Then all $m$ splines at segment $i$ are scaled by $r_{max}$.
 
