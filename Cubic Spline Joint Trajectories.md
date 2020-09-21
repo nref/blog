@@ -520,9 +520,9 @@ $$
 <iframe src="https://www.desmos.com/calculator/2vstdsov0i?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 </center>
 
-_Figure: Two cubic splines for joint 1. Can you see where they meet? Hint: Each spline has 1s of duration.$_
+_Figure: Two cubic splines for joint 1. Can you see where they meet? Hint: Each spline has 1s of duration._
 
-We only see one spline, but there are actually two. The first spline is valid on the interval $t=(0,1)$, and the second spline is valid on the interval $t=(1,2)$. The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, it this movement could have been interpolated by a single spline. 
+We only see one spline, but there are actually two. The first spline is valid on the interval $t=(0,1)$, and the second spline is valid on the interval $t=(1,2)$. The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline. 
 
 ##### Joint 2
 
