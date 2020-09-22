@@ -71,7 +71,7 @@ $$
 Plugging these values back into the cubic equations, we can see in the figure that the joint at $t = 1s$ has position $Q = \pi/2\>rad$ and velocity $v = 0\>rad/s$.
 
 <center>
-<iframe src="https://www.desmos.com/calculator/nmbmjya7ds?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/elrzqx76aq?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 </center>
 
 _Figure: Joint Position, Velocity, and Acceleration over Time_
