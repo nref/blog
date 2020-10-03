@@ -2,7 +2,7 @@ I'm a software developer, so the terms [pull request](https://opensource.stackex
 
 I'm also a Christian and go to a weekly Bible study.
 
-At Bible study,  after the lesson, and sometimes before, the group shares "prayer requests". This is a chance for participants to pray for each other or for people outside the group.
+At Bible study,  after the lesson, and sometimes before, the group shares "prayer requests". This is a chance for participants to pray for each other and for people outside the group.
 
 Unless requested not to, we record these prayer requests in a group messaging app. It can be hard to take down requests on a smartphone, so I often bring my laptop to keep up.
 
@@ -12,4 +12,4 @@ Not knowing what I had just said, I looked around and saw blank eyes looking bac
 
 "Guys, I mean _prayer_ requests!"
 
-Having my laptop open must have triggered something code-related in my brain.
+Having my laptop open may have triggered something code-related in my brain.
