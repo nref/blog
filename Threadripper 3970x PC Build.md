@@ -2,7 +2,7 @@ In April, I built a new PC out of these parts:
 
 - Threadripper 3970x
 - MSI TRX40 PRO
-- G.SKILL Trident Z Neo Series 64GB (2 x 32GB
+- G.SKILL Trident Z Neo Series 64GB (2 x 32GB)
 - EVGA GeForce GTX 1080 8GB GDDR5X
 - Samsung 970 EVO
 - EVGA 1000 GQ
@@ -17,4 +17,6 @@ Total cost: **$3863.98**
 
 **It is worth it?** I find the performance-per-dollar to be very high. I was pleased to see that Linus Torvalds himself [praised his 3970x](http://lkml.iu.edu/hypermail/linux/kernel/2005.3/00406.html). I find performance to be a good balance between the cheaper 3960x and the pricey 3990x. I literally could not find any prebuilt machines of this caliber, but if I could have, they would have easily cost over $6000.
 
-
+***
+### Discussion
+Please feel free to start a discussion [on GitHub](https://github.com/slater1/blog/issues).
