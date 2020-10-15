@@ -1,13 +1,9 @@
-### Privacy Policy
+# Privacy Policy
 
-Updated 2020-03-05  
+**Last Revision**: 2020-10-15 
   
-This is the privacy policy for some software I've written. It only applies if you use any of that software.  
+This privacy policy describes how our software collects and uses your data.
   
-***
-This privacy policy describes how your data is collected and used by this website.  
-  
-
 ### We may collect...
 
 -   Your real First and Last name, or whatever First and Last name you present to us.
