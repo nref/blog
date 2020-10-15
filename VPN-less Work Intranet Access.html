@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN-less Work Intranet Access</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#"><img src="https://1.bp.blogspot.com/-JI6Q_2wu2N8/Xt1dnYWZjWI/AAAAAAAAJ1A/un3jD3mqpaYu14wZ2CAtw0KhCszXzKaTQCK4BGAsYHg/d/SOCK5%2Bover%2BSSH.png" alt=""></a></p>
+<p>I recently started working for a European company. I live in the US, so they shipped me a work laptop, but it took almost a month after my start date to arrive. As a temporary solution, I was given RDP access to a virtual machine inside the corporate intranet, but with only two cores and a transatlantic ping, it immediately proved inadequate for software development.</p>
+<p>Meanwhile at home I have screaming a 32-core Threadripper with 64GB of memory, and I greatly prefer to develop on it. Now work has a VPN client, but IT policy prohibits connecting personal devices. Instead, I used the following procedure to set up the topology pictured above.</p>
+<p>After following this procedure, I can access the company’s TFS (Team Foundation Server), pull and push code with git, participate in pull requests, pull company NuGet packages, and reach team wiki pages, all from my personal machine.</p>
+<p><strong>Warning</strong>: The procedure described below may or may not violate your company’s IT policies. We’re creating what your company may view as an enterprise backdoor. Please verify with the appropriate people in your company before trying it.</p>
+<p><strong>Summary</strong></p>
+<p>This guide shows how to access work intranet resources e.g. TFS and wiki pages, from a home computer without a VPN.</p>
+<p><strong>SSH Server</strong></p>
+<p>On your home machine, setup an SSH server, optionally with public key auth. Here’s some help for Windows 10:</p>
+<blockquote>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://github.com/PowerShell/Win32-OpenSSH/releases</a></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse</a></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement</a></p>
+</blockquote>
+<p><strong>SSH Tunnel</strong></p>
+<p>Using Remote Desktop, on the remote virtual machine, create a SOCKS5 reverse SSH tunnel:</p>
+<blockquote>
+<p>ssh -R 6666 -i id_rsa <a href="mailto:johndoe@my-dns-name.com">johndoe@my-dns-name.com</a> -p 2323</p>
+<p>johndoe@localhost C:\Users\JohnDoe&gt;</p>
+</blockquote>
+<p>Notes:</p>
+<ul>
+<li>If you don’t have a DNS name (e.g. <a href="http://my-dns-name.com">my-dns-name.com</a>), use your public IP address. You can find it by Googling “my ip”.</li>
+</ul>
+<blockquote>
+<p>ssh -R 6666 -i id_rsa <a href="mailto:johndoe@111.111.111.111">johndoe@111.111.111.111</a> -p 2323</p>
+</blockquote>
+<ul>
+<li>If you haven’t set up public key auth, omit the -i argument. You will be prompted for a password.</li>
+</ul>
+<blockquote>
+<p>ssh -R 6666 <a href="mailto:johndoe@111.111.111.111">johndoe@111.111.111.111</a> -p 2323</p>
+</blockquote>
+<ul>
+<li>Be sure to setup port forwarding on your home router. I have publc port 2323 mapped to port 22 on my home machine.</li>
+<li>Port 6666 is not magic. You can use any port above 1024 without admin access.</li>
+</ul>
+<p>Test SOCKS5</p>
+<p>On your home machine, test the SOCK5 connection.</p>
+<p>Verify your real IP address:</p>
+<blockquote>
+<p>C:\›curl <a href="http://ifconfig.io">ifconfig.io</a></p>
+</blockquote>
+<blockquote>
+<p>111.111.111.111</p>
+</blockquote>
+<p>Verify your tunneled IP address:</p>
+<blockquote>
+<p>C:\›curl --socks5 localhost:6666 <a href="http://ifconfig.io">ifconfig.io</a></p>
+<p>222.222.222.222 // This is the Virtual Machine’s IP address.</p>
+</blockquote>
+<p><strong>Configure Apps</strong></p>
+<blockquote>
+<p><strong>DNS</strong></p>
+</blockquote>
+<ol>
+<li>Download DNS2SOCKS. This app pipes all DNS queries through the SOCK5 proxy.</li>
+</ol>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://sourceforge.net/projects/dns2socks/</a></p>
+<ol start="2">
+<li>Run DNS2SOCKS</li>
+</ol>
+<p>Note, in the command below, 192.168.1.1 points to my home router.</p>
+<p>You could use e.g. Google DNS at 8.8.8.8.</p>
+<pre><code>        DNS2SOCKS.exe /la:socks.log 127.0.0.1:6666 192.168.1.1:53 127.0.0.1:53  
+        DNS2SOCKS V2.1 (free software, use parameter /? to display help)  
+        SOCKS server 127.0.0.1 port 6666  
+        DNS server   192.168.1.1 port 53  
+        listening on 127.0.0.1 port 53  
+        cache enabled  
+        authentication disabled  
+        EDNS client subnet disabled
+</code></pre>
+<ol start="3">
+<li>Set your network adapter to use 127.0.0.1 as the DNS server.</li>
+</ol>
+<p>Open Network Connections:</p>
+<pre><code>            ncpa.cpl
+</code></pre>
+<p>Right click on the adapter, e.g. Ethernet or Wi-Fi.</p>
+<p>Click Properties</p>
+<p>Select “Internet Protocol Version 4 (TCP/IPv4)”</p>
+<p>Click Properties</p>
+<p>Under “Use the following DNS server addresses:”, enter 127.0.0.1.</p>
+<p>Optionally set an alternate server e.g. 8.8.8.8.</p>
+<p>Click OK to close the “Internet Protocol Version 4 TCP/IPv4 Properties” dialog.</p>
+<p>Click OK to close the adapter properties dialog.</p>
+<ol start="4">
+<li>
+<p>Test that you can resolve hosts at the company, e.g. TFS.</p>
+<pre><code>     C:\&gt;nslookup tfs.example.com  
+     Server:  localhost  
+     Address:  127.0.0.1  
+     Non-authoritative answer:  
+     Address:  172.25.1.75
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p><strong>HTTP</strong></p>
+</blockquote>
+<blockquote>
+<p>Since all not apps support SOCKS5, e.g. Visual Studio Teams Explorer, while others have buggy support (such as <a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">git</a>), we need forward HTTP/HTTPs traffic through SOCKS5.</p>
+</blockquote>
+<blockquote>
+<p>Install Privoxy: <a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://www.privoxy.org/</a></p>
+<p>Start Privoxy</p>
+<p>Configure Privoxy</p>
+<blockquote>
+<p>Open config.txt (Edit -&gt; Open Main Configuration)</p>
+</blockquote>
+<blockquote>
+<p>Add the line:</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>forward-socks5 / 127.0.0.1:6666 .</p>
+</blockquote>
+</blockquote>
+<p>Restart Privoxy</p>
+<p>Configure apps to use <a href="https://127.0.0.1:8118">https://127.0.0.1:8118</a>.</p>
+<p>Use 127.0.0.1, not localhost, since localhost may resolve to the SOCKS5 server.</p>
+</blockquote>
+<blockquote>
+<p><strong>git</strong></p>
+</blockquote>
+<ol>
+<li>
+<p>On your home machine, setup git to use the HTTP proxy.</p>
+<pre><code>         // All repos  
+         C:\&gt;git config --global http.proxy http://127.0.0.1:8118  
+         C:\&gt;git config --global https.proxy http://127.0.0.1:8118  
+           
+         // Or just this repo  
+         cd C:\Users\JohnDoe\repo  
+         C:\&gt;Users\JohnDoe\repo&gt;git config http.proxy https://127.0.0.1:8118  
+         C:\&gt;Users\JohnDoe\repo&gt;git config https.proxy https://127.0.0.1:8118
+</code></pre>
+</li>
+</ol>
+<p>Unset with</p>
+<pre><code>                git config --global --unset https.proxy  
+                git config --global --unset http.proxy
+</code></pre>
+<p>It may be helpful to store your credentials. You should get a GUI dialog prompt.</p>
+<pre><code>            cd repo  
+            git config --global credential.helper store  
+            git pull  
+            Username for 'https://tfs.example.com': user@example.com  
+            Password for 'https://user@example.com@tfs.example.com':
+</code></pre>
+<p>To change these values later, open the Start Menu and search for “Credential Manager”</p>
+<blockquote>
+<p><strong>Chrome</strong></p>
+</blockquote>
+<ol>
+<li>Install the SOCKS proxy extension by Hotplate Labs.</li>
+</ol>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://chrome.google.com/webstore/detail/socks-proxy/odiakldnmmpjabkemfboijigageaelcn?hl=en</a></p>
+<ol start="2">
+<li>Set the extension to use the SOCK5 proxy port, e.g. 6666.</li>
+</ol>
+<p>Right click on the extension icon and click Options.</p>
+<p>Type the port into the text box that appears.</p>
+<p>Try to load some intranet pages.</p>
+<p><a href="https://tfs.example.com/">https://tfs.example.com/</a></p>
+<p>Check your IP address</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://www.google.com/search?q=whatsmyip</a></p>
+<p>“222.222.222.222”</p>
+<blockquote>
+<p><strong>Visual Studio 2019 (for e.g. Team Explorer)</strong></p>
+</blockquote>
+<ol>
+<li>
+<p>Open the file <em>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe.config</em></p>
+</li>
+<li>
+<p>Add the following under “&lt;<a href="http://system.net">system.net</a>&gt;”</p>
+<pre><code>     &lt;defaultProxy useDefaultCredentials="true" enabled="true"&gt;  
+         &lt;proxy proxyaddress="http://127.0.0.1:8118" /&gt;  
+     &lt;/defaultProxy&gt;
+</code></pre>
+</li>
+</ol>
+<p>Before:</p>
+<pre><code>            &lt;system.net&gt;  
+                &lt;settings&gt;  
+                    &lt;ipv6 enabled="true"/&gt;  
+                &lt;/settings&gt;  
+            &lt;/system.net&gt;
+</code></pre>
+<p>After:</p>
+<pre><code>            &lt;system.net&gt;  
+                &lt;defaultProxy useDefaultCredentials="true" enabled="true"&gt;  
+                    &lt;proxy proxyaddress="http://127.0.0.1:8118" /&gt;  
+                &lt;/defaultProxy&gt;  
+                &lt;settings&gt;  
+                    &lt;ipv6 enabled="true"/&gt;  
+                &lt;/settings&gt;  
+            &lt;/system.net&gt;
+</code></pre>
+<ol start="3">
+<li>
+<p>Restart Visual Studio.</p>
+</li>
+<li>
+<p>In Team Explorer, connect to the server e.g. at the URL  <em><a href="https://tfs.example.com/tfs/">https://tfs.example.com/tfs/</a></em></p>
+</li>
+</ol>
+<hr>
+<p><strong>NuGet</strong></p>
+<ol>
+<li>Open e.g.  <em>C:\Users\JohnDoe\AppData\Roaming\NuGet\nuget.config</em></li>
+<li>Add the configuration below</li>
+</ol>
+<pre class=" language-xml"><code class="prism  language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+ <span class="token comment">&lt;!-- stuff --&gt;</span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>config</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http_proxy<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://127.0.0.1:8118<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>config</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- stuff --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<hr>
+<p><strong>Sources</strong></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://serverfault.com/questions/361794/with-ssh-only-reverse-tunnel-web-access-via-ssh-socks-proxy</a><br>
+<a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://www.reddit.com/r/techsupport/comments/4j0l35/windows_10_route_all_traffic_through_socks5_proxy</a><br>
+<a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://superuser.com/questions/370930/ssh-reverse-socks-tunnel</a><br>
+<a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://stackoverflow.com/questions/15227130/using-a-socks-proxy-with-git-for-the-http-transport</a><br>
+<a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://cstan.io/?p=11673&amp;lang=en</a><br>
+<a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://stackoverflow.com/questions/39345249/visual-studio-community-proxy</a></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8082752733153501299#">https://stackoverflow.com/questions/9232160/nuget-behind-a-proxy</a></p>
+<hr>
+<h3 id="discussion">Discussion</h3>
+<p>Please feel free to start a discussion <a href="https://github.com/slater1/blog/issues">on GitHub</a>.</p>
+</div>
+</body>
+
+</html>
