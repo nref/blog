@@ -22,10 +22,10 @@ jobs:
         SOURCE_DIR: './html'      # optional: defaults to entire repository
 
     - name: Invalid Cloudfront cache
-        uses: chetan/invalidate-cloudfront-action@master
-        env:
-          DISTRIBUTION: ${{ secrets.BLOG_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-          PATHS: '/*'
-          AWS_REGION: 'us-east-1'
-          AWS_ACCESS_KEY_ID: ${{ secrets.BLOG_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.BLOG_AWS_SECRET_ACCESS_KEY }}
+      uses: chetan/invalidate-cloudfront-action@master
+      env:
+        DISTRIBUTION: ${{ secrets.BLOG_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
+        PATHS: '/*'
+        AWS_REGION: 'us-east-1'
+        AWS_ACCESS_KEY_ID: ${{ secrets.BLOG_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.BLOG_AWS_SECRET_ACCESS_KEY }}
