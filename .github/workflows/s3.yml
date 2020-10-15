@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    
+
     - name: Checkout master
       uses: actions/checkout@master
 
@@ -24,7 +24,7 @@ jobs:
         AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
         SOURCE_DIR: './html'      # optional: defaults to entire repository
 
-    - name: Invalid Cloudfront cache
+    - name: Invalidate Cloudfront cache
       uses: chetan/invalidate-cloudfront-action@master
       env:
         DISTRIBUTION: ${{ secrets.BLOG_AWS_CLOUDFRONT_DISTRIBUTION_ID }}
