@@ -14,7 +14,7 @@ This privacy policy describes how our software collects and uses your data.
 
 ### We do not collect...
 
--   Your payment information. This is delegated to our payment provider Stripe.
+-   Your payment information. This is delegated to our payment provider.
 -   Information on children. Use of this site intended for persons over the age of 13.
 -   Your advertising profile. Our business model is based on your subscription fee.
 
