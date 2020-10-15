@@ -9,8 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to S3
+    
+    - name: Checkout master
       uses: actions/checkout@master
+
+    - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks
