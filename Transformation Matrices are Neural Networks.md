@@ -1,9 +1,9 @@
-Chances are you've seen a neutal network diagram like this one with circles and arrows:
+Chances are you've seen a neural network diagram like this one with circles and arrows:
 
 ![Image for post](https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png)
 *Figure: A neural network. Source:* [Medium](https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c)
 
-While that looks fancy, they're just matrices. More generally, they're tensors, but a special kind of tensor which makes them [basically matrices.](https://math.stackexchange.com/a/412429)
+While that looks fancy, it's basically a matrix. More generally, it's a tensor, but a special kind of tensor which makes it [just a matrix](https://math.stackexchange.com/a/412429).
 
 I was reading [this Medium article comparing matrices and tensors](https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c) which models the following matrix multiplication as the two-layer neural network shown above:
 
