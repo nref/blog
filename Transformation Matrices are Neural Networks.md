@@ -22,7 +22,14 @@ $$
 
 Here is a neural network visualizing the linear mapping sequence $M_zM_yM_xV$:
 
-![](https://1.bp.blogspot.com/-YTDB2hrFi9I/Xx4V06dJjXI/AAAAAAAAJ28/CY6v_QTgHh0wDJ9hWvIuOJ3J4fHrfAdTQCLcBGAsYHQ/d/rotations.png)
+![](https://drive.google.com/uc?export=view&id=1JZ5nbd-Y55QYEPMk8XQ00cE2w688KX25)
 *Figure: Made with [draw.io](https://draw.io/)*
 
 By tracing the paths through the layers of the neural network below, one can gain an intuition of how each transformation operation contributes to the resulting vector $V_{rot}$.
+
+![](https://drive.google.com/uc?export=view&id=1t9ccuXdm87LI7s9Tx5QdnJ0STQQv_V39)
+*Figure: Made with [draw.io](https://draw.io/)*
+
+***
+### Discussion
+Please feel free to start a discussion [on GitHub](https://github.com/slater1/blog/issues).
