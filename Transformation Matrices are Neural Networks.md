@@ -1,4 +1,5 @@
-Chances are you've seen a neutral network diagram like this one with circles and arrows:
+Chances are you've seen a neutal network diagram like this one with circles and arrows:
+
 ![Image for post](https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png)
 *Figure: A neural network. Source:* [Medium](https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c)
 
