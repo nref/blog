@@ -1,9 +1,14 @@
-I was reading [this Medium article on tensors](https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c) which models the following matrix multiplication as a two-layer neural network:
+Chances are you've seen a neutral network diagram like this one with circles and arrows:
+![Image for post](https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png)
+*Figure: A neural network. Source:* [Medium](https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c)
+
+While that looks fancy, they're just matrices. More generally, they're tensors, but a special kind of tensor which makes them [basically matrices.](https://math.stackexchange.com/a/412429)
+
+I was reading [this Medium article comparing matrices and tensors](https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c) which models the following matrix multiplication as the two-layer neural network shown above:
 
 ![Image for post](https://miro.medium.com/max/756/1*Bxba1gx4ec2h9qe7UNPvMg.png)
-![Image for post](https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png)
 
-This made me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:
+This helped me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:
 
 $$
 \begin{aligned}
