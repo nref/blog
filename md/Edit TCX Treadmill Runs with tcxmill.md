@@ -25,3 +25,6 @@ The only requirements are that you know and follow your workout structure. Instr
 ***
 ### Discussion
 Please feel free to start a discussion [on GitHub](https://github.com/slater1/blog/issues).
+
+***
+[Main page](index.html)
