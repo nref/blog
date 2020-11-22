@@ -1,3 +1,5 @@
+2020-11-22
+
 Dear Friends,  
   
 You may know that I have been managing hip pain for a while. I had an MRI for it in October, and yesterday I had a follow-up consultation with [Dr. Kemmet](https://www.utmedicalcenter.org/doctors/rebecca-k-kemmet-md/) at UT Family Physicians to learn what the MRI can tell us.  
