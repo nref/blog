@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use Reverse SSH to Connect Xamarin to macOS</title>
+  <link rel="stylesheet" href="style.min.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180713038-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-180713038-1');
+  </script>
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p>This is a guide for anyone using Xamarin and whose machine cannot reach a macOS build host by SSH on port 22.</p>
+<p>In my case, I have Xamarin installed on a Windows machine and a macOS guest hosted in QEMU/KVM on a Ubuntu laptop. The Ubuntu laptop is connected to the network through its wireless adapter.</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-mEuvnQDLehY/Xmj9lEk4lNI/AAAAAAAAJvI/LmIES0c7uWYp5_JCrqkBWOEkSNbT7XAygCLcBGAsYHQ/s1600/Untitled%2BDiagram%2B%25282%2529.png" alt=""></a></p>
+<p>Wireless adapters cannot bridge to KVM guests, so it is not possible to SSH directly from the Windows machine to the macOS guest.</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-SFReweMo_9Q/Xmj9wV14YII/AAAAAAAAJvM/48ab93Ez-PAfJ97C-Y5aqYdgykyhM_x9gCLcBGAsYHQ/s1600/Untitled%2BDiagram%2B%25283%2529.png" alt=""></a></p>
+<p>Since Xamarin needs SSH to reach macOS, I use a bag of networking tricks including a reverse SSH tunnel, NAT, and port forwarding to enable Xamarin to reach the macOS guest.</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-FPTI4_oEsy4/Xmj-w9w1UDI/AAAAAAAAJvc/bEdWKvONImcffa_Kx6LvPhnYgwthifAnACLcBGAsYHQ/s1600/Reverse%2BSSH%2Bbehind%2BNAT.png" alt=""></a></p>
+<p>Disclaimer: Installing macOS on anything but Apple hardware violates the macOS license agreement. Proceed at your own risk.</p>
+<h3 id="setup-hosts">Setup Hosts</h3>
+<p>On <strong>Host 1</strong>, install Windows 10 and Visual Studio 2019 with Xamarin<br>
+On <strong>Host 2</strong>, install Ubuntu, KVM and a macOS guest (Host 3): See <a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">here</a>.<br>
+On <strong>Host 3</strong>, install Xcode and Visual Studio for Mac</p>
+<h3 id="network-topology">Network Topology</h3>
+<p>You should now have the following topology. The IP addresses can of course be different than mine.</p>
+<p><strong>Host 1</strong>: Windows 10 1809 Running Visual Studio<br>
+IP: 172.16.1.4</p>
+<p><strong>Host 2</strong>: Ubuntu 18.04 LTS running Host 3 in KVM, connected to wifi<br>
+IP: 172.16.1.2<br>
+IP: 192.168.122.1 (NAT with Host 3)</p>
+<p><strong>Host 3</strong>: OS X Mojave virtual machine<br>
+IP: 192.168.122.242 (NAT with Host 2)</p>
+<h3 id="setup-ssh">Setup SSH</h3>
+<p>Xamarin communicates with Xcode over SSH, so we need to be able to SSH from Windows to the macOS guest.</p>
+<p>On <strong>macOS</strong>, SSH is installed but not running. Navigate to <em>System Preferences → Sharing →</em> check <em>Remote Login</em>. Optionally setup public key auth. See <a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">here</a>.</p>
+<p>On <strong>Windows</strong>, see <a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">here</a>. Optionally setup public key auth. It’s tricky. <a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">This</a> worked for me.</p>
+<p>Test that macOS can reach reach Windows.</p>
+<p><strong>macOS =&gt;</strong> <strong>Windows</strong>: ssh <a href="mailto:windowsuser@172.16.1.4">windowsuser@172.16.1.4</a><br>
+<strong>Windows =&gt;</strong> <strong>macOS</strong>: Not yet (Windows cannot reach macOS behind NAT)</p>
+<h3 id="create-a-tunnel">Create a Tunnel</h3>
+<p>In <strong>macOS</strong>, create a reverse SSH tunnel from port 22 to a free port in Windows, e.g. 40322.</p>
+<p>ssh -R 40322:localhost:22 <a href="mailto:windowsuser@172.16.1.4">windowsuser@172.16.1.4</a></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-_LLLjxUDLaQ/XmF4cyUytAI/AAAAAAAAJtQ/4mdIEDqTxvsadJSZ7_BI7koaBon0k3-wwCLcBGAsYHQ/s640/macos-create-tunnel.png" alt=""></a></p>
+<p>Never before was I glad to encounter a PowerShell prompt.</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-1YQ7nh9NBTw/XmF4fY1rnxI/AAAAAAAAJtU/pomyVwPyArA0EY1XlW49GsQr_le9PiSoQCLcBGAsYHQ/s640/macos-tunneled-to-windows.png" alt=""></a></p>
+<p>Leave this connection open and proceed to the next step.</p>
+<h3 id="setup-firewall">Setup Firewall</h3>
+<p>On <strong>Ubuntu</strong>, open the port which Windows will go through to reach macOS.</p>
+<p>sudo ufw allow 40322</p>
+<h3 id="verify-tunnel">Verify Tunnel</h3>
+<p>In <strong>Windows</strong>, test the connection to macOS. Notice that to get to macOS, you SSH from Windows to Windows. The tunnel we created before at port 40322 then takes you to macOS.</p>
+<p>ssh macosuser@localhost -p 40322</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-0gLt2UpypeQ/XmF43ijTo5I/AAAAAAAAJtw/q-0K0UBnD9410n4L2K9HAlL9m3cf7hoAwCLcBGAsYHQ/s1600/test-tunnel.PNG" alt=""></a></p>
+<p>If the connection succeeds, you’ll be greeted by a shell in macOS.</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-6MF37yIdsFg/XmF43KwuzMI/AAAAAAAAJts/qddzVa7nqbo6iq9KdwYDSn2yfxuVnsghQCEwYBhgL/s1600/test-tunnel-success.PNG" alt=""></a></p>
+<p>This was just a test. It is not necessary to leave this connection open to proceed.</p>
+<h3 id="port-forward">Port Forward</h3>
+<p>The Xamarin Mac Agent can only connect on port 22, but the macOS host is on 40322.</p>
+<p>In <strong>Windows</strong>, in an elevated command prompt or PowerShell instance, forward port 22 to 40322.</p>
+<p>netsh interface portproxy add v4tov4 listenport=22 listenaddress=127.0.0.1 connectport=40322 connectaddress=127.0.0.1</p>
+<h3 id="connect-xamarin-to-mac">Connect Xamarin to Mac</h3>
+<p>In <strong>Windows</strong>, in Visual Studio, connect to the macOS Xcode server. You’ll have to use user/pass auth.</p>
+<p>Host: 127.0.0.1<br>
+User: (macOS user)<br>
+Pass: (macOS password)</p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-8hQLYxNIWtc/XmF42pamYqI/AAAAAAAAJt0/EAjVaFZAqgcHT7REQ5TIXYT3FP0x07syQCEwYBhgL/s640/add-mac.PNG" alt=""></a></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-ynNKLX8juno/XmF42rQUc0I/AAAAAAAAJt8/9F9YAKTlJk4-s0X2X3ECgneWPaIBtwnyACEwYBhgL/s640/add-mac-authenticate.PNG" alt=""></a></p>
+<p><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#"><img src="https://1.bp.blogspot.com/-uMY7BdcprEo/XmF42v1cmOI/AAAAAAAAJt4/aTlNYXtNifEFBqmlQkniKgiy6kWQwd_7gCEwYBhgL/s640/add-mac-success.PNG" alt=""></a></p>
+<p>Xamarin may ask to install a few things on the macOS host.</p>
+<p>Happy coding!</p>
+<h3 id="resources">Resources</h3>
+<ol>
+<li><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">https://wiki.libvirt.org/page/Networking#Bridged_networking_.28aka_.22shared_physical_device.22.29</a></li>
+<li><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">https://www.howtogeek.com/428413/what-is-reverse-ssh-tunneling-and-how-to-use-it</a></li>
+<li><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/8218420647288487136#">https://stackoverflow.com/a/53841245</a></li>
+</ol>
+<hr>
+<h3 id="discussion">Discussion</h3>
+<p>Please feel free to start a discussion <a href="https://github.com/slater1/blog/issues">on GitHub</a>.</p>
+<hr>
+<p><a href="index.html">Main page</a></p>
+</div>
+</body>
+
+</html>
