@@ -10,7 +10,7 @@ I have been referred to [a surgeon](https://www.uosortho.com/doctors/william-r-o
   
 This news is a gut-punch, where in a moment life changes direction, and a time to evaluate again my relationship with running. I will try to keep running, but I think that my days of marathoning and ultra may be at an end. I may choose to complement a reduction in running volume with a shift to more static activities like lifting and non load-bearing sports like swimming.  
   
-In all this I remember the promise of my Lord: "In this world you will have trouble. But take heart! I have overcome the world."" John 16:33  
+In all this I remember the promise of my Lord: "In this world you will have trouble. But take heart! I have overcome the world." John 16:33  
   
 I'll keep you informed,  
   
