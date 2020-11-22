@@ -9,7 +9,14 @@ The cycle produced the following results:
  - A moderate and early wall starting at mile 19
 
 **Was it hard work?** Yes. It was a lot of training time and fairly monotonous.
+
 **Would I do it again?** I would like to try other methods first, particularly ones with greater variety.
+
 **Is Canova better than method X?** Based on what metrics? A sample size of one athlete-cycle does not provide much information. For a metric like Injury Rate, can say that I have completed several Lydiard-style cycles, during all of which I accrued at least one injury. I did not get injured this cycle, but in January 2020 I began another Canova-style cycle, and I strained my calf in February on an easy run the day after a quality workout.
+
 **Is it the best method?** In what context? For amateur athletes, I would say "no". Canova himself stated in Valencia that amateurs simply cannot produce the quality his style demands, and that holds true for this amateur. Canova starts with Elite athletes and aims to make them world class. It would be better to follow a plan made specifically for the type of athlete you are.
+
 **What will I do next?** In June 2020 I returned to Bobby Holcombe of [Knoxville Endurance](http://www.knoxvilleendurance.com/) to get training more suited to my changing goals. Before 2020, I wanted to be as fast as possible, and now I want to be as consistent as possible.
+
+***
+[Main page](index.html)
