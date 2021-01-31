@@ -1,4 +1,4 @@
-name: Sync Blog to S3
+name: Sync HTML Blog to S3
 
 on:
   push:
