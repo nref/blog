@@ -48,3 +48,6 @@ This privacy policy describes how our software collects and uses your data.
 ### We may contact you...
 
 -   By email. By signing up, you opt into communications from us, but you can unsubscribe at any time.
+
+***
+[Main page](index.html)

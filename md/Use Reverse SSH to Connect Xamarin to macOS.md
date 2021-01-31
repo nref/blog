@@ -169,3 +169,6 @@ Happy coding!
 ***
 ### Discussion
 Please feel free to start a discussion [on GitHub](https://github.com/slater1/blog/issues).
+
+***
+[Main page](index.html)

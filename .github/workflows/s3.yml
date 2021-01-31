@@ -2,6 +2,8 @@ name: Sync Blog to S3
 
 on:
   push:
+    paths: 
+      - html/*
     branches:
     - master
 
