@@ -1,3 +1,18 @@
+@import url("static/fonts/FiraCode/fira_code.css");
+
+:root {
+  --highlight: #7981fe;
+  --error: #ff2f91;
+  --green1: #00fa91;
+  --green2: #00e8a6;
+  --eb-brand: #d4fb7a;
+  --gray1: #161616;
+  --gray2: #262626;
+  --gray3: #363636;
+  --gray4: #464646;
+  --gray15: #e6e6e6;
+}
+
 @font-face {
     font-family: KaTeX_AMS;
     src: url(/static/fonts/KaTeX_AMS-Regular.woff2) format("woff2"), url(/static/fonts/KaTeX_AMS-Regular.woff) format("woff"), url(/static/fonts/KaTeX_AMS-Regular.aaf4eee.ttf) format("truetype");
@@ -2622,3 +2637,30 @@
     padding-right: 0;
     max-width: none
   }
+
+.brand {
+	font-family: "Fira Code";
+	font-style: italic;
+	color: var(--gray15)
+}
+
+.brand-suffix {
+  color: var(--highlight);
+	font-family: "Fira Code";
+	font-style: italic;
+}
+
+.brand-eb {
+	color: var(--eb-brand);
+	font-family: "Fira Code";
+	font-style: italic;
+}
+
+.brand a:link {
+  color: var(--gray15);
+}
+
+/* visited link */
+.brand a:visited {
+  color: var(--gray15);
+}
