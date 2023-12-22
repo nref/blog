@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Doug Slater</title>
+      <link>https://www.slater.dev</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://www.slater.dev/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Reflections on a DIY Canova Method Marathon Training Cycle</title>
+          <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/reflections-on-a-diy-canova-method-marathon-training-cycle/</link>
+          <guid>https://www.slater.dev/reflections-on-a-diy-canova-method-marathon-training-cycle/</guid>
+          <description>&lt;p&gt;From August-November 2019, I trained for the &lt;a href=&quot;https:&#x2F;&#x2F;monumentalmarathon.com&#x2F;&quot;&gt;Indianapolis Marathon&lt;&#x2F;a&gt; using the Renato Canova method. I composed training plan with information from both primary and secondary sources, including others&#x27; Canova-style training plans, descriptions of his method, video interviews, his own training plans for his athletes, and &lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;renato-canova-in-valencia&#x2F;&quot;&gt;one very useful talk in Valencia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;My self-composed plan called for two quality runs a week: one of longer duration and one of shorter duration but more intensity. The remaining runs were easy miles ending with striders. I did not have time to do a Canova-style base phase, which is &lt;a href=&quot;https:&#x2F;&#x2F;nateruns.blogspot.com&#x2F;2015&#x2F;02&#x2F;throwback-thursday-meeting-canova.html&quot;&gt;arguably the most important part&lt;&#x2F;a&gt;, but I nailed the taper, executing some very aggressive speedwork as late as the week before the race.&lt;&#x2F;p&gt;
+&lt;p&gt;The cycle produced the following results:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;No injury&lt;&#x2F;li&gt;
+&lt;li&gt;A 54-second PR (2:59:26 → 2:58:30)&lt;&#x2F;li&gt;
+&lt;li&gt;A moderate and early wall starting at mile 19&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Was it hard work?&lt;&#x2F;strong&gt; Yes. It was a lot of training time and fairly monotonous.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Would I do it again?&lt;&#x2F;strong&gt; I would like to try other methods first, particularly ones with greater variety.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Is Canova better than method X?&lt;&#x2F;strong&gt; Based on what metrics? A sample size of one athlete-cycle does not provide much information. For a metric like Injury Rate, can say that I have completed several Lydiard-style cycles, during all of which I accrued at least one injury. I did not get injured this cycle, but in January 2020 I began another Canova-style cycle, and I strained my calf in February on an easy run the day after a quality workout.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Is it the best method?&lt;&#x2F;strong&gt; In what context? For amateur athletes, I would say &amp;quot;no&amp;quot;. Canova himself stated in Valencia that amateurs simply cannot produce the quality his style demands, and that holds true for this amateur. Canova starts with Elite athletes and aims to make them world class. It would be better to follow a plan made specifically for the type of athlete you are.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;What will I do next?&lt;&#x2F;strong&gt; In June 2020 I returned to Bobby Holcombe of &lt;a href=&quot;http:&#x2F;&#x2F;www.knoxvilleendurance.com&#x2F;&quot;&gt;Knoxville Endurance&lt;&#x2F;a&gt; to get training more suited to my changing goals. Before 2020, I wanted to be as fast as possible, and now I want to be as consistent as possible.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Transformation Matrices are Neural Networks</title>
+          <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/matrices-are-neural-networks/</link>
+          <guid>https://www.slater.dev/matrices-are-neural-networks/</guid>
+          <description>&lt;p&gt;Chances are you&#x27;ve seen a neural network diagram like this one with circles and arrows:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;miro.medium.com&#x2F;max&#x2F;496&#x2F;1*GTdVep66Ln4N4Zd2JnSXbQ.png&quot; alt=&quot;Image for post&quot; &#x2F;&gt;
+&lt;em&gt;Figure: A neural network. Source:&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@quantumsteinke&#x2F;whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c&quot;&gt;Medium&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;While that looks fancy, it&#x27;s basically a matrix. More generally, it&#x27;s a tensor, but a special kind of tensor which makes it &lt;a href=&quot;https:&#x2F;&#x2F;math.stackexchange.com&#x2F;a&#x2F;412429&quot;&gt;just a matrix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I was reading &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@quantumsteinke&#x2F;whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c&quot;&gt;this Medium article comparing matrices and tensors&lt;&#x2F;a&gt; which models the following matrix multiplication as the two-layer neural network shown above:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;miro.medium.com&#x2F;max&#x2F;756&#x2F;1*Bxba1gx4ec2h9qe7UNPvMg.png&quot; alt=&quot;Image for post&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This helped me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+M_x &amp;amp;= Rot_x(15°) \newline
+M_y &amp;amp;= Rot_y(15°) \newline
+M_z &amp;amp;= Rot_z(15°) \newline
+V &amp;amp;= [1,2,3] \newline
+V&#x27; &amp;amp;= M_xV \newline
+&amp;amp;= [1, \pmb{1.155}, \pmb{3.415}] \newline
+V&#x27;&#x27; &amp;amp;= M_yV&#x27; \newline
+&amp;amp;= [\pmb{1.850}, 1.155, \pmb{3.042}] \newline
+V&#x27;&#x27;&#x27; &amp;amp;= M_zV&#x27;&#x27; \newline
+&amp;amp;= [\pmb{1.488}, \pmb{1.595}, 3.042] \newline
+\end{aligned}
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;Here is a neural network visualizing the linear mapping sequence $M_zM_yM_xV$:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1JZ5nbd-Y55QYEPMk8XQ00cE2w688KX25&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Figure: Made with &lt;a href=&quot;https:&#x2F;&#x2F;draw.io&#x2F;&quot;&gt;draw.io&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;By tracing the paths through the layers of the neural network below, one can gain an intuition of how each transformation operation contributes to the resulting vector $V_{rot}$.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1t9ccuXdm87LI7s9Tx5QdnJ0STQQv_V39&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Figure: Made with &lt;a href=&quot;https:&#x2F;&#x2F;draw.io&#x2F;&quot;&gt;draw.io&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Threadripper 3970x PC Build</title>
+          <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/threadripper/</link>
+          <guid>https://www.slater.dev/threadripper/</guid>
+          <description>&lt;p&gt;In April, I built a new PC out of these parts:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Threadripper 3970x&lt;&#x2F;li&gt;
+&lt;li&gt;MSI TRX40 PRO&lt;&#x2F;li&gt;
+&lt;li&gt;G.SKILL Trident Z Neo Series 64GB (2 x 32GB)&lt;&#x2F;li&gt;
+&lt;li&gt;EVGA GeForce GTX 1080 8GB GDDR5X&lt;&#x2F;li&gt;
+&lt;li&gt;Samsung 970 EVO&lt;&#x2F;li&gt;
+&lt;li&gt;EVGA 1000 GQ&lt;&#x2F;li&gt;
+&lt;li&gt;Noctua NH-U14S TR4-SP3&lt;&#x2F;li&gt;
+&lt;li&gt;Fractal Design Meshify C&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Total cost: &lt;strong&gt;$3863.98&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Why did I build it?&lt;&#x2F;strong&gt; I&#x27;m a software developer, and I spend all day in Visual Studio. I had just gotten hired at a new employer, and I expected to be doing a fair amount of C++ compilation. For the rest of my development tasks, I wanted to be comfortably over-provisioned. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Do I like it?&lt;&#x2F;strong&gt; Emphatically yes. Developing on it is a dream. I am spoiled to work on any other machine. It is fun to watch all 64 logical processors max out in Task Manager during compilation. I love spinning up a virtual machine and whimsically assigning 16 cores and as many gigabytes of RAM. I feel like a teenager with a 500hp engine under his foot.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1NUEqO5TG63nc1w3gjQOcWOb-4WBu8GsM&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Image: All cores maxed out compiling &lt;a href=&quot;https:&#x2F;&#x2F;www.researchgate.net&#x2F;publication&#x2F;259903810_The_open-radART_ion_ORAion_Software_Suite&quot;&gt;open-radART&lt;&#x2F;a&gt;. Vroom!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;It is worth it?&lt;&#x2F;strong&gt; I find the performance-per-dollar to be very high. I was pleased to see that Linus Torvalds himself &lt;a href=&quot;http:&#x2F;&#x2F;lkml.iu.edu&#x2F;hypermail&#x2F;linux&#x2F;kernel&#x2F;2005.3&#x2F;00406.html&quot;&gt;praised his 3970x&lt;&#x2F;a&gt;. I find performance to be a good balance between the cheaper 3960x and the pricey 3990x. I literally could not find any prebuilt machines of this caliber, but if I could have, they would have easily cost over $6000.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1GQNreuaFoaGbw6WqV8pW4T3tlnDIxb38&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Image: The 3970x sits equitably on the performance-price curve, but its performance is way ahead of the competition. Source: https:&#x2F;&#x2F;www.cpubenchmark.net&#x2F;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Christian Pull Requests</title>
+          <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/christian-pull-requests/</link>
+          <guid>https://www.slater.dev/christian-pull-requests/</guid>
+          <description>&lt;h3 id=&quot;christian-pull-requests&quot;&gt;Christian Pull Requests&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;m a software developer, so the terms &lt;a href=&quot;https:&#x2F;&#x2F;opensource.stackexchange.com&#x2F;a&#x2F;380&quot;&gt;pull request&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Code_review&quot;&gt;code review&lt;&#x2F;a&gt; are part of my daily vernacular.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m also a Christian and go to a weekly Bible study.&lt;&#x2F;p&gt;
+&lt;p&gt;At Bible study,  after the lesson, and sometimes before, the group shares &amp;quot;prayer requests&amp;quot;. This is a chance for participants to pray for each other and for people outside the group.&lt;&#x2F;p&gt;
+&lt;p&gt;Unless requested not to, we record these prayer requests in a group messaging app. It can be hard to take down requests on a smartphone, so I often bring my laptop to keep up.&lt;&#x2F;p&gt;
+&lt;p&gt;At the end of Bible study one recent Sunday night, I pulled out my laptop and announced, &amp;quot;Ok, I am taking pull requests!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Not knowing what I had just said, I looked around and saw blank eyes looking back.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;Guys, I mean &lt;em&gt;prayer&lt;&#x2F;em&gt; requests!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Having my laptop open may have triggered something code-related in my brain.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Cubic Spline Joint Trajectories</title>
+          <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/cubic-spline-joint-trajectories/</link>
+          <guid>https://www.slater.dev/cubic-spline-joint-trajectories/</guid>
+          <description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h3&gt;
+&lt;p&gt;In robot kinematics, a &lt;em&gt;joint path&lt;&#x2F;em&gt; is a sequence of positions for one or more joints. A &lt;em&gt;joint trajectory&lt;&#x2F;em&gt; is the time function interpolating these positions.&lt;&#x2F;p&gt;
+&lt;p&gt;This post examines generating joint trajectories with cubic splines.&lt;&#x2F;p&gt;
+&lt;p&gt;Say we have a robotic arm with one revolute joint, and we want to rotate its joint position \(Q\) from \(0\) to \(90\) degrees.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Q_{init} &amp;amp;= 0 \newline
+Q_{final} &amp;amp;= \pi&#x2F;2 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1m5GK-sDcSwYTzq65qyWgDwImKPglIG3j&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Figure: The joint start and goal&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We don&#x27;t care how long it takes, but the joint must start from rest and and end at rest.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+V_{init} &amp;amp;= 0 \newline
+V_{final} &amp;amp;= 0 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;initial-solution&quot;&gt;Initial Solution&lt;&#x2F;h3&gt;
+&lt;p&gt;We can satisfy these constraints by interpolating the joint position, velocity, and acceleration with a  &lt;a href=&quot;https:&#x2F;&#x2F;mathworld.wolfram.com&#x2F;CubicSpline.html&quot;&gt;cubic spline&lt;&#x2F;a&gt;,&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Q(t) &amp;amp;= At^3 + Bt^2 + Ct + D &amp;amp;&amp;amp;\text{&#x2F;&#x2F; Position} \newline
+V(t) &amp;amp;= 3At^2 + 2Bt + C &amp;amp;&amp;amp;\text{&#x2F;&#x2F; Velocity} \newline
+A(t) &amp;amp;= 6At + 2B &amp;amp;&amp;amp;\text{&#x2F;&#x2F; Acceleration} \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;where \(t\) is the time since the movement started.&lt;&#x2F;p&gt;
+&lt;p&gt;We start by finding the coefficients \(A\), \(B\), \(C\), and \(D\).&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Duration &amp;amp;=  \textit{(To be Determined)} \newline
+Displacement &amp;amp;= Q_{final} - Q_{init} \newline
+A &amp;amp;= \frac{(2  \cdot  -Displacement &#x2F; Duration + V_{init} + V_{final})}{Duration^2} \newline
+B &amp;amp;= \frac{(3  \cdot  Displacement &#x2F; Duration - 2  \cdot  V_{init} - V_{final})}{Duration} \newline
+C &amp;amp;= V_{init} \newline
+D &amp;amp;= Q_{init} \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Since we don&#x27;t care how long the movement takes, let&#x27;s choose arbitrarily that the movement should last \(1\) second:&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+Duration = 1
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;then we have the coefficients&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+A &amp;amp;= (2 \cdot -(\pi&#x2F;2)&#x2F;1 + 0 + 0)&#x2F;1^2 = -\pi \newline
+B &amp;amp;= (3 \cdot (\pi&#x2F;2)&#x2F;1 - 2 \cdot 0 -0)&#x2F;1  = 3\pi&#x2F;2 \newline
+C &amp;amp;= 0 \newline
+D &amp;amp;= 0 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Plugging these values back into the cubic equations, we can see in the figure that the joint at \(t = 1s\) has position \(Q = \pi&#x2F;2&amp;gt;rad\) and velocity \(v = 0&amp;gt;rad&#x2F;s\).&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;elrzqx76aq?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;center&gt;
+&lt;p&gt;&lt;em&gt;Figure: Joint Position, Velocity, and Acceleration over Time&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;joint-constraints&quot;&gt;Joint Constraints&lt;&#x2F;h3&gt;
+&lt;p&gt;In reality, a joint may not physically be able to move in 1 second, so let&#x27;s consider some realistic constraints.&lt;&#x2F;p&gt;
+&lt;p&gt;Say the joint has a maximum angular velocity of  \(6°&#x2F;s\)  and a maximum angular acceleration of \(3°&#x2F;s^2\). Assume this holds true regardless of its payload or position, i.e. ignore dynamics.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+V_{limit} &amp;amp;= 0.104719755 &amp;gt; rad&#x2F;s \newline
+A_{limit} &amp;amp;= 0.0523599 &amp;gt; rad&#x2F;s^2
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Clearly the solution plotted above exceeds these limits:&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+V_{max} &amp;amp;=  3\pi&#x2F;4, t = 0.5s \newline
+A_{max} &amp;amp;=  3\pi, t = 0s \newline
+&amp;amp;= -3\pi, t = 1s \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;We can reduce the velocity and acceleration by scaling the duration, i.e. making the movement take longer. The time-optimal solution is found analytically according to Melchiorri [1]:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;double &lt;&#x2F;span&gt;&lt;span&gt;get_scale()  
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;double&lt;&#x2F;span&gt;&lt;span&gt; v_scale = abs(Vmax) &#x2F; Vlimit
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;double&lt;&#x2F;span&gt;&lt;span&gt; a_scale = sqrt(abs(Amax) &#x2F; Alimit)
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;max(v_scale, a_scale)
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If  &lt;code&gt;a_scale&lt;&#x2F;code&gt; is larger than  &lt;code&gt;v_scale&lt;&#x2F;code&gt;, then the acceleration limit is constraining the duration. If  &lt;code&gt;v_scale&lt;&#x2F;code&gt; is larger than  &lt;code&gt;a_scale&lt;&#x2F;code&gt;, then the velocity limit is constraining the duration.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;v_scale = abs(3π&#x2F;4) &#x2F; 0.104719755  = 22.5
+&lt;&#x2F;span&gt;&lt;span&gt;a_scale = sqrt(abs(3π)&#x2F;0.0523599)  = 13.417
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In this case, the velocity limit is the dominating constraint.  &lt;em&gt;The time-optimal duration is 22.5 seconds.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We can verify by recalculating the polynomial coefficients with the new duration.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+A &amp;amp;= (2 \cdot -(\pi&#x2F;2)&#x2F;22.5)&#x2F;22.5^2 = -0.00027580511 \newline
+B &amp;amp;= (3 \cdot (\pi&#x2F;2)&#x2F;22.5)&#x2F;22.5  = 0.00930842267 \newline
+C &amp;amp;= 0 \newline
+D &amp;amp;= 0 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;uarkx6wols?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;center&gt;
+&lt;p&gt;&lt;em&gt;Figure: Scaled Joint Position, Velocity, and Acceleration over Time&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We can see that the joint at  \(t = 22.5s\) has position \(Q = \pi&#x2F;2 &amp;gt;rad\) and velocity \(v = 0 &amp;gt;rad&#x2F;s\). The maximum velocity is at \(t = 11.25s\( with \(v = 0.104719755 &amp;gt;rad&#x2F;s\). The maximum acceleration is at \(t = 0\) and \(t = 22.5s\) with \(a = 0.0186 &amp;gt;rad&#x2F;s^2\) and \(a = -0.0186 &amp;gt;rad&#x2F;s^2\), respectively. The joint velocity and acceleration constraints are satisfied. \(\blacksquare\)&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;task-space-constraints&quot;&gt;Task Space Constraints&lt;&#x2F;h3&gt;
+&lt;p&gt;Let&#x27;s add another constraint. Let&#x27;s say the frame attached to the tip of the joint has maximum translational speed and angular velocity components.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1SyYM1NDXyL0JCjo4HGCioj08uTcVwQxJ&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Figure: Diagram of a frame at the joint tip. The frame is right-handed, i.e. Z points out of the page.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+\dot{X}_{max} &amp;amp;= 100mm&#x2F;s \newline
+\dot{Y}_{max} &amp;amp;= 100mm&#x2F;s \newline
+\dot{Z}_{max} &amp;amp;= 100mm&#x2F;s \newline
+\dot{R_x}_{max} &amp;amp;= 9°&#x2F;s \newline
+\dot{R_y}_{max} &amp;amp;= 9°&#x2F;s \newline
+\dot{R_z}_{max} &amp;amp;= 9°&#x2F;s \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Aside:&lt;&#x2F;em&gt; I say &lt;em&gt;components&lt;&#x2F;em&gt; because e.g. a velocity vector moving with \(\dot{X} = \dot{Y} = \dot{Z} = 100mm&#x2F;s\) would actually be moving at \(\sqrt{(100²+100²+100²)} ~= 173mm&#x2F;s\). One could certainly solve for a velocity vector constraint, too.&lt;&#x2F;p&gt;
+&lt;p&gt;Similar to joint space constraints, we can meet task space constraints by scaling the duration of the trajectory, but we need to know the relation from joint space to task space.&lt;&#x2F;p&gt;
+&lt;p&gt;The relation from joint space to task space is known as  &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Forward_kinematics&quot;&gt;forward kinematics&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. Conversion from joint position to task space position is  &lt;em&gt;forward position&lt;&#x2F;em&gt;, and conversion from joint velocity to task space velocity is  &lt;em&gt;forward velocity&lt;&#x2F;em&gt;. This topic is widely covered elsewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s say our robot joint has position \(Q\), angular velocity \(\dot{Q}\) (also known as \(V(t)\)), and radius \(r\) from its center of rotation to the tip frame. Then the following relations apply:&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+X &amp;amp;= r \cdot cos(Q) \newline
+Y &amp;amp;= r \cdot sin(Q) \newline
+Z &amp;amp;= 0 \newline
+R_x &amp;amp;= 0 \newline
+R_y &amp;amp;= 0 \newline
+R_z &amp;amp;= Q \newline
+\newline
+\dot{X} &amp;amp;= -\dot{Q} \cdot r \cdot sin(Q) \newline
+\dot{Y} &amp;amp;= \dot{Q} \cdot r \cdot cos(Q) \newline
+\dot{Z} &amp;amp;= 0 \newline
+\dot{Rx} &amp;amp;= 0 \newline
+\dot{Ry} &amp;amp;= 0 \newline
+\dot{Rz} &amp;amp;= \dot{Q} \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;For example, if \(r = 1 &amp;gt;meter\),  \(Q = 0 &amp;gt;rad\), and \(Qdot = \pi &amp;gt; rad&#x2F;s\), then&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+X &amp;amp;= 1m \newline
+Y &amp;amp;= 0m \newline
+R_z &amp;amp;= 0m \newline
+\dot{X} &amp;amp;= 0 &amp;gt;m&#x2F;s \newline
+\dot{Y} &amp;amp;= 1 &amp;gt;m&#x2F;s \newline
+\dot{R_z} &amp;amp;= \pi &amp;gt; rad&#x2F;s \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;For another example, if \(r = 1 &amp;gt;meter\),  \(Q = \pi&#x2F;2 &amp;gt;rad\), and \(Qdot = \pi &amp;gt; rad&#x2F;s\), then&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+X &amp;amp;= 0m \newline
+Y &amp;amp;= 1m \newline
+R_z &amp;amp;= 0m \newline
+\dot{X} &amp;amp;= -1 &amp;gt;m&#x2F;s \newline
+\dot{Y} &amp;amp;= 0 &amp;gt;m&#x2F;s \newline
+\dot{R_z} &amp;amp;= \pi &amp;gt; rad&#x2F;s \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;For details, see this &lt;a href=&quot;https:&#x2F;&#x2F;robotacademy.net.au&#x2F;masterclass&#x2F;robotic-arms-and-forward-kinematics&#x2F;?lesson=260&quot;&gt;video lecture&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Going back to our 1-second trajectory, since the joint velocity is a parabola, which is symmetric, the maximum occurs at any of \(t = 0\), \(t = 0.5\), or \(t = 1\). Since \(V_{init} = V_{final} = 0\), the maximum occurs at \(t = 0.5\). This results in the following task space velocities:&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Q(0.5) &amp;amp;= -\pi t³ + \frac{3\pi}{2}t² = \pi&#x2F;4 &amp;gt;rad \newline
+V(0.5) &amp;amp;= -3\pi(1&#x2F;2)² +3\pi&#x2F;2  = \frac{3\pi}{4} rad&#x2F;s \newline
+\dot{X}_{max} &amp;amp;= \frac{3\pi}{4} rad&#x2F;s \cdot 1m \cdot cos(\pi&#x2F;4) = 1.67m&#x2F;s  = 1670 &amp;gt;mm&#x2F;s \newline
+\dot{Y}_{max} &amp;amp;=  \frac{3\pi}{4} rad&#x2F;s \cdot 1m \cdot sin(\pi&#x2F;4) = 1.67m&#x2F;s  = 1670 &amp;gt;mm&#x2F;s \newline
+\dot{Z}_{max} &amp;amp;= 0 &amp;gt;mm&#x2F;s \newline
+\dot{R_x} &amp;amp;= 0 &amp;gt;rad&#x2F;s \newline
+\dot{R_y} &amp;amp;= 0 &amp;gt;rad&#x2F;s \newline
+\dot{R_z}  &amp;amp;= \frac{3\pi}{4} &amp;gt;rad&#x2F;s \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Dividing by the given task space constraints yields the following ratios:&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+X_{ratio} &amp;amp;= 1670&#x2F;100  = 16.7 \newline
+Y_{ratio} &amp;amp;= 1670&#x2F;100  = 16.7 \newline
+Z_{ratio} &amp;amp;= 0 \newline
+R_{x_{ratio}} &amp;amp;= 0 \newline
+R_{y_{ratio}} &amp;amp;= 0 \newline
+R_{z_{ratio}} &amp;amp;= \frac{\frac{3\pi}{4} &amp;gt;rad&#x2F;s}{9°&#x2F;s} = 15 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;The maximum task space ratio is \(16.7\), which is less than the previous value of \(v_{scale} = 22.5\).  &lt;em&gt;The previous scaled trajectory duration of 22.5s also satisfies the given task space constraints.&lt;&#x2F;em&gt; \(\blacksquare\)&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;multiple-joints&quot;&gt;Multiple Joints&lt;&#x2F;h3&gt;
+&lt;p&gt;The same approach applies to robots with more than one joint. &lt;&#x2F;p&gt;
+&lt;p&gt;In this case, if we have \(m\) joints, then we will have \(m\) cubic splines, and \(a_{scale}\) and \(v_{scale}\) must be calculated for each joint. &lt;&#x2F;p&gt;
+&lt;p&gt;The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;&#x2F;h4&gt;
+&lt;p&gt;Consider adding a second joint to the previous example to create a two-joint manipulator. This joint has the same velocity and acceleration limits.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+V_{limit} &amp;amp;= 0.104719755 &amp;gt; rad&#x2F;s \newline
+A_{limit} &amp;amp;= 0.0523599 &amp;gt; rad&#x2F;s^2
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1YFmbgUtKW6srb9yDHVx6TMgpF5-3maH1&quot; alt=&quot;&quot; &#x2F;&gt;
+&lt;em&gt;Figure: A robot with two joints.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;mnga15rnud&quot;&gt;Simulate this robot on Desmos&lt;&#x2F;a&gt;. Use the \(q_1\) and \(q_2\) sliders.&lt;&#x2F;p&gt;
+&lt;p&gt;The first spline is unchanged.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{array}{c}
+\begin{aligned}
+Q_{init_1} &amp;amp;= 0 &amp;amp; A_1 &amp;amp;= -\pi \newline
+Q_{final_1} &amp;amp;= \pi&#x2F;2  &amp;amp; B_1 &amp;amp;= 3\pi&#x2F;2 \newline
+V_{init_1} &amp;amp;= 0 &amp;amp; C_1 &amp;amp;= 0 \newline
+V_{final_1} &amp;amp;= 0 &amp;amp; D_1 &amp;amp;= 0 \newline
+\end{aligned}
+\end{array}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the second spline. &lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{array}{c}
+\begin{aligned}
+Q_{init_2} &amp;amp;= \pi&#x2F;2 &amp;amp; A_2 &amp;amp;=2\pi \newline
+Q_{final_2} &amp;amp;= -\pi&#x2F;2 &amp;amp; B_2 &amp;amp;= -3\pi \newline
+V_{init_2} &amp;amp;= 0 &amp;amp; C_2 &amp;amp;= 0 \newline
+V_{final_2} &amp;amp;= 0 &amp;amp; D_2 &amp;amp;= \pi&#x2F;2 \newline
+\end{aligned}
+\end{array}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the relation of joint space to task space.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+X &amp;amp;= r_1 \cdot cos(Q_1) + r_2 \cdot cos(Q_1 + Q_2) \newline
+Y &amp;amp;= r_1 \cdot sin(Q_1) + r_2 \cdot sin(Q_1 + Q_2) \newline
+Z &amp;amp;= 0 \newline
+R_x &amp;amp;= 0 \newline
+R_y &amp;amp;= 0 \newline
+R_z &amp;amp;= Q_1 + Q_2 \newline
+\newline
+\dot{X} &amp;amp;= -\dot{Q_1} \cdot r_1 \cdot sin(Q_1) - \dot{Q_1} \cdot \dot{Q_2} \cdot r_2 \cdot sin(Q_1 + Q_2) \newline
+\dot{Y} &amp;amp;= \dot{Q_1} \cdot r_1 \cdot cos(Q_1) + \dot{Q_1} \cdot \dot{Q_2} \cdot r_2 \cdot cos(Q_1 + Q_2)\newline
+\dot{Z} &amp;amp;= 0 \newline
+\dot{Rx} &amp;amp;= 0 \newline
+\dot{Ry} &amp;amp;= 0 \newline
+\dot{Rz} &amp;amp;= \dot{Q_1} + \dot{Q_2}\newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;For details, see the derivation of position &lt;a href=&quot;https:&#x2F;&#x2F;robotacademy.net.au&#x2F;masterclass&#x2F;robotic-arms-and-forward-kinematics&#x2F;?lesson=262&quot;&gt;here&lt;&#x2F;a&gt; and the derivation of velocity &lt;a href=&quot;https:&#x2F;&#x2F;robotacademy.net.au&#x2F;masterclass&#x2F;velocity-kinematics-in-2d&#x2F;?lesson=321&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We now find the maximum velocity, acceleration, and resulting time scale for each joint.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;&#x2F;em&gt; The topic of finding polynomial minima or maxima is well-covered elsewhere and can be deferred to a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Comparison_of_linear_algebra_libraries&quot;&gt;good algebra library&lt;&#x2F;a&gt;. Here, we just use Desmos.&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;lt2t9hn9jd?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;center&gt;
+&lt;p&gt;&lt;em&gt;Figure: Joint-space velocities, two-joint manipulator.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;first-joint&quot;&gt;First Joint&lt;&#x2F;h5&gt;
+&lt;p&gt;\(
+\begin{aligned}
+V_{1_{max}} &amp;amp;=  3\pi&#x2F;4, t = 0.5s \newline
+A_{1_{max}} &amp;amp;=  3\pi, t = 0s \newline
+&amp;amp;= -3\pi, t = 1s \newline
+V_{1_{scale}} &amp;amp;= \frac{|3π&#x2F;4|}{0.10471975}  = 22.5 \newline
+A_{1_{scale}} &amp;amp;= \sqrt{\frac{|3π|}{0.0523599}}  = 13.417 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;second-joint&quot;&gt;Second Joint&lt;&#x2F;h5&gt;
+&lt;p&gt;\(
+\begin{aligned}
+V_{2_{max}} &amp;amp;=  3\pi&#x2F;2, t = 0.5s \newline
+A_{2_{max}} &amp;amp;=  6\pi, t = 0s \newline
+&amp;amp;= -6\pi, t = 1s \newline
+V_{2_{scale}} &amp;amp;= \frac{|3π&#x2F;2|}{0.10471975}  = 45 \newline
+A_{2_{scale}} &amp;amp;= \sqrt{\frac{|6π|}{0.0523599}}  = 18.974 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Without considering task space velocity, the time-optimal duration is \(1s \cdot max(22.5, 13.417, 45, 18.974)=45s\). Clearly, since the second joint has twice as far to rotate as the first joint, it constrains the duration of the movement.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s now consider task space velocity.&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;bkieqkwpew?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;center&gt;
+&lt;p&gt;&lt;em&gt;Figure: Task-space velocities, two-joint manipulator.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+\dot{X}_{max} &amp;amp;= |3.245|m&#x2F;s, t=0.3624s \newline
+\dot{Y}_{max} &amp;amp;= |-3.245|m&#x2F;s, t=0.6376s \newline
+\dot{R_z}_{max} &amp;amp;= -3\pi&#x2F;4 rad&#x2F;s, t=0.5s \newline
+X_{ratio} &amp;amp;= 3245&#x2F;100  = 32.45 \newline
+Y_{ratio} &amp;amp;= 3245&#x2F;100  = 32.45 \newline
+R_{z_{ratio}} &amp;amp;= \frac{\frac{3\pi}{4} &amp;gt;rad&#x2F;s}{9°&#x2F;s} = 15 \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Since \(32.45 &amp;lt; 45\),  the joint space constraints dominate the task space constraints. &lt;em&gt;The time-optimal duration is \(1s \cdot max(45, 32.45, 15)=45s\).&lt;&#x2F;em&gt; \()\blacksquare\)&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;longer-paths&quot;&gt;Longer Paths&lt;&#x2F;h3&gt;
+&lt;p&gt;If a path  \(\pmb{Q}_j\) of length \(n | n&amp;gt;2\) is given for joint \(j\), i.e. intermediate points between \(Q_{init}\) and \(Q_{final}\) are given, and if the joint begins and ends with zero velocity (\(V_{init} = V_{final} = 0\)), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1]. &lt;&#x2F;p&gt;
+&lt;h4 id=&quot;example-1&quot;&gt;Example&lt;&#x2F;h4&gt;
+&lt;p&gt;Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position. &lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+\pmb{Q}_1 &amp;amp;= [Q_{1_{init}} Q_{1_{intermediate}} Q_{1_{final}}] \newline
+\pmb{Q}_2 &amp;amp;= [Q_{2_{init}} Q_{2_{intermediate}} Q_{2_{final}}] \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;Let the given intermediate positions be&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Q_{1_{intermediate}} &amp;amp;= \pi&#x2F;4 \newline
+Q_{2_{intermediate}} &amp;amp;= 0
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;...along with the initial and final velocities.&lt;&#x2F;p&gt;
+&lt;p&gt;\(V_{1_{init}} = V_{1_{final}} = V_{2_{init}} = V_{2_{final}}= 0\)&lt;&#x2F;p&gt;
+&lt;p&gt;We must find the intermediate velocities \(V_{1_{intermediate}}\) and \(V_{2_{intermediate}}\). We can do this by solving the system&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+A\pmb{v} = \pmb{c}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;where&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+A=
+\begin{bmatrix}
+2(T_1+T_2) &amp;amp; T_1 \newline
+T_3 &amp;amp;2(T_2+T_3) &amp;amp;T_2 \newline
+&amp;amp; &amp;amp; \ddots \ddots \ddots \newline
+&amp;amp; &amp;amp; &amp;amp;  T_{n-2} &amp;amp; 2(T_{n-3}+T_{n-2}) &amp;amp; T_{n-3} \newline
+&amp;amp; &amp;amp; &amp;amp; &amp;amp; T_{n-1} &amp;amp; 2(T_{n-2} + T_{n-1}) \newline
+\end{bmatrix}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\pmb{v} =
+\begin{bmatrix}
+V_2 \newline
+V_3 \newline
+\vdots \newline
+V_{n-2} \newline
+V_{n-1} \newline
+\end{bmatrix}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\pmb{c} =
+\begin{bmatrix}
+\frac{3}{T_1T_2}[T_1^2(Q_3-Q_2)+T_2^2(Q_2-Q_1)] \pmb{- T_2V_1} \newline
+\frac{3}{T_2T_3}[T_2^2(Q_4-Q_3)+T_3^2(Q_3-Q_2)] \newline
+\vdots \newline
+\frac{3}{T_{n-3}T_{n-2}}[T_{n-3}^2(Q_{n-1}-Q_{n-2})+T_{n-2}^2(Q_{n-2}-Q_{n-3})] \newline
+\frac{3}{T_{n-2}T_{n-1}}[T_{n-2}^2(Q_{n}-Q_{n-1})+T_{n-1}^2(Q_{n-1}-Q_{n-2})] \pmb{- T_{n-2}V_n}\newline
+\end{bmatrix}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;and&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+T_i &amp;amp;= Duration_i &amp;amp; \text{&#x2F;&#x2F; The duration of segment \(i\)} \newline
+Q_i &amp;amp;= Q_{i_{init}} &amp;amp; \text{ &#x2F;&#x2F; The initial position of segment \(i\) } \newline
+V_i &amp;amp;= V_{i_{init}} &amp;amp; \text{ &#x2F;&#x2F; The initial velocity of segment \(i\) } \newline
+V_n &amp;amp;= V_{n_{final}} &amp;amp; \text{ &#x2F;&#x2F; The final velocity of the last segment } \newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Reminder&lt;&#x2F;em&gt;: There are \(n-1\) splines interpolating \(n\) control points (also called knots), and our indexing starts at \(1\), not \(0\). Therefore,  \(i==1\) refers to the first spline, and \(i == n-1\) refers to the last spline.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Aside:&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;roboticslibrary&#x2F;rl&#x2F;blob&#x2F;cba76ed3e54676d430205a0dfdf03ce33ed3850c&#x2F;src&#x2F;rl&#x2F;math&#x2F;Spline.h#L108&quot;&gt;Here&lt;&#x2F;a&gt; is an example implementation of the above algorithm. &lt;&#x2F;p&gt;
+&lt;h5 id=&quot;joint-1&quot;&gt;Joint 1&lt;&#x2F;h5&gt;
+&lt;p&gt;We solve for \(V_{1_{intermediate}}\).&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{array}{ccc}
+\begin{bmatrix}
+2(T_1+T_2)
+\end{bmatrix}
+\begin{bmatrix} 
+V_{1_{intermediate}}
+\end{bmatrix} 
+&amp;amp;=
+\begin{bmatrix} 
+\frac{3}{T_1T_2}[T_1^2(Q_{1_{final}}-Q_{1_{intermediate}})+T_2^2(Q_{1_{intermediate}}-Q_{1_{init}})]-T_2 \cdot V_{1_{init}}
+\end{bmatrix}
+\end{array}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;If we choose again arbitrarily that each segment should have 1 second of duration, then \(T_1=1\) and \(T_2=1\). Then&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+\begin{bmatrix}
+2(1+1)
+\end{bmatrix}
+\begin{bmatrix} 
+V_{1_{intermediate}}
+\end{bmatrix} 
+&amp;amp;=
+\begin{bmatrix} 
+\frac{3}{1 \cdot 1}[1^2(\pi&#x2F;2-\pi&#x2F;4)+1^2(\pi&#x2F;4-0)]-2\cdot 0 
+\end{bmatrix}
+\newline
+4 \cdot V_{1_{intermediate}}&amp;amp;=
+\begin{bmatrix} 
+3[\pi&#x2F;4+\pi&#x2F;4] 
+\end{bmatrix}
+\newline
+V_{1_{intermediate}} &amp;amp;= 3\pi&#x2F;8 \ rad&#x2F;s
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;We can now plot the two splines.&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Duration_{1 \rightarrow 2} &amp;amp;= 1 \newline
+Displacement_{1 \rightarrow 2} &amp;amp;= \pi&#x2F;4 \newline
+A_{1 \rightarrow 2} &amp;amp;= \frac{(2 \cdot - \pi&#x2F;4 + 0 + 3\pi&#x2F;8)}{1^2} &amp;amp;&amp;amp;= -\pi&#x2F;8\newline
+B_{1 \rightarrow 2} &amp;amp;= \frac{(3 \cdot \pi&#x2F;4 - 2 \cdot 0 - 3\pi&#x2F;8)}{1} &amp;amp;&amp;amp;= 3\pi&#x2F;8\newline
+C_{1 \rightarrow 2} &amp;amp;= V_{init} &amp;amp;&amp;amp;= 0\newline
+D_{1 \rightarrow 2} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= 0\newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Duration_{2 \rightarrow 3} &amp;amp;= 1 \newline
+Displacement_{2 \rightarrow 3} &amp;amp;= \pi&#x2F;4 \newline
+A_{2 \rightarrow 3} &amp;amp;= \frac{(2 \cdot - \pi&#x2F;4 + 3\pi&#x2F;8 + 0)}{1^2} &amp;amp;&amp;amp;= -\pi&#x2F;8\newline
+B_{2 \rightarrow 3} &amp;amp;= \frac{(3 \cdot \pi&#x2F;4 - 2 \cdot 3\pi&#x2F;8 - 0)}{1} &amp;amp;&amp;amp;= 0\newline
+C_{2 \rightarrow 3} &amp;amp;= V_{init} &amp;amp;&amp;amp;= 3\pi&#x2F;8\newline
+D_{2 \rightarrow 3} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= \pi&#x2F;4\newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;2vstdsov0i?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;center&gt;
+&lt;p&gt;&lt;em&gt;Figure: Two cubic splines for joint 1. Can you see where they meet? Hint: Each spline has 1s of duration.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We only see one spline, but there are actually two. The first spline is valid on the interval \(t=(0,1)\), and the second spline is valid on the interval \(t=(1,2)\). The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline. &lt;&#x2F;p&gt;
+&lt;h5 id=&quot;joint-2&quot;&gt;Joint 2&lt;&#x2F;h5&gt;
+&lt;p&gt;We solve for \(V_{2_{intermediate}}\).&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+\begin{bmatrix}
+2(1+1)
+\end{bmatrix}
+\begin{bmatrix} 
+V_{2_{intermediate}}
+\end{bmatrix} 
+&amp;amp;=
+\begin{bmatrix} 
+\frac{3}{1 \cdot 1}[1^2(-\pi&#x2F;2-0)+1^2(0-\pi&#x2F;2)]-2\cdot 0 
+\end{bmatrix}
+\newline
+4 \cdot V_{2_{intermediate}}&amp;amp;=
+\begin{bmatrix} 
+3[-\pi&#x2F;2-\pi&#x2F;2] 
+\end{bmatrix}
+\newline
+V_{2_{intermediate}} &amp;amp;= -3\pi&#x2F;4 \ rad&#x2F;s
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+A = \frac{(2  \cdot  -Displacement &#x2F; Duration + V_{init} + V_{final})}{Duration^2} \newline
+B = \frac{(3  \cdot  Displacement &#x2F; Duration - 2  \cdot  V_{init} - V_{final})}{Duration} \newline
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Duration_{1 \rightarrow 2} &amp;amp;= 1 \newline
+Displacement_{1 \rightarrow 2} &amp;amp;= -\pi&#x2F;2 \newline
+A_{1 \rightarrow 2} &amp;amp;= \frac{(2 \cdot - (- \pi&#x2F;2) + 0 + (- 3\pi&#x2F;4))}{1^2} &amp;amp;&amp;amp;= \pi&#x2F;4\newline
+B_{1 \rightarrow 2} &amp;amp;= \frac{(3 \cdot (- \pi&#x2F;2) - 2 \cdot  0 - (-3\pi&#x2F;4))}{1} &amp;amp;&amp;amp;= -3\pi&#x2F;4\newline
+C_{1 \rightarrow 2} &amp;amp;= V_{init} &amp;amp;&amp;amp;= 0\newline
+D_{1 \rightarrow 2} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= \pi&#x2F;2\newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;p&gt;\(
+\begin{aligned}
+Duration_{2 \rightarrow 3} &amp;amp;= 1 \newline
+Displacement_{2 \rightarrow 3} &amp;amp;= -\pi&#x2F;2 \newline
+A_{2 \rightarrow 3} &amp;amp;= \frac{(2 \cdot - (-\pi&#x2F;2) + (- 3\pi&#x2F;4) + 0)}{1^2} &amp;amp;&amp;amp;= \pi&#x2F;4\newline
+B_{2 \rightarrow 3} &amp;amp;= \frac{(3 \cdot (- \pi&#x2F;2) - 2 \cdot  (-3\pi&#x2F;4) - 0)}{1} &amp;amp;&amp;amp;= 0\newline
+C_{2 \rightarrow 3} &amp;amp;= V_{init} &amp;amp;&amp;amp;= -3\pi&#x2F;4\newline
+D_{2 \rightarrow 3} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= 0\newline
+\end{aligned}
+\)&lt;&#x2F;p&gt;
+&lt;center&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;ouilnuznpg?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;center&gt;
+&lt;p&gt;&lt;em&gt;Figure: Two cubic splines for joint 2. They meet at \(t=1s\).&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;scaling-longer-trajectories&quot;&gt;Scaling Longer Trajectories&lt;&#x2F;h4&gt;
+&lt;p&gt;In order to satisfy joint-space and task-space velocity and acceleration limits, the \(m(n-1)\) resulting cubic splines (\(m=\) number of joints, \(n\) = number of control points) must each be scaled by the method described previously. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Pseudocode:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; segments: sequence of splines, lenth n - 1 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F;          (n == number of interpolated points)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; task_space_limit: e.g. Xlim = 100, Ylim = 100mm&#x2F;s, etc.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;scale(segments, task_space_limit)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;: 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; segment in segments&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    joints = segment.joints &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; joints: container of size m
+&lt;&#x2F;span&gt;&lt;span&gt;	  
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; get_scale: See Joint Constraints section
+&lt;&#x2F;span&gt;&lt;span&gt;    joint_space_ratio = joints.max(joint =&amp;gt; joint.get_scale()) 
+&lt;&#x2F;span&gt;&lt;span&gt;    task_space_ratio = joints.forward_velocity() &#x2F; task_space_limit
+&lt;&#x2F;span&gt;&lt;span&gt;	
+&lt;&#x2F;span&gt;&lt;span&gt;	r_max = max(joint_space_ratio, task_space_ratio)
+&lt;&#x2F;span&gt;&lt;span&gt;    scale(segment, r_max)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;em&gt;Above:&lt;&#x2F;em&gt; For each segment \(i\), \(m\) ratios are calculated, one for each joint, and the task space ratio is calculated. The maximum ratio \(r_{max}\) is selected. Then all \(m\) splines at segment \(i\) are scaled by \(r_{max}\).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Pseudocode:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; Scale the given spline
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;scale(segment, ratio)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;: 
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  segment.duration *= ratio &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; Update duration
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; Update velocity
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(segment.is_first()) spline.Vinit &#x2F;= ratio
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(segment.is_last()) spline.Vfinal &#x2F;= ratio
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(segment.is_intermediate()) spline.Vintermediate &#x2F;= ratio
+&lt;&#x2F;span&gt;&lt;span&gt;   
+&lt;&#x2F;span&gt;&lt;span&gt;  forward_propagate(segment.next);
+&lt;&#x2F;span&gt;&lt;span&gt;  segment.compute_velocities() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; e.g. find new Vintermediate
+&lt;&#x2F;span&gt;&lt;span&gt;  segment.compute_coefficients() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; e.g. get A B C D
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; Update segment start and finish times
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;forward_propagate(segment)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(next_segment != null)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    next_segment.forward_propagate() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; e.g. Tinit = Tinit_prev + Duration
+&lt;&#x2F;span&gt;&lt;span&gt;    next_segment= segment.next
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;em&gt;Above:&lt;&#x2F;em&gt; When a segment is scaled, the following changes occur &lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;the segment duration &lt;&#x2F;li&gt;
+&lt;li&gt;the segment initial or final velocity (or both)&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;em&gt;Forward propagation&lt;&#x2F;em&gt;: All segments after the scaled segment are affected: the start time of each spline becomes the finishing time of the previous. These values propagate to the last spline.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, the resulting intermediate velocities and polynomial coefficients must be recomputed. &lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
+&lt;p&gt;[1] Biagiotti, L., &amp;amp; Melchiorri, C. (2009). &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.blogger.com&#x2F;blog&#x2F;post&#x2F;edit&#x2F;8646226552989795436&#x2F;981000181203813289#&quot;&gt;Trajectory Planning for Automatic Machines and Robots&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. Berlin, Heidelberg: Springer Berlin Heidelberg.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Edit TCS Treadmill Runs with tcxmill</title>
+          <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/edit-tcx-treadmill-runs-with-tcxmill/</link>
+          <guid>https://www.slater.dev/edit-tcx-treadmill-runs-with-tcxmill/</guid>
+          <description>&lt;p&gt;Get tcxmill &lt;a href=&quot;https:&#x2F;&#x2F;www.github.com&#x2F;nref&#x2F;tcxmill&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Editing activity distance is one of the &lt;a href=&quot;https:&#x2F;&#x2F;support.strava.com&#x2F;hc&#x2F;en-us&#x2F;search?utf8=%E2%9C%93&amp;amp;query=edit+distance&amp;amp;commit=Search&quot;&gt;most requested Strava features&lt;&#x2F;a&gt;, and I created a way to do it for treadmill runs.&lt;&#x2F;p&gt;
+&lt;p&gt;If you, like me, track treadmill workouts with a Garmin watch which uploads to Strava, then you&#x27;ve likely experienced this kind of data:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;1.bp.blogspot.com&#x2F;-Hs1nLrF0jCo&#x2F;XaoMEmiFOdI&#x2F;AAAAAAAAJrc&#x2F;VUXjSj1I4-weLjjnnvmsb-dFK9yD0iS_wCLcBGAsYHQ&#x2F;s640&#x2F;summary-before.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;1.bp.blogspot.com&#x2F;-LxgF0tK2jR8&#x2F;XaoMCjKfulI&#x2F;AAAAAAAAJrk&#x2F;HCwWRRdGDygeulmOJFUSRQ2Ri0zQ0_VpACEwYBhgL&#x2F;s640&#x2F;charts-before.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Above is a recent treadmill workout of mine. I ran 30km, i.e. 18.6 miles. My  &lt;a href=&quot;https:&#x2F;&#x2F;buy.garmin.com&#x2F;en-US&#x2F;US&#x2F;p&#x2F;621922#overview&quot;&gt;Forerunner 945&lt;&#x2F;a&gt;  and  &lt;a href=&quot;https:&#x2F;&#x2F;buy.garmin.com&#x2F;en-US&#x2F;US&#x2F;p&#x2F;530376#overview&quot;&gt;HRM-Run&lt;&#x2F;a&gt;  recorded an extraordinary 42.54 miles at an absurd pace of 3:12&#x2F;mi.&lt;&#x2F;p&gt;
+&lt;p&gt;The impossibility of this metric is hyperbolized by Eliud Kipchoge subsequently &lt;a href=&quot;https:&#x2F;&#x2F;www.nytimes.com&#x2F;2019&#x2F;10&#x2F;12&#x2F;sports&#x2F;eliud-kipchoge-marathon-record.html&quot;&gt;breaking the two-hour marathon barrier&lt;&#x2F;a&gt; at a pace of 4:34&#x2F;mi. To avoid ridicule from my Strava friends, I gladly kept this activity private until I could correct it.&lt;&#x2F;p&gt;
+&lt;p&gt;In addition to being wildly inaccurate, the pace data is also noisy.&lt;&#x2F;p&gt;
+&lt;p&gt;Below is the corrected data after running tcxmill. You can see that the distance and pace are correct, and the workout structure is reflected accurately.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;1.bp.blogspot.com&#x2F;-mbXDGITsPkY&#x2F;XaoMEFxmcCI&#x2F;AAAAAAAAJrs&#x2F;Vs5GZBrnMdIHL74BsxqSTevBBEFxSB4mgCEwYBhgL&#x2F;s640&#x2F;summary-after.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;1.bp.blogspot.com&#x2F;-9-xtDOatTE4&#x2F;XaoMCnOiMzI&#x2F;AAAAAAAAJrg&#x2F;-_9B6pqWb-4h-KK2Hlbn8lRVkk804BiKQCEwYBhgL&#x2F;s640&#x2F;charts-after.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The only requirements are that you know and follow your workout structure. Instructions are on &lt;a href=&quot;https:&#x2F;&#x2F;www.github.com&#x2F;nref&#x2F;tcxmill&quot;&gt;the GitHub page&lt;&#x2F;a&gt;. Go ahead and try it out!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Renato Canova in Valencia</title>
+          <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/renato-canova-in-valencia/</link>
+          <guid>https://www.slater.dev/renato-canova-in-valencia/</guid>
+          <description>&lt;p&gt;Several sites link to Renato Canova&#x27;s 2017 talk in Valencia. The video is still on YouTube, but the original link to the slides is broken.&lt;&#x2F;p&gt;
+&lt;p&gt;I contacted the Serrano athletics club on Facebook, which happily procured the file within a day. Thanks, guys!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;file&#x2F;d&#x2F;1g__fXGd8wsMsBsH02fzDwSvTDXsw-I2w&#x2F;view&quot;&gt;Here is the PDF&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

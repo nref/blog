@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Doug Slater</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://www.slater.dev/style.css">
+    <link rel="stylesheet" href="https://www.slater.dev/color/blue.css">
+
+        <link rel="stylesheet" href="https://www.slater.dev/color/background_dark.css">
+    
+    <link rel="stylesheet" href="https://www.slater.dev/font-hack-subset.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="Doug Slater">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.slater.dev/matrices-are-neural-networks/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="Doug Slater">
+    <meta property="twitter:domain" content="www.slater.dev">
+    <meta property="twitter:url" content="https://www.slater.dev/matrices-are-neural-networks/">
+
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.slater.dev/rss.xml">
+    
+        <link rel="shortcut icon" type="image&#x2F;x-icon" href="favicon.ico">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+    
+    
+
+</head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            Doug Slater
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <h3>Words about code, fitness, family, and theology</h3>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://www.slater.dev">blog</a></li>
+            
+                <li><a href="https://www.slater.dev/tags">tags</a></li>
+            
+                <li><a href="https://www.slater.dev/archive">archive</a></li>
+            
+                <li><a href="https://www.slater.dev/about">about me</a></li>
+            
+                <li><a href="https://www.slater.dev/links">links</a></li>
+            
+                <li><a href="https://github.com/nref" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            
+                <li><a href="https://www.linkedin.com/in/slater0/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+
+    </header>
+    
+
+    <div class="search-container">
+        <input id="search" type="search" placeholder="🔎 Search">
+
+        <div class="search-results">
+            <div class="search-results__items"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://www.slater.dev/matrices-are-neural-networks/">Transformation Matrices are Neural Networks</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2020-10-15
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://www.slater.dev/tags/math/">#math</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>Chances are you've seen a neural network diagram like this one with circles and arrows:</p>
+<p><img src="https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png" alt="Image for post" />
+<em>Figure: A neural network. Source:</em> <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">Medium</a></p>
+<p>While that looks fancy, it's basically a matrix. More generally, it's a tensor, but a special kind of tensor which makes it <a href="https://math.stackexchange.com/a/412429">just a matrix</a>.</p>
+<p>I was reading <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">this Medium article comparing matrices and tensors</a> which models the following matrix multiplication as the two-layer neural network shown above:</p>
+<p><img src="https://miro.medium.com/max/756/1*Bxba1gx4ec2h9qe7UNPvMg.png" alt="Image for post" /></p>
+<p>This helped me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:</p>
+<p>$$
+\begin{aligned}
+M_x &amp;= Rot_x(15°) \newline
+M_y &amp;= Rot_y(15°) \newline
+M_z &amp;= Rot_z(15°) \newline
+V &amp;= [1,2,3] \newline
+V' &amp;= M_xV \newline
+&amp;= [1, \pmb{1.155}, \pmb{3.415}] \newline
+V'' &amp;= M_yV' \newline
+&amp;= [\pmb{1.850}, 1.155, \pmb{3.042}] \newline
+V''' &amp;= M_zV'' \newline
+&amp;= [\pmb{1.488}, \pmb{1.595}, 3.042] \newline
+\end{aligned}
+$$</p>
+<p>Here is a neural network visualizing the linear mapping sequence $M_zM_yM_xV$:</p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1JZ5nbd-Y55QYEPMk8XQ00cE2w688KX25" alt="" />
+<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
+<p>By tracing the paths through the layers of the neural network below, one can gain an intuition of how each transformation operation contributes to the resulting vector $V_{rot}$.</p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1t9ccuXdm87LI7s9Tx5QdnJ0STQQv_V39" alt="" />
+<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h">Read other posts:</span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://www.slater.dev/threadripper/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Threadripper 3970x PC Build</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://www.slater.dev/reflections-on-a-diy-canova-method-marathon-training-cycle/">
+                            <span class="button__text">Reflections on a DIY Canova Method Marathon Training Cycle</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2023
+ Doug Slater</span>
+                    </div>
+            </div>
+    </footer>
+    
+
+</div>
+<script type="text/javascript" src="https://www.slater.dev/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://www.slater.dev/search.js"></script>
+</body>
+
+</html>
