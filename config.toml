@@ -1,5 +1,5 @@
 # Be sure to change these!
-base_url = "https://www.slater.dev/"
+base_url = "https://www.slater.dev"
 title = "Doug Slater"
 
 # Sass compilation is required

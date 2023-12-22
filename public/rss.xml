@@ -2,7 +2,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
       <title>Doug Slater</title>
-      <link>https://www.slater.dev/</link>
+      <link>https://www.slater.dev</link>
       <description></description>
       <generator>Zola</generator>
       <language>en</language>
