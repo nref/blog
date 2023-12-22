@@ -118,34 +118,34 @@ $$&lt;&#x2F;p&gt;
 &lt;p&gt;In robot kinematics, a &lt;em&gt;joint path&lt;&#x2F;em&gt; is a sequence of positions for one or more joints. A &lt;em&gt;joint trajectory&lt;&#x2F;em&gt; is the time function interpolating these positions.&lt;&#x2F;p&gt;
 &lt;p&gt;This post examines generating joint trajectories with cubic splines.&lt;&#x2F;p&gt;
 &lt;p&gt;Say we have a robotic arm with one revolute joint, and we want to rotate its joint position \(Q\) from \(0\) to \(90\) degrees.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 Q_{init} &amp;amp;= 0 \newline
 Q_{final} &amp;amp;= \pi&#x2F;2 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1m5GK-sDcSwYTzq65qyWgDwImKPglIG3j&quot; alt=&quot;&quot; &#x2F;&gt;
 &lt;em&gt;Figure: The joint start and goal&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;We don&#x27;t care how long it takes, but the joint must start from rest and and end at rest.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 V_{init} &amp;amp;= 0 \newline
 V_{final} &amp;amp;= 0 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;initial-solution&quot;&gt;Initial Solution&lt;&#x2F;h3&gt;
 &lt;p&gt;We can satisfy these constraints by interpolating the joint position, velocity, and acceleration with a  &lt;a href=&quot;https:&#x2F;&#x2F;mathworld.wolfram.com&#x2F;CubicSpline.html&quot;&gt;cubic spline&lt;&#x2F;a&gt;,&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 Q(t) &amp;amp;= At^3 + Bt^2 + Ct + D &amp;amp;&amp;amp;\text{&#x2F;&#x2F; Position} \newline
 V(t) &amp;amp;= 3At^2 + 2Bt + C &amp;amp;&amp;amp;\text{&#x2F;&#x2F; Velocity} \newline
 A(t) &amp;amp;= 6At + 2B &amp;amp;&amp;amp;\text{&#x2F;&#x2F; Acceleration} \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;where \(t\) is the time since the movement started.&lt;&#x2F;p&gt;
 &lt;p&gt;We start by finding the coefficients \(A\), \(B\), \(C\), and \(D\).&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 Duration &amp;amp;=  \textit{(To be Determined)} \newline
 Displacement &amp;amp;= Q_{final} - Q_{init} \newline
@@ -154,20 +154,20 @@ B &amp;amp;= \frac{(3  \cdot  Displacement &#x2F; Duration - 2  \cdot  V_{init} 
 C &amp;amp;= V_{init} \newline
 D &amp;amp;= Q_{init} \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Since we don&#x27;t care how long the movement takes, let&#x27;s choose arbitrarily that the movement should last \(1\) second:&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 Duration = 1
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;then we have the coefficients&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 A &amp;amp;= (2 \cdot -(\pi&#x2F;2)&#x2F;1 + 0 + 0)&#x2F;1^2 = -\pi \newline
 B &amp;amp;= (3 \cdot (\pi&#x2F;2)&#x2F;1 - 2 \cdot 0 -0)&#x2F;1  = 3\pi&#x2F;2 \newline
 C &amp;amp;= 0 \newline
 D &amp;amp;= 0 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Plugging these values back into the cubic equations, we can see in the figure that the joint at \(t = 1s\) has position \(Q = \pi&#x2F;2&amp;gt;rad\) and velocity \(v = 0&amp;gt;rad&#x2F;s\).&lt;&#x2F;p&gt;
 &lt;center&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;elrzqx76aq?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
@@ -177,20 +177,20 @@ D &amp;amp;= 0 \newline
 &lt;h3 id=&quot;joint-constraints&quot;&gt;Joint Constraints&lt;&#x2F;h3&gt;
 &lt;p&gt;In reality, a joint may not physically be able to move in 1 second, so let&#x27;s consider some realistic constraints.&lt;&#x2F;p&gt;
 &lt;p&gt;Say the joint has a maximum angular velocity of  \(6°&#x2F;s\)  and a maximum angular acceleration of \(3°&#x2F;s^2\). Assume this holds true regardless of its payload or position, i.e. ignore dynamics.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 V_{limit} &amp;amp;= 0.104719755 &amp;gt; rad&#x2F;s \newline
 A_{limit} &amp;amp;= 0.0523599 &amp;gt; rad&#x2F;s^2
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Clearly the solution plotted above exceeds these limits:&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 V_{max} &amp;amp;=  3\pi&#x2F;4, t = 0.5s \newline
 A_{max} &amp;amp;=  3\pi, t = 0s \newline
 &amp;amp;= -3\pi, t = 1s \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;We can reduce the velocity and acceleration by scaling the duration, i.e. making the movement take longer. The time-optimal solution is found analytically according to Melchiorri [1]:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#569cd6;&quot;&gt;double &lt;&#x2F;span&gt;&lt;span&gt;get_scale()  
 &lt;&#x2F;span&gt;&lt;span&gt;{
@@ -205,25 +205,25 @@ A_{max} &amp;amp;=  3\pi, t = 0s \newline
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;In this case, the velocity limit is the dominating constraint.  &lt;em&gt;The time-optimal duration is 22.5 seconds.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;We can verify by recalculating the polynomial coefficients with the new duration.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 A &amp;amp;= (2 \cdot -(\pi&#x2F;2)&#x2F;22.5)&#x2F;22.5^2 = -0.00027580511 \newline
 B &amp;amp;= (3 \cdot (\pi&#x2F;2)&#x2F;22.5)&#x2F;22.5  = 0.00930842267 \newline
 C &amp;amp;= 0 \newline
 D &amp;amp;= 0 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;center&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;uarkx6wols?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
 &lt;&#x2F;center&gt;
 &lt;p&gt;&lt;em&gt;Figure: Scaled Joint Position, Velocity, and Acceleration over Time&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;We can see that the joint at  \(t = 22.5s\) has position \(Q = \pi&#x2F;2 &amp;gt;rad\) and velocity \(v = 0 &amp;gt;rad&#x2F;s\). The maximum velocity is at \(t = 11.25s\( with \(v = 0.104719755 &amp;gt;rad&#x2F;s\). The maximum acceleration is at \(t = 0\) and \(t = 22.5s\) with \(a = 0.0186 &amp;gt;rad&#x2F;s^2\) and \(a = -0.0186 &amp;gt;rad&#x2F;s^2\), respectively. The joint velocity and acceleration constraints are satisfied. \(\blacksquare\)&lt;&#x2F;p&gt;
+&lt;p&gt;We can see that the joint at  \(t = 22.5s\) has position \(Q = \pi&#x2F;2 &amp;gt;rad\) and velocity \(v = 0 &amp;gt;rad&#x2F;s\). The maximum velocity is at \(t = 11.25s\) with \(v = 0.104719755 &amp;gt;rad&#x2F;s\). The maximum acceleration is at \(t = 0\) and \(t = 22.5s\) with \(a = 0.0186 &amp;gt;rad&#x2F;s^2\) and \(a = -0.0186 &amp;gt;rad&#x2F;s^2\), respectively. The joint velocity and acceleration constraints are satisfied. \(\blacksquare\)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;task-space-constraints&quot;&gt;Task Space Constraints&lt;&#x2F;h3&gt;
 &lt;p&gt;Let&#x27;s add another constraint. Let&#x27;s say the frame attached to the tip of the joint has maximum translational speed and angular velocity components.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1SyYM1NDXyL0JCjo4HGCioj08uTcVwQxJ&quot; alt=&quot;&quot; &#x2F;&gt;
 &lt;em&gt;Figure: Diagram of a frame at the joint tip. The frame is right-handed, i.e. Z points out of the page.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 \dot{X}_{max} &amp;amp;= 100mm&#x2F;s \newline
 \dot{Y}_{max} &amp;amp;= 100mm&#x2F;s \newline
@@ -232,12 +232,12 @@ D &amp;amp;= 0 \newline
 \dot{R_y}_{max} &amp;amp;= 9°&#x2F;s \newline
 \dot{R_z}_{max} &amp;amp;= 9°&#x2F;s \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Aside:&lt;&#x2F;em&gt; I say &lt;em&gt;components&lt;&#x2F;em&gt; because e.g. a velocity vector moving with \(\dot{X} = \dot{Y} = \dot{Z} = 100mm&#x2F;s\) would actually be moving at \(\sqrt{(100²+100²+100²)} ~= 173mm&#x2F;s\). One could certainly solve for a velocity vector constraint, too.&lt;&#x2F;p&gt;
 &lt;p&gt;Similar to joint space constraints, we can meet task space constraints by scaling the duration of the trajectory, but we need to know the relation from joint space to task space.&lt;&#x2F;p&gt;
 &lt;p&gt;The relation from joint space to task space is known as  &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Forward_kinematics&quot;&gt;forward kinematics&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. Conversion from joint position to task space position is  &lt;em&gt;forward position&lt;&#x2F;em&gt;, and conversion from joint velocity to task space velocity is  &lt;em&gt;forward velocity&lt;&#x2F;em&gt;. This topic is widely covered elsewhere.&lt;&#x2F;p&gt;
 &lt;p&gt;Let&#x27;s say our robot joint has position \(Q\), angular velocity \(\dot{Q}\) (also known as \(V(t)\)), and radius \(r\) from its center of rotation to the tip frame. Then the following relations apply:&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 X &amp;amp;= r \cdot cos(Q) \newline
 Y &amp;amp;= r \cdot sin(Q) \newline
@@ -253,9 +253,9 @@ R_z &amp;amp;= Q \newline
 \dot{Ry} &amp;amp;= 0 \newline
 \dot{Rz} &amp;amp;= \dot{Q} \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;For example, if \(r = 1 &amp;gt;meter\),  \(Q = 0 &amp;gt;rad\), and \(Qdot = \pi &amp;gt; rad&#x2F;s\), then&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 X &amp;amp;= 1m \newline
 Y &amp;amp;= 0m \newline
@@ -264,9 +264,9 @@ R_z &amp;amp;= 0m \newline
 \dot{Y} &amp;amp;= 1 &amp;gt;m&#x2F;s \newline
 \dot{R_z} &amp;amp;= \pi &amp;gt; rad&#x2F;s \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;For another example, if \(r = 1 &amp;gt;meter\),  \(Q = \pi&#x2F;2 &amp;gt;rad\), and \(Qdot = \pi &amp;gt; rad&#x2F;s\), then&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 X &amp;amp;= 0m \newline
 Y &amp;amp;= 1m \newline
@@ -275,10 +275,10 @@ R_z &amp;amp;= 0m \newline
 \dot{Y} &amp;amp;= 0 &amp;gt;m&#x2F;s \newline
 \dot{R_z} &amp;amp;= \pi &amp;gt; rad&#x2F;s \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;For details, see this &lt;a href=&quot;https:&#x2F;&#x2F;robotacademy.net.au&#x2F;masterclass&#x2F;robotic-arms-and-forward-kinematics&#x2F;?lesson=260&quot;&gt;video lecture&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Going back to our 1-second trajectory, since the joint velocity is a parabola, which is symmetric, the maximum occurs at any of \(t = 0\), \(t = 0.5\), or \(t = 1\). Since \(V_{init} = V_{final} = 0\), the maximum occurs at \(t = 0.5\). This results in the following task space velocities:&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 Q(0.5) &amp;amp;= -\pi t³ + \frac{3\pi}{2}t² = \pi&#x2F;4 &amp;gt;rad \newline
 V(0.5) &amp;amp;= -3\pi(1&#x2F;2)² +3\pi&#x2F;2  = \frac{3\pi}{4} rad&#x2F;s \newline
@@ -289,9 +289,9 @@ V(0.5) &amp;amp;= -3\pi(1&#x2F;2)² +3\pi&#x2F;2  = \frac{3\pi}{4} rad&#x2F;s \n
 \dot{R_y} &amp;amp;= 0 &amp;gt;rad&#x2F;s \newline
 \dot{R_z}  &amp;amp;= \frac{3\pi}{4} &amp;gt;rad&#x2F;s \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Dividing by the given task space constraints yields the following ratios:&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 X_{ratio} &amp;amp;= 1670&#x2F;100  = 16.7 \newline
 Y_{ratio} &amp;amp;= 1670&#x2F;100  = 16.7 \newline
@@ -300,7 +300,7 @@ R_{x_{ratio}} &amp;amp;= 0 \newline
 R_{y_{ratio}} &amp;amp;= 0 \newline
 R_{z_{ratio}} &amp;amp;= \frac{\frac{3\pi}{4} &amp;gt;rad&#x2F;s}{9°&#x2F;s} = 15 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;The maximum task space ratio is \(16.7\), which is less than the previous value of \(v_{scale} = 22.5\).  &lt;em&gt;The previous scaled trajectory duration of 22.5s also satisfies the given task space constraints.&lt;&#x2F;em&gt; \(\blacksquare\)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;multiple-joints&quot;&gt;Multiple Joints&lt;&#x2F;h3&gt;
@@ -309,17 +309,17 @@ R_{z_{ratio}} &amp;amp;= \frac{\frac{3\pi}{4} &amp;gt;rad&#x2F;s}{9°&#x2F;s} = 
 &lt;p&gt;The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;example&quot;&gt;Example&lt;&#x2F;h4&gt;
 &lt;p&gt;Consider adding a second joint to the previous example to create a two-joint manipulator. This joint has the same velocity and acceleration limits.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 V_{limit} &amp;amp;= 0.104719755 &amp;gt; rad&#x2F;s \newline
 A_{limit} &amp;amp;= 0.0523599 &amp;gt; rad&#x2F;s^2
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1YFmbgUtKW6srb9yDHVx6TMgpF5-3maH1&quot; alt=&quot;&quot; &#x2F;&gt;
 &lt;em&gt;Figure: A robot with two joints.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;mnga15rnud&quot;&gt;Simulate this robot on Desmos&lt;&#x2F;a&gt;. Use the \(q_1\) and \(q_2\) sliders.&lt;&#x2F;p&gt;
 &lt;p&gt;The first spline is unchanged.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{array}{c}
 \begin{aligned}
 Q_{init_1} &amp;amp;= 0 &amp;amp; A_1 &amp;amp;= -\pi \newline
@@ -328,9 +328,9 @@ V_{init_1} &amp;amp;= 0 &amp;amp; C_1 &amp;amp;= 0 \newline
 V_{final_1} &amp;amp;= 0 &amp;amp; D_1 &amp;amp;= 0 \newline
 \end{aligned}
 \end{array}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the second spline. &lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{array}{c}
 \begin{aligned}
 Q_{init_2} &amp;amp;= \pi&#x2F;2 &amp;amp; A_2 &amp;amp;=2\pi \newline
@@ -339,9 +339,9 @@ V_{init_2} &amp;amp;= 0 &amp;amp; C_2 &amp;amp;= 0 \newline
 V_{final_2} &amp;amp;= 0 &amp;amp; D_2 &amp;amp;= \pi&#x2F;2 \newline
 \end{aligned}
 \end{array}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the relation of joint space to task space.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 X &amp;amp;= r_1 \cdot cos(Q_1) + r_2 \cdot cos(Q_1 + Q_2) \newline
 Y &amp;amp;= r_1 \cdot sin(Q_1) + r_2 \cdot sin(Q_1 + Q_2) \newline
@@ -357,7 +357,7 @@ R_z &amp;amp;= Q_1 + Q_2 \newline
 \dot{Ry} &amp;amp;= 0 \newline
 \dot{Rz} &amp;amp;= \dot{Q_1} + \dot{Q_2}\newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;For details, see the derivation of position &lt;a href=&quot;https:&#x2F;&#x2F;robotacademy.net.au&#x2F;masterclass&#x2F;robotic-arms-and-forward-kinematics&#x2F;?lesson=262&quot;&gt;here&lt;&#x2F;a&gt; and the derivation of velocity &lt;a href=&quot;https:&#x2F;&#x2F;robotacademy.net.au&#x2F;masterclass&#x2F;velocity-kinematics-in-2d&#x2F;?lesson=321&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;We now find the maximum velocity, acceleration, and resulting time scale for each joint.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Note:&lt;&#x2F;em&gt; The topic of finding polynomial minima or maxima is well-covered elsewhere and can be deferred to a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Comparison_of_linear_algebra_libraries&quot;&gt;good algebra library&lt;&#x2F;a&gt;. Here, we just use Desmos.&lt;&#x2F;p&gt;
@@ -366,7 +366,7 @@ R_z &amp;amp;= Q_1 + Q_2 \newline
 &lt;&#x2F;center&gt;
 &lt;p&gt;&lt;em&gt;Figure: Joint-space velocities, two-joint manipulator.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;first-joint&quot;&gt;First Joint&lt;&#x2F;h5&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 V_{1_{max}} &amp;amp;=  3\pi&#x2F;4, t = 0.5s \newline
 A_{1_{max}} &amp;amp;=  3\pi, t = 0s \newline
@@ -374,9 +374,9 @@ A_{1_{max}} &amp;amp;=  3\pi, t = 0s \newline
 V_{1_{scale}} &amp;amp;= \frac{|3π&#x2F;4|}{0.10471975}  = 22.5 \newline
 A_{1_{scale}} &amp;amp;= \sqrt{\frac{|3π|}{0.0523599}}  = 13.417 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;second-joint&quot;&gt;Second Joint&lt;&#x2F;h5&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 V_{2_{max}} &amp;amp;=  3\pi&#x2F;2, t = 0.5s \newline
 A_{2_{max}} &amp;amp;=  6\pi, t = 0s \newline
@@ -384,14 +384,14 @@ A_{2_{max}} &amp;amp;=  6\pi, t = 0s \newline
 V_{2_{scale}} &amp;amp;= \frac{|3π&#x2F;2|}{0.10471975}  = 45 \newline
 A_{2_{scale}} &amp;amp;= \sqrt{\frac{|6π|}{0.0523599}}  = 18.974 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Without considering task space velocity, the time-optimal duration is \(1s \cdot max(22.5, 13.417, 45, 18.974)=45s\). Clearly, since the second joint has twice as far to rotate as the first joint, it constrains the duration of the movement.&lt;&#x2F;p&gt;
 &lt;p&gt;Let&#x27;s now consider task space velocity.&lt;&#x2F;p&gt;
 &lt;center&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;bkieqkwpew?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
 &lt;&#x2F;center&gt;
 &lt;p&gt;&lt;em&gt;Figure: Task-space velocities, two-joint manipulator.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 \dot{X}_{max} &amp;amp;= |3.245|m&#x2F;s, t=0.3624s \newline
 \dot{Y}_{max} &amp;amp;= |-3.245|m&#x2F;s, t=0.6376s \newline
@@ -400,34 +400,34 @@ X_{ratio} &amp;amp;= 3245&#x2F;100  = 32.45 \newline
 Y_{ratio} &amp;amp;= 3245&#x2F;100  = 32.45 \newline
 R_{z_{ratio}} &amp;amp;= \frac{\frac{3\pi}{4} &amp;gt;rad&#x2F;s}{9°&#x2F;s} = 15 \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;Since \(32.45 &amp;lt; 45\),  the joint space constraints dominate the task space constraints. &lt;em&gt;The time-optimal duration is \(1s \cdot max(45, 32.45, 15)=45s\).&lt;&#x2F;em&gt; \()\blacksquare\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;Since \(32.45 &amp;lt; 45\),  the joint space constraints dominate the task space constraints. &lt;em&gt;The time-optimal duration is \(1s \cdot max(45, 32.45, 15)=45s\).&lt;&#x2F;em&gt; \(\blacksquare\)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;longer-paths&quot;&gt;Longer Paths&lt;&#x2F;h3&gt;
 &lt;p&gt;If a path  \(\pmb{Q}_j\) of length \(n | n&amp;gt;2\) is given for joint \(j\), i.e. intermediate points between \(Q_{init}\) and \(Q_{final}\) are given, and if the joint begins and ends with zero velocity (\(V_{init} = V_{final} = 0\)), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1]. &lt;&#x2F;p&gt;
 &lt;h4 id=&quot;example-1&quot;&gt;Example&lt;&#x2F;h4&gt;
 &lt;p&gt;Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position. &lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 \pmb{Q}_1 &amp;amp;= [Q_{1_{init}} Q_{1_{intermediate}} Q_{1_{final}}] \newline
 \pmb{Q}_2 &amp;amp;= [Q_{2_{init}} Q_{2_{intermediate}} Q_{2_{final}}] \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;Let the given intermediate positions be&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 Q_{1_{intermediate}} &amp;amp;= \pi&#x2F;4 \newline
 Q_{2_{intermediate}} &amp;amp;= 0
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;...along with the initial and final velocities.&lt;&#x2F;p&gt;
 &lt;p&gt;\(V_{1_{init}} = V_{1_{final}} = V_{2_{init}} = V_{2_{final}}= 0\)&lt;&#x2F;p&gt;
 &lt;p&gt;We must find the intermediate velocities \(V_{1_{intermediate}}\) and \(V_{2_{intermediate}}\). We can do this by solving the system&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 A\pmb{v} = \pmb{c}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;where&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 A=
 \begin{bmatrix}
 2(T_1+T_2) &amp;amp; T_1 \newline
@@ -436,8 +436,8 @@ T_3 &amp;amp;2(T_2+T_3) &amp;amp;T_2 \newline
 &amp;amp; &amp;amp; &amp;amp;  T_{n-2} &amp;amp; 2(T_{n-3}+T_{n-2}) &amp;amp; T_{n-3} \newline
 &amp;amp; &amp;amp; &amp;amp; &amp;amp; T_{n-1} &amp;amp; 2(T_{n-2} + T_{n-1}) \newline
 \end{bmatrix}
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$
 \pmb{v} =
 \begin{bmatrix}
 V_2 \newline
@@ -446,8 +446,8 @@ V_3 \newline
 V_{n-2} \newline
 V_{n-1} \newline
 \end{bmatrix}
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$
 \pmb{c} =
 \begin{bmatrix}
 \frac{3}{T_1T_2}[T_1^2(Q_3-Q_2)+T_2^2(Q_2-Q_1)] \pmb{- T_2V_1} \newline
@@ -456,21 +456,21 @@ V_{n-1} \newline
 \frac{3}{T_{n-3}T_{n-2}}[T_{n-3}^2(Q_{n-1}-Q_{n-2})+T_{n-2}^2(Q_{n-2}-Q_{n-3})] \newline
 \frac{3}{T_{n-2}T_{n-1}}[T_{n-2}^2(Q_{n}-Q_{n-1})+T_{n-1}^2(Q_{n-1}-Q_{n-2})] \pmb{- T_{n-2}V_n}\newline
 \end{bmatrix}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;and&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 T_i &amp;amp;= Duration_i &amp;amp; \text{&#x2F;&#x2F; The duration of segment \(i\)} \newline
 Q_i &amp;amp;= Q_{i_{init}} &amp;amp; \text{ &#x2F;&#x2F; The initial position of segment \(i\) } \newline
 V_i &amp;amp;= V_{i_{init}} &amp;amp; \text{ &#x2F;&#x2F; The initial velocity of segment \(i\) } \newline
 V_n &amp;amp;= V_{n_{final}} &amp;amp; \text{ &#x2F;&#x2F; The final velocity of the last segment } \newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Reminder&lt;&#x2F;em&gt;: There are \(n-1\) splines interpolating \(n\) control points (also called knots), and our indexing starts at \(1\), not \(0\). Therefore,  \(i==1\) refers to the first spline, and \(i == n-1\) refers to the last spline.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Aside:&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;roboticslibrary&#x2F;rl&#x2F;blob&#x2F;cba76ed3e54676d430205a0dfdf03ce33ed3850c&#x2F;src&#x2F;rl&#x2F;math&#x2F;Spline.h#L108&quot;&gt;Here&lt;&#x2F;a&gt; is an example implementation of the above algorithm. &lt;&#x2F;p&gt;
 &lt;h5 id=&quot;joint-1&quot;&gt;Joint 1&lt;&#x2F;h5&gt;
 &lt;p&gt;We solve for \(V_{1_{intermediate}}\).&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{array}{ccc}
 \begin{bmatrix}
 2(T_1+T_2)
@@ -483,9 +483,9 @@ V_{1_{intermediate}}
 \frac{3}{T_1T_2}[T_1^2(Q_{1_{final}}-Q_{1_{intermediate}})+T_2^2(Q_{1_{intermediate}}-Q_{1_{init}})]-T_2 \cdot V_{1_{init}}
 \end{bmatrix}
 \end{array}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;If we choose again arbitrarily that each segment should have 1 second of duration, then \(T_1=1\) and \(T_2=1\). Then&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 \begin{bmatrix}
 2(1+1)
@@ -505,9 +505,9 @@ V_{1_{intermediate}}
 \newline
 V_{1_{intermediate}} &amp;amp;= 3\pi&#x2F;8 \ rad&#x2F;s
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;p&gt;We can now plot the two splines.&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 Duration_{1 \rightarrow 2} &amp;amp;= 1 \newline
 Displacement_{1 \rightarrow 2} &amp;amp;= \pi&#x2F;4 \newline
@@ -516,8 +516,8 @@ B_{1 \rightarrow 2} &amp;amp;= \frac{(3 \cdot \pi&#x2F;4 - 2 \cdot 0 - 3\pi&#x2F
 C_{1 \rightarrow 2} &amp;amp;= V_{init} &amp;amp;&amp;amp;= 0\newline
 D_{1 \rightarrow 2} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= 0\newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$
 \begin{aligned}
 Duration_{2 \rightarrow 3} &amp;amp;= 1 \newline
 Displacement_{2 \rightarrow 3} &amp;amp;= \pi&#x2F;4 \newline
@@ -526,7 +526,7 @@ B_{2 \rightarrow 3} &amp;amp;= \frac{(3 \cdot \pi&#x2F;4 - 2 \cdot 3\pi&#x2F;8 -
 C_{2 \rightarrow 3} &amp;amp;= V_{init} &amp;amp;&amp;amp;= 3\pi&#x2F;8\newline
 D_{2 \rightarrow 3} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= \pi&#x2F;4\newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;center&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;2vstdsov0i?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
 &lt;&#x2F;center&gt;
@@ -534,7 +534,7 @@ D_{2 \rightarrow 3} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= \pi&#x2F;4\newline
 &lt;p&gt;We only see one spline, but there are actually two. The first spline is valid on the interval \(t=(0,1)\), and the second spline is valid on the interval \(t=(1,2)\). The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline. &lt;&#x2F;p&gt;
 &lt;h5 id=&quot;joint-2&quot;&gt;Joint 2&lt;&#x2F;h5&gt;
 &lt;p&gt;We solve for \(V_{2_{intermediate}}\).&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+&lt;p&gt;$$
 \begin{aligned}
 \begin{bmatrix}
 2(1+1)
@@ -554,12 +554,12 @@ V_{2_{intermediate}}
 \newline
 V_{2_{intermediate}} &amp;amp;= -3\pi&#x2F;4 \ rad&#x2F;s
 \end{aligned}
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$
 A = \frac{(2  \cdot  -Displacement &#x2F; Duration + V_{init} + V_{final})}{Duration^2} \newline
 B = \frac{(3  \cdot  Displacement &#x2F; Duration - 2  \cdot  V_{init} - V_{final})}{Duration} \newline
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$
 \begin{aligned}
 Duration_{1 \rightarrow 2} &amp;amp;= 1 \newline
 Displacement_{1 \rightarrow 2} &amp;amp;= -\pi&#x2F;2 \newline
@@ -568,8 +568,8 @@ B_{1 \rightarrow 2} &amp;amp;= \frac{(3 \cdot (- \pi&#x2F;2) - 2 \cdot  0 - (-3\
 C_{1 \rightarrow 2} &amp;amp;= V_{init} &amp;amp;&amp;amp;= 0\newline
 D_{1 \rightarrow 2} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= \pi&#x2F;2\newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
-&lt;p&gt;\(
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;$$
 \begin{aligned}
 Duration_{2 \rightarrow 3} &amp;amp;= 1 \newline
 Displacement_{2 \rightarrow 3} &amp;amp;= -\pi&#x2F;2 \newline
@@ -578,7 +578,7 @@ B_{2 \rightarrow 3} &amp;amp;= \frac{(3 \cdot (- \pi&#x2F;2) - 2 \cdot  (-3\pi&#
 C_{2 \rightarrow 3} &amp;amp;= V_{init} &amp;amp;&amp;amp;= -3\pi&#x2F;4\newline
 D_{2 \rightarrow 3} &amp;amp;= Q_{init} &amp;amp;&amp;amp;= 0\newline
 \end{aligned}
-\)&lt;&#x2F;p&gt;
+$$&lt;&#x2F;p&gt;
 &lt;center&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;ouilnuznpg?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
 &lt;&#x2F;center&gt;
