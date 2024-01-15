@@ -5,8 +5,6 @@ date = 2024-01-15
 tags = ['code']
 +++
 
-# A Design is a Mold for Code
-
 I'm always in search of good metaphors for software design. Good or not, here's one:
 
 > A Design is a Mold for Code
