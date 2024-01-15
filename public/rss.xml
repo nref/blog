@@ -7,7 +7,57 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://www.slater.dev/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>A Design is a Mold for Code</title>
+          <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/a-design-is-a-mold-for-code/</link>
+          <guid>https://www.slater.dev/a-design-is-a-mold-for-code/</guid>
+          <description>&lt;h1 id=&quot;a-design-is-a-mold-for-code&quot;&gt;A Design is a Mold for Code&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;m always in search of good metaphors for software design. Good or not, here&#x27;s one:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A Design is a Mold for Code&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In manufacturing, a mold is a hollow shape that fills with fluid material which expands into the space and sets to form a casting. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;img&#x2F;Bronze_spearhead_mold.JPG&quot; alt=&quot;Example of a mold&quot; &#x2F;&gt;
+&lt;em&gt;Image: Bronze age spear head mold &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Molding_(process)&quot;&gt;Wikipedia&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Like manufacturing, code fills the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Organizational_memory&quot;&gt;negative space&lt;&#x2F;a&gt; of a software design. Imagine two engineering teams who independently &amp;quot;fill&amp;quot; (implement) a design. Let&#x27;s imagine the design is for a C compiler, e.g. the C99 language specification. The two resulting implementations are &lt;code&gt;gcc&lt;&#x2F;code&gt; and &lt;code&gt;clang&lt;&#x2F;code&gt;. They&#x27;re implemented in different languages (C and C++) and take vastly different shapes, but as far as the spec is concerned, the two are equal. People in the know call such implementations &lt;a href=&quot;https:&#x2F;&#x2F;blog.ploeh.dk&#x2F;2018&#x2F;01&#x2F;08&#x2F;software-design-isomorphisms&#x2F;&quot;&gt;isomorphic&lt;&#x2F;a&gt;*.&lt;&#x2F;p&gt;
+&lt;p&gt;* Isomorphic with respect to the design&#x2F;interface&#x2F;specification. Given the same C code, the two compilers produce different binaries, but for compliant C they are equivalent within the specification.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s important not to reverse the causality: a design causes the work product, not the converse. A mold causes a casting, and a software design causes code. Nevertheless, to some extent, one can go in reverse, i.e. reconstruct a mold from a casting or infer a design from code. &lt;&#x2F;p&gt;
+&lt;p&gt;The reconstructed mold might lose some fidelity, like sharp edges or precise dimensions, but it&#x27;s far worse for code. Looking at code without supplemental information, a new dev can only infer a dim, vague notion of its design. She might even sense the mind(s) behind the design. However, it would be costly if even possible to losslessly reconstruct the design, i.e. to such a fidelity that it could be used as the specification for an isomorphic implementation.&lt;&#x2F;p&gt;
+&lt;p&gt;In pseudocode:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;[Test]
+&lt;&#x2F;span&gt;&lt;span&gt;fn Reverse_ProducesIsomorphicDesign()
+&lt;&#x2F;span&gt;&lt;span&gt;    let design1 : ...
+&lt;&#x2F;span&gt;&lt;span&gt;    let code1 = implement(design1)
+&lt;&#x2F;span&gt;&lt;span&gt;    let design2 = reverse(code1)
+&lt;&#x2F;span&gt;&lt;span&gt;    let code2 = implement(design2)
+&lt;&#x2F;span&gt;&lt;span&gt;    assert(isomorphic(code1, code2)) &#x2F;&#x2F; Fails
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Above: The roundtrip from a design to code back to code is lossy.&lt;&#x2F;p&gt;
+&lt;p&gt;There are a few reasons for this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A codebase maybe too large to fit into a dev&#x27;s head. Examples: &lt;code&gt;gcc&lt;&#x2F;code&gt; and &lt;code&gt;clang&lt;&#x2F;code&gt;. Like the limited context window of ChatGPT, a human has limited working memory and forgets. Though with time and repetition, knowledge transitions to long-term memory.&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s hard to infer high-level concepts from low-level details. For example, decompiling assembly back to C.&lt;&#x2F;li&gt;
+&lt;li&gt;Design and code have a many-to-many relationship.
+&lt;ul&gt;
+&lt;li&gt;There can be many implementations that satisfy a design.&lt;&#x2F;li&gt;
+&lt;li&gt;There can be many designs that result in the same code.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This is a problem for software that outlives its creator(s). The software will die unless knowledge is &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Organizational_memory&quot;&gt;retained&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Bus_factor&quot;&gt;replicated&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There are some things developers can do to keep their software alive:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write down the design. Use &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Literate_programming&quot;&gt;natural language&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Make the &lt;a href=&quot;https:&#x2F;&#x2F;www.pathsensitive.com&#x2F;2018&#x2F;01&#x2F;the-design-of-software-is-thing-apart.html&quot;&gt;design apparent in the code&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https:&#x2F;&#x2F;www.pathsensitive.com&#x2F;2022&#x2F;03&#x2F;abstraction-not-what-you-think-it-is.html&quot;&gt;precise abstractions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https:&#x2F;&#x2F;argumatronic.com&#x2F;posts&#x2F;2018-09-02-effective-metaphor.html&quot;&gt;effective&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;onlurking&#x2F;fc5c81d18cfce9ff81bc968a7f342fb1#tacit-knowledge-and-documentation&quot;&gt;metaphors&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Make the code &lt;a href=&quot;https:&#x2F;&#x2F;www.oreilly.com&#x2F;library&#x2F;view&#x2F;code-that-fits&#x2F;9780137464302&#x2F;&quot;&gt;fit in your head&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+      </item>
       <item>
           <title>Reflections on a DIY Canova Method Marathon Training Cycle</title>
           <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
