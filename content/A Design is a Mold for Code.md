@@ -22,7 +22,7 @@ Like manufacturing, code fills the [negative space](https://en.wikipedia.org/wik
 
 It's important not to reverse the causality: a design causes the work product, not the converse. A mold causes a casting, and a software design causes code. Nevertheless, to some extent, one can go in reverse, i.e. reconstruct a mold from a casting or infer a design from code. 
 
-The reconstructed mold might lose some fidelity, like sharp edges or precise dimensions, but it's far worse for code. Looking at code without supplemental information, a new dev can only infer a dim, vague notion of its design. She might even sense the mind(s) behind the design. However, it would be costly if even possible to losslessly reconstruct the design, i.e. to such a fidelity that it could be used as the specification for an isomorphic implementation.
+The reconstructed mold might lose some fidelity, like sharp edges or precise dimensions, but it's far worse for code. Looking at code without supplemental information, a new dev can only infer a dim, vague notion of its design. She might even sense the mind(s) behind the design. However, it would be costly if even possible to losslessly reconstruct the design, i.e. to such a fidelity that it could be the basis for an isomorphic implementation.
 
 In pseudocode:
 
