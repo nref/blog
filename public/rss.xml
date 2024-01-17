@@ -34,7 +34,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    let code2 = implement(design2)
 &lt;&#x2F;span&gt;&lt;span&gt;    assert(isomorphic(code1, code2)) &#x2F;&#x2F; Fails
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Above: The roundtrip from a design to code back to code is lossy.&lt;&#x2F;p&gt;
+&lt;p&gt;Above: The roundtrip from a design to code back to design is lossy.&lt;&#x2F;p&gt;
 &lt;p&gt;There are a few reasons for this:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;A codebase maybe too large to fit into a dev&#x27;s head. Examples: &lt;code&gt;gcc&lt;&#x2F;code&gt; and &lt;code&gt;clang&lt;&#x2F;code&gt;. Like the limited context window of ChatGPT, a human has limited working memory and forgets. Though with time and repetition, knowledge transitions to long-term memory.&lt;&#x2F;li&gt;
