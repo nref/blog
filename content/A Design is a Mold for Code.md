@@ -34,7 +34,7 @@ fn Reverse_ProducesIsomorphicDesign()
     assert(isomorphic(code1, code2)) // Fails
 ```
 
-Above: The roundtrip from a design to code back to code is lossy.
+Above: The roundtrip from a design to code back to design is lossy.
 
 There are a few reasons for this:
 
