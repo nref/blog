@@ -7,25 +7,27 @@ Hi! I'm Doug. I am a software dev, athlete, husband, and Christian.
 
 ## Software
 
-I design software for a living.
+I design software for a living. Message me if you'd like to work with me.
 
-The tools I use professionally include C#, Python, C, C++, XAML, and SQL.
+The tools I use professionally include C#, Python, C, C++, XAML, and SQL. Haskell, Rust, and anything that usurps JavaScript (examples: WASM, PureScript, TypeScript, Fable) are also interesting. 
 
-On the side, I'm learning Rust, Go, and Typescript.
+Skills that transcend specific tech keywords are especially exciting:
 
-I do desktop and mobile frontend work with WPF, Avalonia, Xamarin.Forms, MAUI, and Uno. I eat MVVM for breakfast.
+- **Functional programming**. Based in math and a history going back to the 1930s, FP is the [end-game](https://blog.ploeh.dk/2014/03/10/solid-the-next-step-is-functional/) of SOLID principles. It lets us keep programs testable and easy to understand by maximizing composability, minimizing mutability, and pushing state to program boundaries.  
+- **Math**. Math lends rigor and stability to the otherwise young and shifting field of software.
+  - [Category](https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/) [theory](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/) helps one understand how the algebra you learned in high school is just like code.
+  - I always have a can of Linear Algebra nearby. 
+- **Static typing**. Let your compiler be your tester.
+- **Software design**. Good design wrangles complexity, defines precise abstractions, draws correct boundaries, and endures. I'm a fan of [DDD](https://en.wikipedia.org/wiki/Domain-driven_design) and [hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)).
 
-I do backend web services in ASP.NET Core.
+Some of my projects:
 
-I love to migrate code off .NET Framework.
-
-I like math and algorithms. I always have a can of Linear Algebra in my backpack.
-
-I'm big on software design. I manage complexity, create precise abstractions, and draw correct boundaries.
-
-I run a boostrapped company called [EnduraByte](https://www.endurabyte.com) where I create [FitEdit](https://www.fitedit.io).
-
-Ping me if you want to hire me.
+- [RayCommand](https://www.raysearchlabs.com/raycommand/). Beautiful WPF frontend, 3D graphics, and C# services supporting the needs of radiation therapy clinics
+- [FitEdit](https://www.fitedit.io). An Avalonia MVVM frontend and ASP.NET Core backend built on Supabase. Integrates with Garmin and Strava. A SaaS offering for athletes and fitness enthustiasts
+- [Treadmill](https://github.com/nref/treadmill). A circuit board designed in KiCad and Xamarin/MAUI Android app for controlling a treadmill
+- [Irrlicht.Net](https://github.com/nref/Irrlicht.Net), [Ompl.Net](https://github.com/nref/Ompl.NetStandard), [Kdl.Net](https://github.com/nref/Kdl.NetStandard). C# wrappers for popular C++ libraries
+- [BrowserRouter](https://github.com/nref/BrowseRouter). Launches a different URL depending on the URL
+- ...and more on [GitHub](https://github.com/nref/)
 
 ## Athlete
 
