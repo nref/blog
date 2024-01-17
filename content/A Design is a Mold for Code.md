@@ -14,7 +14,7 @@ In manufacturing, a mold is a hollow shape that fills with fluid material which 
 ![Example of a mold](../img/Bronze_spearhead_mold.JPG)
 *Image: Bronze age spear head mold [Wikipedia](https://en.wikipedia.org/wiki/Molding_(process))*
 
-Like manufacturing, code fills the [negative space](https://en.wikipedia.org/wiki/Organizational_memory) of a software design. Imagine two engineering teams who independently "fill" (implement) a design. Let's imagine the design is for a C compiler, e.g. the C99 language specification. The two resulting implementations are `gcc` and `clang`. They're implemented in different languages (C and C++) and take vastly different shapes, but as far as the spec is concerned, the two are equal. People in the know call such implementations [isomorphic](https://blog.ploeh.dk/2018/01/08/software-design-isomorphisms/)\*.
+Like manufacturing, code fills the [negative space](https://en.wikipedia.org/wiki/Negative_space) of a software design. Imagine two engineering teams who independently "fill" (implement) a design. Let's imagine the design is for a C compiler, e.g. the C99 language specification. The two resulting implementations are `gcc` and `clang`. They're implemented in different languages (C and C++) and take vastly different shapes, but as far as the spec is concerned, the two are equal. People in the know call such implementations [isomorphic](https://blog.ploeh.dk/2018/01/08/software-design-isomorphisms/)\*.
 
 \* Isomorphic with respect to the design/interface/specification. Given the same C code, the two compilers produce different binaries, but for compliant C they are equivalent within the specification.
 
