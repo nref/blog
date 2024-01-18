@@ -40,7 +40,7 @@ Above: The roundtrip from a design to code back to design is lossy.
 
 There are a few reasons for this:
 
-- A codebase maybe too large to fit into a dev's head. Examples: `gcc` and `clang`. Like the limited context window of ChatGPT, a human has limited working memory and forgets. Though with time and repetition, knowledge transitions to long-term memory.
+- A codebase maybe too large to fit into a dev's head. The codebases for Chrome and Firefox are huge. Like the limited context window of ChatGPT, a human has limited working memory and forgets. Though with time and repetition, knowledge transitions to long-term memory.
 - It's hard to infer high-level concepts from low-level details. For example, decompiling assembly back to C.
 - Design and code have a many-to-many relationship.
 	- There can be many implementations that satisfy a design.
