@@ -13,7 +13,7 @@ A meta-pedagogical (teaching about teaching) answer acknowledges that learning s
 
 <div style="text-align: center; width: 60%; margin: 0 auto;">
   <img src="../img/5_die.png"/>
-  <p style="font-style: italic">Image: A die with 5 dots</p>
+  <p style="font-style: italic">Image: How many dots are there? You just subitized.</p>
 </div>
 
 From there, you can teach a 5-year-old arithemetic, for example to add, by having them subitize groups of objects alongside numerals and the math symbol `+`. This connects their innate notion of quantity to the abstract notion of numbers.
