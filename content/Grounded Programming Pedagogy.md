@@ -16,7 +16,7 @@ A meta-pedagogical (teaching about teaching) answer acknowledges that learning s
   <p style="font-style: italic">Image: How many dots are there? You just subitized.</p>
 </div>
 
-From there, you can teach a 5-year-old arithemetic, for example to add, by having them subitize groups of objects alongside numerals and the math symbol `+`. This connects their innate notion of quantity to the abstract notion of numbers.
+From there, you can teach a 5-year-old arithmetic, for example to add, by having them subitize groups of objects alongside numerals and the math symbol `+`. This connects their innate notion of quantity to the abstract notion of numbers.
 
 [SICP](https://web.mit.edu/6.001/6.037/sicp.pdf), a masterpiece in teaching programming, falls heavily on the FP side, though they didn't have that vocabulary at the time. Watch Sussman absolutely rip apart side effects in [lecture 5A](https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/resources/5a-assignment-state-and-side-effects/). But not everybody "gets" this approach easily. Even Hal acknowledges in this [Corecursive interview](https://corecursive.com/039-hal-abelson-sicp/) that the FP approach didn't work for everyone: 
 
