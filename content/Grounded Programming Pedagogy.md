@@ -22,7 +22,7 @@ From there, you can teach a 5-year-old arithemetic, for example to add, by havin
 
 > In the very beginning days, we would teach a sort of short courses for MIT faculty and some of the electrical engineers would just get stuck. "You haven’t showed us how the transistors work". ...People think different ways. Some people have to be grounded on where they’re comfortable and for some people, well, it really is transistors. 
 
-Contrast that to somebody who knows what a function is, in the math sense. The machinery of a [transistor](https://en.wikipedia.org/wiki/Transistor) , of gates, sources, drains, and [TTL](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic) will be an irritating detail, like multiplying matrices by hand.
+Contrast that to somebody who knows what a function is, in the math sense. The machinery of a [transistor](https://en.wikipedia.org/wiki/Transistor), of gates, sources, drains, and [TTL](https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic) will be an irritating detail, like multiplying matrices by hand.
 
 So in the dichotomy between introducing FP and IP first, the answer might depend on where the learning is coming from. I personally learned IP and OOP first, because that's what teaching resources were available to me. I was first exposed to FP in college in the form of Scheme. It was disorienting. I couldn't count all the parentheses, let alone grok tail recursion. I wish it could have been presented to me grounded in terms of what I was already comfortable with, for example high school algebra.
 
