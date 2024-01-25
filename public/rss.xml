@@ -7,7 +7,31 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://www.slater.dev/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Thu, 25 Jan 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Grounded Programming Pedagogy</title>
+          <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.slater.dev/grounded-programming-pedagogy/</link>
+          <guid>https://www.slater.dev/grounded-programming-pedagogy/</guid>
+          <description>&lt;p&gt;In the alum chat for &lt;a href=&quot;https:&#x2F;&#x2F;www.mirdin.com&quot;&gt;Mirdin&lt;&#x2F;a&gt;, someone posted the following question, &amp;quot;Would it be better to start teaching beginners functional or imperative programming first?&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Pretending for a second that FP and IP are the only choices (they&#x27;re &lt;a href=&quot;https:&#x2F;&#x2F;info.ucl.ac.be&#x2F;~pvr&#x2F;VanRoyChapter.pdf&quot;&gt;not&lt;&#x2F;a&gt;), an answer depends on where your beginner comes from.&lt;&#x2F;p&gt;
+&lt;p&gt;A meta-pedagogical (teaching about teaching) answer acknowledges that learning starts in a place the learner feels &lt;a href=&quot;https:&#x2F;&#x2F;argumatronic.com&#x2F;posts&#x2F;2018-09-02-effective-metaphor.html&quot;&gt;grounded&lt;&#x2F;a&gt; and connects them from there to new knowledge. For example, &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Subitizing&quot;&gt;subitizing &lt;&#x2F;a&gt; is an innate ability. A developmentally normal child can instantly know how many objects are presented, for values up to about 5.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center; width: 60%; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;..&#x2F;img&#x2F;5_die.png&quot;&#x2F;&gt;
+  &lt;p style=&quot;font-style: italic&quot;&gt;Image: A die with 5 dots&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;From there, you can teach a 5-year-old arithemetic, for example to add, by having them subitize groups of objects alongside numerals and the math symbol &lt;code&gt;+&lt;&#x2F;code&gt;. This connects their innate notion of quantity to the abstract notion of numbers.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;web.mit.edu&#x2F;6.001&#x2F;6.037&#x2F;sicp.pdf&quot;&gt;SICP&lt;&#x2F;a&gt;, a masterpiece in teaching programming, falls heavily on the FP side, though they didn&#x27;t have that vocabulary at the time. Watch Sussman absolutely rip apart side effects in &lt;a href=&quot;https:&#x2F;&#x2F;ocw.mit.edu&#x2F;courses&#x2F;6-001-structure-and-interpretation-of-computer-programs-spring-2005&#x2F;resources&#x2F;5a-assignment-state-and-side-effects&#x2F;&quot;&gt;lecture 5A&lt;&#x2F;a&gt;. But not everybody &amp;quot;gets&amp;quot; this approach easily. Even Hal acknowledges in this &lt;a href=&quot;https:&#x2F;&#x2F;corecursive.com&#x2F;039-hal-abelson-sicp&#x2F;&quot;&gt;Corecursive interview&lt;&#x2F;a&gt; that the FP approach didn&#x27;t work for everyone: &lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the very beginning days, we would teach a sort of short courses for MIT faculty and some of the electrical engineers would just get stuck. &amp;quot;You haven’t showed us how the transistors work&amp;quot;. ...People think different ways. Some people have to be grounded on where they’re comfortable and for some people, well, it really is transistors. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Contrast that to somebody who knows what a function is, in the math sense. The machinery of a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Transistor&quot;&gt;transistor&lt;&#x2F;a&gt; , of gates, sources, drains, and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Transistor%E2%80%93transistor_logic&quot;&gt;TTL&lt;&#x2F;a&gt; will be an irritating detail, like multiplying matrices by hand.&lt;&#x2F;p&gt;
+&lt;p&gt;So in the dichotomy between introducing FP and IP first, the answer might depend on where the learning is coming from. I personally learned IP and OOP first, because that&#x27;s what teaching resources were available to me. I was first exposed to FP in college in the form of Scheme. It was disorienting. I couldn&#x27;t count all the parentheses, let alone grok tail recursion. I wish it could have been presented to me grounded in terms of what I was already comfortable with, for example high school algebra.&lt;&#x2F;p&gt;
+&lt;p&gt;I say, introduce multiple programming paradigms early on, and ground it in what the learner knows. A fundamental programming skill is to think at &lt;a href=&quot;https:&#x2F;&#x2F;www.joelonsoftware.com&#x2F;2002&#x2F;11&#x2F;11&#x2F;the-law-of-leaky-abstractions&#x2F;&quot;&gt;multiple levels of abstraction&lt;&#x2F;a&gt;. The Haskell programmer needs to be aware that even monads at some point are just bits in a memory hierarchy, just as it&#x27;s important for an assembly programmer to know that while register allocation is critical to performance, registers are not really what the program is about.&lt;&#x2F;p&gt;
+&lt;p&gt;To close, let&#x27;s ground this discussion in something we all know. To design a cathedral, the architect needs to know what bricks will be used. To build a cathedral, the bricklayer needs to envision the noble end to which each brick is set down.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>A Design is a Mold for Code</title>
           <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
