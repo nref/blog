@@ -7,7 +7,7 @@ tags = ['code']
 
  In the alum chat for [Mirdin](https://www.mirdin.com), someone posted the following question, "Would it be better to start teaching beginners functional or imperative programming first?"
  
- Pretending for a second that FP and IP are the only choices (they're [not](https://info.ucl.ac.be/~pvr/VanRoyChapter.pdf)), an answer depends on where your beginner comes from.
+ Pretending for a second that [FP](https://en.wikipedia.org/wiki/Functional_programming) and [IP](https://en.wikipedia.org/wiki/Imperative_programming) are the only choices (they're [not](https://info.ucl.ac.be/~pvr/VanRoyChapter.pdf)), an answer depends on where your beginner comes from.
 
 A meta-pedagogical (teaching about teaching) answer acknowledges that learning starts in a place the learner feels [grounded](https://argumatronic.com/posts/2018-09-02-effective-metaphor.html) and connects them from there to new knowledge. For example, [subitizing](https://en.wikipedia.org/wiki/Subitizing) is an innate ability. A developmentally normal child can instantly know how many objects are presented, for values up to about 5.
 
