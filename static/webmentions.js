@@ -1,14 +1,3 @@
-+++
-title = "Mentions"
-path = "mentions"
-+++
-
-Here is where this blog is being talked about.
-
-<div id="webmentions">
-</div>
-
-<script>
 // Fetches webmentions and appends them as list items to the specified element.
 async function fetchWebmentions() {
   const endpoint = 'https://webmention.io/api/mentions?token=XLeyknxwZFJQ74Al2nsu2A';
@@ -23,6 +12,12 @@ async function fetchWebmentions() {
 
     // Create a list to hold the webmentions.
     const list = document.createElement('ul');
+
+    const status = document.createElement('p');
+    status.style.fontStyle = 'italic';
+    document.getElementById(responseElementId).appendChild(status);
+
+    status.innerText = `Found ${data.links.length} links`;
 
     // Iterate through each webmention and append it to the list.
     data.links.forEach(mention => {
@@ -46,4 +41,3 @@ async function fetchWebmentions() {
 
 // Run the fetch operation when the document is fully loaded.
 document.addEventListener('DOMContentLoaded', fetchWebmentions);
-</script>
