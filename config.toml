@@ -68,6 +68,7 @@ menu_items = [
     {name = "archive", url = "$BASE_URL/archive"},
     {name = "about me", url = "$BASE_URL/about"},
     {name = "links", url = "$BASE_URL/links"},
+    #{name = "mentions", url = "$BASE_URL/mentions"},
 
     # set newtab to true to make the link open in new tab
     # These links have moved to the footer, see templates/index.html
