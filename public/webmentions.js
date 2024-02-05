@@ -3,6 +3,10 @@ async function fetchWebmentions() {
   const endpoint = 'https://webmention.io/api/mentions?token=XLeyknxwZFJQ74Al2nsu2A';
   const responseElementId = 'webmentions'; // The ID of the element where webmentions will be displayed.
 
+  if (responseElementId === null) {
+    return;
+  }
+
   try {
     const response = await fetch(endpoint);
     if (!response.ok) {
