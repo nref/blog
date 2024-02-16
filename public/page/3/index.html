@@ -109,6 +109,58 @@
         <div class="posts">
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://www.slater.dev/matrices-are-neural-networks/">Transformation Matrices are Neural Networks</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2020-10-15
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://www.slater.dev/tags/math/">#math</a></span>
+    
+
+
+                    
+        <div class="post-content">
+            <p>Chances are you've seen a neural network diagram like this one with circles and arrows:</p>
+<p><img src="https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png" alt="Image for post" />
+<em>Figure: A neural network. Source:</em> <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">Medium</a></p>
+<p>While that looks fancy, it's basically a matrix. More generally, it's a tensor, but a special kind of tensor which makes it <a href="https://math.stackexchange.com/a/412429">just a matrix</a>.</p>
+<p>I was reading <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">this Medium article comparing matrices and tensors</a> which models the following matrix multiplication as the two-layer neural network shown above:</p>
+<p><img src="https://miro.medium.com/max/756/1*Bxba1gx4ec2h9qe7UNPvMg.png" alt="Image for post" /></p>
+<p>This helped me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:</p>
+<p>$$
+\begin{aligned}
+M_x &amp;= Rot_x(15°) \newline
+M_y &amp;= Rot_y(15°) \newline
+M_z &amp;= Rot_z(15°) \newline
+V &amp;= [1,2,3] \newline
+V' &amp;= M_xV \newline
+&amp;= [1, \pmb{1.155}, \pmb{3.415}] \newline
+V'' &amp;= M_yV' \newline
+&amp;= [\pmb{1.850}, 1.155, \pmb{3.042}] \newline
+V''' &amp;= M_zV'' \newline
+&amp;= [\pmb{1.488}, \pmb{1.595}, 3.042] \newline
+\end{aligned}
+$$</p>
+<p>Here is a neural network visualizing the linear mapping sequence $M_zM_yM_xV$:</p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1JZ5nbd-Y55QYEPMk8XQ00cE2w688KX25" alt="" />
+<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
+<p>By tracing the paths through the layers of the neural network below, one can gain an intuition of how each transformation operation contributes to the resulting vector $V_{rot}$.</p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1t9ccuXdm87LI7s9Tx5QdnJ0STQQv_V39" alt="" />
+<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
+
+        </div>
+
+                </div>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://www.slater.dev/threadripper/">Threadripper 3970x PC Build</a></h1>
     <div class="post-meta-inline">
         
@@ -146,41 +198,6 @@
 <p><strong>It is worth it?</strong> I find the performance-per-dollar to be very high. I was pleased to see that Linus Torvalds himself <a href="http://lkml.iu.edu/hypermail/linux/kernel/2005.3/00406.html">praised his 3970x</a>. I find performance to be a good balance between the cheaper 3960x and the pricey 3990x. I literally could not find any prebuilt machines of this caliber, but if I could have, they would have easily cost over $6000.</p>
 <p><img src="https://drive.google.com/uc?export=view&amp;id=1GQNreuaFoaGbw6WqV8pW4T3tlnDIxb38" alt="" />
 <em>Image: The 3970x sits equitably on the performance-price curve, but its performance is way ahead of the competition. Source: https://www.cpubenchmark.net/</em></p>
-
-        </div>
-
-                </div>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://www.slater.dev/christian-pull-requests/">Christian Pull Requests</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2020-10-03
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/code/">#code</a>&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/theology/">#theology</a></span>
-    
-
-
-                    
-        <div class="post-content">
-            <h3 id="christian-pull-requests">Christian Pull Requests</h3>
-<p>I'm a software developer, so the terms <a href="https://opensource.stackexchange.com/a/380">pull request</a> and <a href="https://en.wikipedia.org/wiki/Code_review">code review</a> are part of my daily vernacular.</p>
-<p>I'm also a Christian and go to a weekly Bible study.</p>
-<p>At Bible study,  after the lesson, and sometimes before, the group shares &quot;prayer requests&quot;. This is a chance for participants to pray for each other and for people outside the group.</p>
-<p>Unless requested not to, we record these prayer requests in a group messaging app. It can be hard to take down requests on a smartphone, so I often bring my laptop to keep up.</p>
-<p>At the end of Bible study one recent Sunday night, I pulled out my laptop and announced, &quot;Ok, I am taking pull requests!&quot;</p>
-<p>Not knowing what I had just said, I looked around and saw blank eyes looking back.</p>
-<p>&quot;Guys, I mean <em>prayer</em> requests!&quot;</p>
-<p>Having my laptop open may have triggered something code-related in my brain.</p>
 
         </div>
 
