@@ -15,7 +15,7 @@ Programming computers is hard because, as [Hal put it](https://www.youtube.com/w
 Even the most mundane of programming issues are rooted in profound questions:
 
 - "Why are my dependencies broken?" => "What is causality?" <sup>\[[1](#References)\]</sup>
-- "Should I check for null?" => "When can we know a program is correct? Design time compile time, or run time?"  <sup>\[[2,3](#References)\]</sup>
+- "Should I check for null?" => "When can we know a program is correct? Design time, compile time, or run time?"  <sup>\[[2,3](#References)\]</sup>
 - "Why don't I understand this code?" => "What is memory, cognition, and language?" <sup>\[[4](#References)\]</sup>
 - "Why is this program buggy?" => "What is a proof?" <sup>\[[5,6](#References)\]</sup>
 
