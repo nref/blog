@@ -73,20 +73,15 @@
         <h3>Words about code, fitness, family, and theology</h3>
 
         
-        
-                <nav class="menu">
+        <nav class="menu">
             <ul class="menu__inner">
-                <li class="active"><a href="https://www.slater.dev">blog</a></li>
+                <li><a href="https://www.slater.dev/archive">archive</a></li>
             
                 <li><a href="https://www.slater.dev/tags">tags</a></li>
             
-                <li><a href="https://www.slater.dev/archive">archive</a></li>
-            
-                <li><a href="https://www.slater.dev/about">about me</a></li>
-            
                 <li><a href="https://www.slater.dev/links">links</a></li>
             
-                <li><a href="https://www.slater.dev/mentions">mentions</a></li>
+                <li><a href="https://www.slater.dev/about">about Doug</a></li>
             </ul>
         </nav>
     
@@ -150,47 +145,6 @@
 <li><a href="https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence">Curry-Howard correspondence</a></li>
 <li><a href="https://tomasp.net/blog/2018/alien-lambda-calculus">Would aliens understand lambda calculus?</a></li>
 </ol>
-
-        </div>
-
-                </div>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://www.slater.dev/grounded-programming-pedagogy/">Grounded Programming Pedagogy</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2024-01-25
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/code/">#code</a></span>
-    
-
-
-                    
-        <div class="post-content">
-            <p>In the alum chat for <a href="https://www.mirdin.com">Mirdin</a>, someone posted the following question, &quot;Would it be better to start teaching beginners functional or imperative programming first?&quot;</p>
-<p>Pretending for a second that <a href="https://en.wikipedia.org/wiki/Functional_programming">FP</a> and <a href="https://en.wikipedia.org/wiki/Imperative_programming">IP</a> are the only choices (they're <a href="https://info.ucl.ac.be/~pvr/VanRoyChapter.pdf">not</a>), an answer depends on where your beginner comes from.</p>
-<p>A meta-pedagogical (teaching about teaching) answer acknowledges that learning starts in a place the learner feels <a href="https://argumatronic.com/posts/2018-09-02-effective-metaphor.html">grounded</a> and connects them from there to new knowledge. For example, <a href="https://en.wikipedia.org/wiki/Subitizing">subitizing</a> is an innate ability. A developmentally normal child can instantly know how many objects are presented, for values up to about 5.</p>
-<div style="text-align: center; width: 60%; margin: 0 auto;">
-  <img src="../img/5_die.png"/>
-  <p style="font-style: italic">Image: How many dots are there? You just subitized.</p>
-</div>
-<p>From there, you can teach a 5-year-old arithmetic, for example to add, by having them subitize groups of objects alongside numerals and the math symbol <code>+</code>. This connects their innate notion of quantity to the abstract notion of numbers.</p>
-<p>The MIT book and course <a href="https://web.mit.edu/6.001/6.037/sicp.pdf">SICP</a> is a masterpiece in programming pedagogy, and it falls heavily on the FP side. Watch Professor Sussman absolutely rip apart side effects in <a href="https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/resources/5a-assignment-state-and-side-effects/">lecture 5A</a>. But not everybody &quot;gets&quot; this approach easily. Even Hal acknowledges in this <a href="https://corecursive.com/039-hal-abelson-sicp/">Corecursive interview</a> that the FP approach didn't work for everyone: </p>
-<blockquote>
-<p>In the very beginning days, we would teach a sort of short courses for MIT faculty and some of the electrical engineers would just get stuck. &quot;You haven’t showed us how the transistors work&quot;. ...People think different ways. Some people have to be grounded on where they’re comfortable and for some people, well, it really is transistors. </p>
-</blockquote>
-<p>Contrast that to somebody who knows what a function is, in the math sense. The machinery of a <a href="https://en.wikipedia.org/wiki/Transistor">transistor</a>, of gates, sources, drains, and <a href="https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic">TTL</a> will be an irritating detail, like multiplying matrices by hand.</p>
-<p>So in the dichotomy between introducing FP and IP first, the answer might depend on where the learner is coming from. I learned IP and OOP first because that's what material was available. I was first exposed to FP in college in the form of Scheme. It was disorienting. I couldn't count all the parentheses, let alone grok tail recursion. I wish it could have been presented to me grounded in terms of what I was already comfortable with, for example high school algebra.</p>
-<p>I say, introduce multiple programming paradigms early, and ground it in what the learner knows. A fundamental programming skill is to think at <a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">multiple levels of abstraction</a>. The Haskell programmer needs to be aware that even monads at some point are just bits in a memory hierarchy, just as it's important for an assembly programmer to know that while register allocation is critical to performance, registers are not really what the program is about.</p>
-<p>To close, let's ground this discussion in something we all know. To design a cathedral, the architect needs to know what bricks will be used. To build a cathedral, the bricklayer needs to envision the noble end to which each brick is set down.</p>
 
         </div>
 

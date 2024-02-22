@@ -73,20 +73,15 @@
         <h3>Words about code, fitness, family, and theology</h3>
 
         
-        
-                <nav class="menu">
+        <nav class="menu">
             <ul class="menu__inner">
-                <li class="active"><a href="https://www.slater.dev">blog</a></li>
+                <li><a href="https://www.slater.dev/archive">archive</a></li>
             
                 <li><a href="https://www.slater.dev/tags">tags</a></li>
             
-                <li><a href="https://www.slater.dev/archive">archive</a></li>
-            
-                <li><a href="https://www.slater.dev/about">about me</a></li>
-            
                 <li><a href="https://www.slater.dev/links">links</a></li>
             
-                <li><a href="https://www.slater.dev/mentions">mentions</a></li>
+                <li><a href="https://www.slater.dev/about">about Doug</a></li>
             </ul>
         </nav>
     
@@ -109,11 +104,11 @@
         <div class="posts">
                 <div class="post on-list">
                     
-    <h1 class="post-title"><a href="https://www.slater.dev/edit-tcx-treadmill-runs-with-tcxmill/">Edit TCS Treadmill Runs with tcxmill</a></h1>
+    <h1 class="post-title"><a href="https://www.slater.dev/matrices-are-neural-networks/">Transformation Matrices are Neural Networks</a></h1>
     <div class="post-meta-inline">
         
     <span class="post-date">
-            2019-10-18
+            2020-10-15
         </span>
 
     </div>
@@ -121,53 +116,39 @@
     
         <span class="post-tags-inline">
                 :: tags:&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/code/">#code</a>&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/running/">#running</a></span>
+                <a class="post-tag" href="https://www.slater.dev/tags/math/">#math</a></span>
     
 
 
                     
         <div class="post-content">
-            <p>Get tcxmill <a href="https://www.github.com/nref/tcxmill">here</a></p>
-<p>Editing activity distance is one of the <a href="https://support.strava.com/hc/en-us/search?utf8=%E2%9C%93&amp;query=edit+distance&amp;commit=Search">most requested Strava features</a>, and I created a way to do it for treadmill runs.</p>
-<p>If you, like me, track treadmill workouts with a Garmin watch which uploads to Strava, then you've likely experienced this kind of data:</p>
-<p><img src="https://1.bp.blogspot.com/-Hs1nLrF0jCo/XaoMEmiFOdI/AAAAAAAAJrc/VUXjSj1I4-weLjjnnvmsb-dFK9yD0iS_wCLcBGAsYHQ/s640/summary-before.png" alt="" /></p>
-<p><img src="https://1.bp.blogspot.com/-LxgF0tK2jR8/XaoMCjKfulI/AAAAAAAAJrk/HCwWRRdGDygeulmOJFUSRQ2Ri0zQ0_VpACEwYBhgL/s640/charts-before.png" alt="" /></p>
-<p>Above is a recent treadmill workout of mine. I ran 30km, i.e. 18.6 miles. My  <a href="https://buy.garmin.com/en-US/US/p/621922#overview">Forerunner 945</a>  and  <a href="https://buy.garmin.com/en-US/US/p/530376#overview">HRM-Run</a>  recorded an extraordinary 42.54 miles at an absurd pace of 3:12/mi.</p>
-<p>The impossibility of this metric is hyperbolized by Eliud Kipchoge subsequently <a href="https://www.nytimes.com/2019/10/12/sports/eliud-kipchoge-marathon-record.html">breaking the two-hour marathon barrier</a> at a pace of 4:34/mi. To avoid ridicule from my Strava friends, I gladly kept this activity private until I could correct it.</p>
-<p>In addition to being wildly inaccurate, the pace data is also noisy.</p>
-<p>Below is the corrected data after running tcxmill. You can see that the distance and pace are correct, and the workout structure is reflected accurately.</p>
-<p><img src="https://1.bp.blogspot.com/-mbXDGITsPkY/XaoMEFxmcCI/AAAAAAAAJrs/Vs5GZBrnMdIHL74BsxqSTevBBEFxSB4mgCEwYBhgL/s640/summary-after.png" alt="" /></p>
-<p><img src="https://1.bp.blogspot.com/-9-xtDOatTE4/XaoMCnOiMzI/AAAAAAAAJrg/-_9B6pqWb-4h-KK2Hlbn8lRVkk804BiKQCEwYBhgL/s640/charts-after.png" alt="" /></p>
-<p>The only requirements are that you know and follow your workout structure. Instructions are on <a href="https://www.github.com/nref/tcxmill">the GitHub page</a>. Go ahead and try it out!</p>
-
-        </div>
-
-                </div>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://www.slater.dev/renato-canova-in-valencia/">Renato Canova in Valencia</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2019-08-26
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/running/">#running</a></span>
-    
-
-
-                    
-        <div class="post-content">
-            <p>Several sites link to Renato Canova's 2017 talk in Valencia. The video is still on YouTube, but the original link to the slides is broken.</p>
-<p>I contacted the Serrano athletics club on Facebook, which happily procured the file within a day. Thanks, guys!</p>
-<p><a href="https://drive.google.com/file/d/1g__fXGd8wsMsBsH02fzDwSvTDXsw-I2w/view">Here is the PDF</a>.</p>
+            <p>Chances are you've seen a neural network diagram like this one with circles and arrows:</p>
+<p><img src="https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png" alt="Image for post" />
+<em>Figure: A neural network. Source:</em> <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">Medium</a></p>
+<p>While that looks fancy, it's basically a matrix. More generally, it's a tensor, but a special kind of tensor which makes it <a href="https://math.stackexchange.com/a/412429">just a matrix</a>.</p>
+<p>I was reading <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">this Medium article comparing matrices and tensors</a> which models the following matrix multiplication as the two-layer neural network shown above:</p>
+<p><img src="https://miro.medium.com/max/756/1*Bxba1gx4ec2h9qe7UNPvMg.png" alt="Image for post" /></p>
+<p>This helped me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:</p>
+<p>$$
+\begin{aligned}
+M_x &amp;= Rot_x(15°) \newline
+M_y &amp;= Rot_y(15°) \newline
+M_z &amp;= Rot_z(15°) \newline
+V &amp;= [1,2,3] \newline
+V' &amp;= M_xV \newline
+&amp;= [1, \pmb{1.155}, \pmb{3.415}] \newline
+V'' &amp;= M_yV' \newline
+&amp;= [\pmb{1.850}, 1.155, \pmb{3.042}] \newline
+V''' &amp;= M_zV'' \newline
+&amp;= [\pmb{1.488}, \pmb{1.595}, 3.042] \newline
+\end{aligned}
+$$</p>
+<p>Here is a neural network visualizing the linear mapping sequence $M_zM_yM_xV$:</p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1JZ5nbd-Y55QYEPMk8XQ00cE2w688KX25" alt="" />
+<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
+<p>By tracing the paths through the layers of the neural network below, one can gain an intuition of how each transformation operation contributes to the resulting vector $V_{rot}$.</p>
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1t9ccuXdm87LI7s9Tx5QdnJ0STQQv_V39" alt="" />
+<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
 
         </div>
 
@@ -178,6 +159,13 @@
                         <a href="https://www.slater.dev/page/4/">
                             <span class="button__icon">←</span>&nbsp;
                             <span class="button__text">Newer posts</span>
+                        </a>
+                    </span>
+                
+                    <span class="button next">
+                        <a href="https://www.slater.dev/page/6/">
+                            <span class="button__text">Older posts</span>&nbsp;
+                            <span class="button__icon">→</span>
                         </a>
                     </span>
                 </div>
