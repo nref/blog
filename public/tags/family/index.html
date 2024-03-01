@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Doug Slater</title>
+    <title>
+Doug Slater</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -15,18 +16,21 @@
     
     <link rel="stylesheet" href="https://www.slater.dev/font-hack-subset.css">
 
-    <meta name="description" content="">
+    
+        
+        
+    <meta name="description" content="All posts tagged family">
 
-    <meta property="og:description" content="">
+    <meta property="og:description" content="All posts tagged family">
     <meta property="og:title" content="Doug Slater">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.slater.dev/">
+    <meta property="og:url" content="https://www.slater.dev/tags/family/">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="All posts tagged family">
     <meta name="twitter:title" content="Doug Slater">
     <meta property="twitter:domain" content="www.slater.dev">
-    <meta property="twitter:url" content="https://www.slater.dev/">
+    <meta property="twitter:url" content="https://www.slater.dev/tags/family/">
 
             <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.slater.dev/rss.xml">
     
@@ -77,7 +81,7 @@
             <ul class="menu__inner">
                 <li><a href="https://www.slater.dev/archive">archive</a></li>
             
-                <li><a href="https://www.slater.dev/tags">tags</a></li>
+                <li class="active"><a href="https://www.slater.dev/tags">tags</a></li>
             
                 <li><a href="https://www.slater.dev/links">links</a></li>
             
@@ -101,77 +105,32 @@
 
     <div class="content">
         
-        <div class="posts">
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://www.slater.dev/matrices-are-neural-networks/">Transformation Matrices are Neural Networks</a></h1>
-    <div class="post-meta-inline">
+    <div class="post">
+        <h1 class="post-title">
+            tag: #family
+            (1 post)
+        </h1>
+
+        <a href="https://www.slater.dev/tags">
+            Show all tags
+        </a>
+
         
-    <span class="post-date">
-            2020-10-15
-        </span>
+    <ul><li class="post-list">
+            <a href="https://www.slater.dev/make-a-correct-judgement/">
+                <span class="post-date">2024-03-01</span>
+                :: <span class="post-list-title">Make a Correct Judgement</span></a>
+            
+        <span class="post-tags-inline">
+                ::
+                <a class="post-tag" href="https://www.slater.dev/tags/family/">#family</a>,
+                <a class="post-tag" href="https://www.slater.dev/tags/theology/">#theology</a></span>
+    
+        </li>
+    </ul>
 
     </div>
 
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://www.slater.dev/tags/math/">#math</a></span>
-    
-
-
-                    
-        <div class="post-content">
-            <p>Chances are you've seen a neural network diagram like this one with circles and arrows:</p>
-<p><img src="https://miro.medium.com/max/496/1*GTdVep66Ln4N4Zd2JnSXbQ.png" alt="Image for post" />
-<em>Figure: A neural network. Source:</em> <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">Medium</a></p>
-<p>While that looks fancy, it's basically a matrix. More generally, it's a tensor, but a special kind of tensor which makes it <a href="https://math.stackexchange.com/a/412429">just a matrix</a>.</p>
-<p>I was reading <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">this Medium article comparing matrices and tensors</a> which models the following matrix multiplication as the two-layer neural network shown above:</p>
-<p><img src="https://miro.medium.com/max/756/1*Bxba1gx4ec2h9qe7UNPvMg.png" alt="Image for post" /></p>
-<p>This helped me realize that any linear map can be modeled as a neutral network. Consider rotating a vector around the X, then Y, and Z-axes:</p>
-<p>$$
-\begin{aligned}
-M_x &amp;= Rot_x(15°) \newline
-M_y &amp;= Rot_y(15°) \newline
-M_z &amp;= Rot_z(15°) \newline
-V &amp;= [1,2,3] \newline
-V' &amp;= M_xV \newline
-&amp;= [1, \pmb{1.155}, \pmb{3.415}] \newline
-V'' &amp;= M_yV' \newline
-&amp;= [\pmb{1.850}, 1.155, \pmb{3.042}] \newline
-V''' &amp;= M_zV'' \newline
-&amp;= [\pmb{1.488}, \pmb{1.595}, 3.042] \newline
-\end{aligned}
-$$</p>
-<p>Here is a neural network visualizing the linear mapping sequence $M_zM_yM_xV$:</p>
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1JZ5nbd-Y55QYEPMk8XQ00cE2w688KX25" alt="" />
-<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
-<p>By tracing the paths through the layers of the neural network below, one can gain an intuition of how each transformation operation contributes to the resulting vector $V_{rot}$.</p>
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1t9ccuXdm87LI7s9Tx5QdnJ0STQQv_V39" alt="" />
-<em>Figure: Made with <a href="https://draw.io/">draw.io</a></em></p>
-
-        </div>
-
-                </div>
-            <div class="pagination">
-                <div class="pagination__buttons">
-                    <span class="button previous">
-                        <a href="https://www.slater.dev/page/6/">
-                            <span class="button__icon">←</span>&nbsp;
-                            <span class="button__text">Newer posts</span>
-                        </a>
-                    </span>
-                
-                    <span class="button next">
-                        <a href="https://www.slater.dev/page/8/">
-                            <span class="button__text">Older posts</span>&nbsp;
-                            <span class="button__icon">→</span>
-                        </a>
-                    </span>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
     

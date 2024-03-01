@@ -6,6 +6,4 @@ draft = true
 tags = ['code']
 +++
 
-What do you think is more important: Now or the future?
-
 

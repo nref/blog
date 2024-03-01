@@ -33,6 +33,10 @@
         <loc>https://www.slater.dev/links/</loc>
     </url>
     <url>
+        <loc>https://www.slater.dev/make-a-correct-judgement/</loc>
+        <lastmod>2024-03-01</lastmod>
+    </url>
+    <url>
         <loc>https://www.slater.dev/matrices-are-neural-networks/</loc>
         <lastmod>2020-10-15</lastmod>
     </url>
@@ -47,6 +51,9 @@
     </url>
     <url>
         <loc>https://www.slater.dev/page/11/</loc>
+    </url>
+    <url>
+        <loc>https://www.slater.dev/page/12/</loc>
     </url>
     <url>
         <loc>https://www.slater.dev/page/2/</loc>
@@ -85,6 +92,9 @@
     </url>
     <url>
         <loc>https://www.slater.dev/tags/code/</loc>
+    </url>
+    <url>
+        <loc>https://www.slater.dev/tags/family/</loc>
     </url>
     <url>
         <loc>https://www.slater.dev/tags/math/</loc>
