@@ -32,7 +32,7 @@ Appearances are not always wrong, but they often are. In those cases, our incorr
 
 > I know your presumption and the evil of your heart, for you have come down to see the battle.” And David said, “What have I done now? Was it not but a word?” -- 1 Samuel 17
 
-We've all heard about David from the Bible. The curly-haired sculpture by Michaelangelo. Did you know that David had older brothers? Eliab was Jesse's oldest son, but David was selected to become king of Israel. He was jealous of his little brother David, and it came out when David asked to confront Goliath.
+We've all heard about David from the Bible. Everyone recognizes the curly-haired sculpture by Michaelangelo. Did you know that David had older brothers? Eliab was Jesse's oldest son, but David was selected to become king of Israel. He was jealous of his little brother David, and it came out when David asked to confront Goliath.
 
 Contrast that to the first sentence in Jude:
 
