@@ -1,5 +1,5 @@
 +++
-title = "Make a Correct judgment"
+title = "Make a Correct Judgment"
 date = 2024-03-01
 [taxonomies]
 tags = ['theology', 'family']
