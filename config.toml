@@ -73,7 +73,7 @@ menu_items = [
     # set newtab to true to make the link open in new tab
     # These links have moved to the footer, see templates/index.html
     #{name = "GitHub", url = "https://github.com/nref", newtab = true},
-    #{name = "LinkedIn", url = "https://www.linkedin.com/in/slater0/", newtab = true},
+    #{name = "LinkedIn", url = "https://www.linkedin.com/in/dev/", newtab = true},
 ]
 
 # Whether to show links to earlier and later (aka. higher/lower) posts
