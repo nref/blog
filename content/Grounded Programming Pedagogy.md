@@ -12,7 +12,7 @@ tags = ['code']
 A meta-pedagogical (teaching about teaching) answer acknowledges that learning starts in a place the learner feels [grounded](https://argumatronic.com/posts/2018-09-02-effective-metaphor.html) and connects them from there to new knowledge. For example, [subitizing](https://en.wikipedia.org/wiki/Subitizing) is an innate ability. A developmentally normal child can instantly know how many objects are presented, for values up to about 5.
 
 <div style="text-align: center; width: 60%; margin: 0 auto;">
-  <img src="../img/5_die.png"/>
+  <img src="../5_die.png"/>
   <p style="font-style: italic">Image: How many dots are there? You just subitized.</p>
 </div>
 

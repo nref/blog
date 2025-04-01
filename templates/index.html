@@ -1,170 +1,30 @@
-{% import "macros/date.html" as date_macros -%}
-{% import "macros/head.html" as head_macros -%}
-{% import "macros/menu.html" as menu_macros -%}
-{% import "macros/post.html" as post_macros -%}
-{% import "macros/title.html" as title_macros -%}
+{% import "macros.html" as macros %}
+<!doctype html>
+<html class="not-ready lg:text-base" lang="{{ lang }}">
+  {% include "partials/head.html" %}
+  <body class="text-black duration-200 ease-out dark:text-white">
+    {% include "partials/header.html" %}
 
-<!DOCTYPE html>
-<html lang="{%- if config.default_language -%}{{ config.default_language }}{%- else -%}en{%- endif -%}">
+    <!-- Body Start inject -->
+    {% include "injects/body_start.html" ignore missing %}
 
-<head>
-    <title>{%- block title %}{{ config.title }}{% endblock title -%}</title>
-    {{ head_macros::head(config=config) }}
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl break-words px-4 pb-16 pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg"
+    >
+      {% block main %}
 
-    {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
+      <!-- Profile -->
+      {% if paginator is undefined or paginator.current_index == 1 %}<!---->
+      {% include "partials/profile.html" %}<!---->
+      {% endif %}<!---->
 
-    {%- if config.generate_feeds %}
-        {%- for feed in config.feed_filenames %}
-            {%- if feed is containing('atom') %}
-                <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Atom Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
-            {%- endif %}
+      {% include "partials/page_list.html" %}<!---->
+      {% endblock main %}
+    </main>
 
-            {%- if feed is containing('rss') %}
-                <link rel="alternate" type="application/rss+xml" title="{{ config.title }} RSS Feed" href="{{ get_url(path=feed, trailing_slash=false, lang=lang) | safe }}" />
-            {%- endif %}
+    {% include "partials/footer.html" %}
 
-        {%- endfor %}
-    {%- endif -%}
-
-    {%- if config.extra.favicon %}
-        <link rel="shortcut icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") | safe }}" href="{{ config.extra.favicon | safe }}">
-    {% endif -%}
-
-    {%- block extra_head %}
-    {% endblock extra_head -%}
-
-    <!-- webmentions -->
-    <link rel="webmention" href="https://webmention.io/www.slater.dev/webmention" />
-
-    <script type="text/javascript" src="{{ get_url(path="webmentions.js") }}"></script>
-
-    <!-- Analytics -->
-    <script src="https://cdn.counter.dev/script.js" data-id="ad05f962-0745-473f-9913-4ed948b0a691" data-utcoffset="-5"></script>
-
-    <!-- KaTeX -->
-    {% if config.extra.katex.enabled %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-
-    {% if config.extra.katex.auto_render %}
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-            onload="renderMathInElement(document.body);"></script>
-    {% endif %}
-    {% endif %}
-
-</head>
-
-<body class="">
-<div class="container">
-    {% block header %}
-    <header class="header">
-        <div class="header__inner">
-            <div class="header__logo">
-                {%- if config.extra.logo_home_link %}
-                    {% set logo_link = config.extra.logo_home_link %}
-                {% else %}
-                    {% set logo_link = config.base_url %}
-                {% endif -%}
-                <a href="{{ logo_link | safe }}" style="text-decoration: none;">
-                    <div class="logo">
-                      {% block logo_content %}
-                        {%- if config.extra.logo_text %}
-                            {{ config.extra.logo_text }}
-                        {% else %}
-                            Terminimal theme
-                        {% endif -%}
-                        {% endblock logo_content %}
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <h3>Words about code, fitness, family, and theology</h3>
-
-        {% block header_menu %}
-        {{ menu_macros::menu(config=config, current_path=current_path) }}
-        {% endblock header_menu %}
-
-    </header>
-    {% endblock header %}
-
-    <div class="search-container">
-        <input id="search" type="search" placeholder="🔎 Search">
-
-        <div class="search-results">
-            <div class="search-results__items"></div>
-        </div>
-    </div>
-
-    <div class="content">
-        {% block content %}
-        <div class="posts">
-            {%- if paginator %}
-                {%- set show_pages = paginator.pages -%}
-            {% else %}
-                {%- set show_pages = section.pages -%}
-            {% endif -%}
-
-            {%- for page in show_pages %}
-                <div class="post on-list">
-                    {{ post_macros::header(page=page) }}
-
-                    {{ post_macros::content(page=page, summary=true, show_only_description=page.extra.show_only_description | default(value=false)) }}
-                </div>
-            {% endfor -%}
-            <div class="pagination">
-                <div class="pagination__buttons">
-                {%- if paginator.previous %}
-                    <span class="button previous">
-                        <a href="{{ paginator.previous | safe }}">
-                            <span class="button__icon">←</span>&nbsp;
-                            <span class="button__text">Newer posts</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                {%- if paginator.next %}
-                    <span class="button next">
-                        <a href="{{ paginator.next | safe }}">
-                            <span class="button__text">Older posts</span>&nbsp;
-                            <span class="button__icon">→</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                </div>
-            </div>
-        </div>
-        {% endblock content %}
-    </div>
-
-    {% block footer %}
-    <footer class="footer">
-        <div class="footer__inner">
-            <a href="https://fosstodon.org/@slater" target="_blank" rel="me">Mastodon</a>
-            <a href="https://github.com/nref" target="_blank" rel="me">GitHub</a>
-            <a href="https://www.linkedin.com/in/slaterdev/" target="_blank" rel="me">LinkedIn</a>
-            <a href="/rss.xml" target="_blank" rel="me">RSS</a>
-            <a href="mailto:blog@slater.dev" target="_blank" rel="me">Email</a>
-            {%- if config.extra.copyright_html %}
-                <div class="copyright copyright--user">{{ config.extra.copyright_html | safe }}</div>
-            {% else %}
-                <div class="copyright">
-                    {%- if config.extra.author %}
-                        <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
-                    {% else %}
-                        <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
-                    {% endif -%}
-                </div>
-            {% endif -%}
-        </div>
-    </footer>
-    {% endblock footer %}
-
-</div>
-{%- block extra_body %}
-{% endblock extra_body -%}
-
-<script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}"></script>
-<script type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
-</body>
-
+    <!-- Body End inject -->
+    {% include "injects/body_end.html" ignore missing %}
+  </body>
 </html>

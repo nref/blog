@@ -1,114 +1,138 @@
-# Be sure to change these!
-base_url = "https://www.slater.dev"
+# The base URL of the site; the only required configuration variable.
+base_url = "https://www.slater.dev/"
+
+# The site title and description; used in feeds by default.
 title = "Doug Slater"
+description = "Software Engineering Leader and Mentor"
 
-# Sass compilation is required
-compile_sass = true
+# The default site author.
+author = "Doug"
 
-# The theme supports feeds (RSS and ATOM)
+# The default language; used in feeds.
+default_language = "en"
+
+# When set to "true", a feed is automatically generated.
 generate_feeds = true
 
-# Use `rss.xml` for RSS feeds and `atom.xml` for ATOM.
-feed_filenames = ["rss.xml"]
+# The filenames to use for the feeds. Used as the template filenames, too.
+# Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["atom.xml"]
 
-build_search_index = true 
-
-# Optional: enable tags
-taxonomies = [
-    {name = "tags"}
-]
-
-[search]
-index_format = "elasticlunr_json"
-
-# Code highlighting
-[markdown]
-highlight_code = true
-highlight_theme = "visual-studio-dark"
-
-[extra]
-katex.enabled = true
-katex.auto_render = true
-
-# One of: blue, green, orange, pink, red.
-# Defaults to blue.
-# Append -light for light themes, e.g. blue-light
-# Or append -auto, e.g. blue-auto
-accent_color = "blue"
-
-# One of: blue, dark, green, orange, pink, red, light, auto
-# Enabling dark background will also modify primary font color to be darker.
-# Defaults to accent color (or, if not accent color specified, to blue).
-background_color = "dark"
-
-# The logo text - defaults to "Terminimal theme"
-logo_text = "Doug Slater"
-
-# The logo link - defaults to base_url.
-logo_home_link = "/"
-
-# Author name: when specified, modifies the default
-# copyright text. Apart from author, it will
-# contain current year and a link to the theme.
-author = "Doug Slater"
-
-# Copyright text in HTML format. If specified,
-# entirely replaces default copyright and author.
-#copyright_html = "My custom&nbsp;<b>copyright</b>"
-
-# menu is enabled by adding menu_items (optional)
-menu_items = [
-    # each of these is optional, name and url are required
-    # $BASE_URL is going to be substituted by base_url from configuration
-    #{name = "blog", url = "$BASE_URL"},
-
-    # tags should only be enabled if you have "tags" taxonomy
-    # see documentation below for more details
-    {name = "archive", url = "$BASE_URL/archive"},
-    {name = "tags", url = "$BASE_URL/tags"},
-    {name = "links", url = "$BASE_URL/links"},
-    {name = "about Doug", url = "$BASE_URL/about"},
-    #{name = "mentions", url = "$BASE_URL/mentions"},
-
-    # set newtab to true to make the link open in new tab
-    # These links have moved to the footer, see templates/index.html
-    #{name = "GitHub", url = "https://github.com/nref", newtab = true},
-    #{name = "LinkedIn", url = "https://www.linkedin.com/in/dev/", newtab = true},
-]
-
-# Whether to show links to earlier and later (aka. higher/lower) posts
-# on each post page (defaults to true).
-enable_post_view_navigation = true
-
-# The text shown at the bottom of a post,
-# before earlier/later post links.
-# Defaults to "Thanks for reading! Read other posts?"
-post_view_navigation_prompt = "Read other posts:"
-
-# Use full Hack character set, not just a subset.
-# Switch this to true if you need full unicode support.
-# Defaults to false.
-use_full_hack_font = false
-
-# Optional: Global favicon URL and mimetype.
-#           Mimetype defaults to "image/x-icon".
-#           The URL should point at a file located
-#           in your site's "static" directory.
-favicon = "favicon.ico"
-# favicon_mimetype = "image/png"
-
-# Optional: Set how <title> elements are rendered.
-# Values:
-# - "main_only" -- only the main title (`config.title`) is rendered.
-# - "page_only" -- only the page title (if defined) is rendered,
-#                  falling back to `config.title` if not defined or empty.
-# - "combined" -- combine like so: "page_title | main_title",
-#                 or if page_title is not defined or empty, fall back to `main_title`
+# The taxonomies to be rendered for the site and their configuration of the default languages
+# Example:
+#     taxonomies = [
+#       {name = "tags", feed = true}, # each tag will have its own feed
+#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
+#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+#       {name = "authors"}, # Basic definition: no feed or pagination
+#     ]
 #
-# Note that the main (index) page only has the main title.
-page_titles = "main_only"
+taxonomies = [{ name = "tags", rss = true, paginate_by = 5 }]
 
-# Optional: default image to use for OpenGraph.
-#           If the page doesnt set og_image, use this one as fallback. Usefull
-#           for indexes and taxonomies' pages.
-#default_og_image = "static/ocean.jpg"
+# Configuration of the Markdown rendering
+[markdown]
+# When set to "true", all code blocks are highlighted.
+highlight_code = true
+
+# A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
+extra_syntaxes_and_themes = []
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "base16-ocean-dark"
+
+# The Kita theme style config.
+[extra]
+# Enable KaTex math formula support globally.
+math = true
+# Enable mermaid support globally.
+mermaid = false
+# Enable comment support globally.
+comment = true
+# The URL of social image.
+social_image = "icons/github.svg"
+
+[extra.style]
+# The custom background color.
+# bg_color = ""
+
+# The custom background color in dark mode.
+# bg_dark_color = ""
+
+# Enable header blur.
+# header_blur = true
+
+# The custom header color, only available when `header_blur` is false.
+header_color = "#37afe1"
+
+# The custom header color in dark mode, only available when `header_blur` is false.
+header_dark_color = "#37afe1"
+
+primary_color = "#37afe1"
+
+# The profile on home page.
+[extra.profile]
+name = "Doug Slater"
+bio = "Software Engineering Leader and Mentor"
+# The URL of avatar.
+avatar_url = "images/doug.jpg"
+# Invert color in dark mode.
+avatar_invert = false
+
+# The social icons below the profile on the home page.
+# The `name` should be the file name of static/icons/*.svg or the icon name of https://simpleicons.org/
+[[extra.profile.social]]
+name = "github"
+url = "https://github.com/nref"
+
+[[extra.profile.social]]
+name = "mastodon"
+url = "https://fosstodon.org/@slater"
+
+[[extra.profile.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/slaterdev/"
+path = "images/doug.jpg"
+
+[[extra.profile.social]]
+name = "rss"
+url = "$BASE_URL/atom.xml"
+
+# The top menu.
+# [[extra.menu]]
+# name = "Projects"
+# url = "$BASE_URL/projects"
+
+[[extra.menu]]
+name = "Archive"
+url = "$BASE_URL/archive"
+
+# [[extra.menu]]
+# name = "Tags"
+# url = "$BASE_URL/tags"
+
+[[extra.menu]]
+name = "About"
+url = "$BASE_URL/about"
+
+# The page footer options.
+[extra.footer]
+since = 2020
+license = "CC BY-SA 4.0"
+license_url = "https://creativecommons.org/licenses/by-sa/4.0/deed"
+
+# The giscus comment options, only available when comment is enabled.
+[extra.giscus]
+repo = "nref/giscus-blog"
+repo_id = "R_kgDOORwKLA"
+category = "Announcements"
+category_id = "DIC_kwDOORwKLM4CopVP"
+mapping = "pathname"
+strict = 1
+reactions_enabled = 1
+emit_metadata = 0
+input_position = "bottom"
+theme = "noborder_dark"
+lang = "en"
+loading = "lazy"
