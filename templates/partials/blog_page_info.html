@@ -1,0 +1,23 @@
+<div class="flex items-center">
+  {% if config.extra.profile.avatar_url %}
+  <div class="not-prose shrink-0 rounded-full profile-border bg-white/50 shadow dark:bg-white/[15%]">
+    <img class="{% if config.extra.profile.avatar_invert %}dark:invert{% endif %} my-0 aspect-square w-16 rounded-full !bg-black/5" src="{{ get_url(path=config.extra.profile.avatar_url) }}" alt="{{ config.extra.profile.name | default(value=config.title) }}" />
+  </div>
+
+  {% endif %}
+  <div class="ml-4 text-sm antialiased opacity-60">
+    {% if page.authors | length > 0 %}
+    {% set author = page.authors | join(sep=", ") %}
+    {% else %}
+    {% set author = config.author %}
+    {% endif %}
+    {% if author %}
+    <span>{{ author }}</span>
+    {% endif %}
+    {% if page.date %}
+    <span class="mx-1">&middot;</span>
+    <time>{{ page.date | date }}</time>
+    {% endif %}
+    {% include "injects/page_info.html" ignore missing %}
+  </div>
+</div>

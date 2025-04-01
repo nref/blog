@@ -6,7 +6,7 @@
 
   <header class="mb-16">
     <h1 class="!my-0 pb-2.5">{{ page.title }}</h1>
-    {% include "partials/page_info.html" %}
+    {% include "partials/blog_page_info.html" %}
   </header>
 
   {% if page.extra.cover.image %}<!---->
@@ -26,6 +26,8 @@
   <section>{{ page.content | safe }}</section>
 
   <hr />
+
+  {% include "signup.html" %} 
 
   <!-- Post Taxonomies -->
   {% include "partials/post_taxonomies.html" %}<!---->
