@@ -6,10 +6,10 @@ title = "Doug Slater"
 compile_sass = true
 
 # The theme supports feeds (RSS and ATOM)
-generate_feed = true
+generate_feeds = true
 
 # Use `rss.xml` for RSS feeds and `atom.xml` for ATOM.
-feed_filename = "rss.xml"
+feed_filenames = ["rss.xml"]
 
 build_search_index = true 
 

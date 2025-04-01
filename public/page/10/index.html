@@ -28,8 +28,7 @@
     <meta property="twitter:domain" content="www.slater.dev">
     <meta property="twitter:url" content="https://www.slater.dev/">
 
-            <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.slater.dev/rss.xml">
-    
+                <link rel="alternate" type="application/rss+xml" title="Doug Slater RSS Feed" href="https://www.slater.dev/rss.xml" />
         <link rel="shortcut icon" type="image&#x2F;x-icon" href="favicon.ico">
     
     <!-- webmentions -->
@@ -313,8 +312,8 @@ $$</p>
 <p>The maximum task space ratio is \(16.7\), which is less than the previous value of \(v_{scale} = 22.5\).  <em>The previous scaled trajectory duration of 22.5s also satisfies the given task space constraints.</em> \(\blacksquare\)</p>
 <hr />
 <h3 id="multiple-joints">Multiple Joints</h3>
-<p>The same approach applies to robots with more than one joint. </p>
-<p>In this case, if we have \(m\) joints, then we will have \(m\) cubic splines, and \(a_{scale}\) and \(v_{scale}\) must be calculated for each joint. </p>
+<p>The same approach applies to robots with more than one joint.</p>
+<p>In this case, if we have \(m\) joints, then we will have \(m\) cubic splines, and \(a_{scale}\) and \(v_{scale}\) must be calculated for each joint.</p>
 <p>The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.</p>
 <h4 id="example">Example</h4>
 <p>Consider adding a second joint to the previous example to create a two-joint manipulator. This joint has the same velocity and acceleration limits.</p>
@@ -338,7 +337,7 @@ V_{final_1} &amp;= 0 &amp; D_1 &amp;= 0 \newline
 \end{aligned}
 \end{array}
 $$</p>
-<p>Here is the second spline. </p>
+<p>Here is the second spline.</p>
 <p>$$
 \begin{array}{c}
 \begin{aligned}
@@ -413,9 +412,9 @@ $$</p>
 <p>Since \(32.45 &lt; 45\),  the joint space constraints dominate the task space constraints. <em>The time-optimal duration is \(1s \cdot max(45, 32.45, 15)=45s\).</em> \(\blacksquare\)</p>
 <hr />
 <h3 id="longer-paths">Longer Paths</h3>
-<p>If a path  \(\pmb{Q}_j\) of length \(n | n&gt;2\) is given for joint \(j\), i.e. intermediate points between \(Q_{init}\) and \(Q_{final}\) are given, and if the joint begins and ends with zero velocity (\(V_{init} = V_{final} = 0\)), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1]. </p>
+<p>If a path  \(\pmb{Q}_j\) of length \(n | n&gt;2\) is given for joint \(j\), i.e. intermediate points between \(Q_{init}\) and \(Q_{final}\) are given, and if the joint begins and ends with zero velocity (\(V_{init} = V_{final} = 0\)), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1].</p>
 <h4 id="example-1">Example</h4>
-<p>Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position. </p>
+<p>Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position.</p>
 <p>$$
 \begin{aligned}
 \pmb{Q}_1 &amp;= [Q_{1_{init}} Q_{1_{intermediate}} Q_{1_{final}}] \newline
@@ -476,7 +475,7 @@ V_n &amp;= V_{n_{final}} &amp; \text{ // The final velocity of the last segment 
 \end{aligned}
 $$</p>
 <p><em>Reminder</em>: There are \(n-1\) splines interpolating \(n\) control points (also called knots), and our indexing starts at \(1\), not \(0\). Therefore,  \(i==1\) refers to the first spline, and \(i == n-1\) refers to the last spline.</p>
-<p><em>Aside:</em> <a href="https://github.com/roboticslibrary/rl/blob/cba76ed3e54676d430205a0dfdf03ce33ed3850c/src/rl/math/Spline.h#L108">Here</a> is an example implementation of the above algorithm. </p>
+<p><em>Aside:</em> <a href="https://github.com/roboticslibrary/rl/blob/cba76ed3e54676d430205a0dfdf03ce33ed3850c/src/rl/math/Spline.h#L108">Here</a> is an example implementation of the above algorithm.</p>
 <h5 id="joint-1">Joint 1</h5>
 <p>We solve for \(V_{1_{intermediate}}\).</p>
 <p>$$
@@ -484,11 +483,11 @@ $$</p>
 \begin{bmatrix}
 2(T_1+T_2)
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 V_{1_{intermediate}}
-\end{bmatrix} 
+\end{bmatrix}
 &amp;=
-\begin{bmatrix} 
+\begin{bmatrix}
 \frac{3}{T_1T_2}[T_1^2(Q_{1_{final}}-Q_{1_{intermediate}})+T_2^2(Q_{1_{intermediate}}-Q_{1_{init}})]-T_2 \cdot V_{1_{init}}
 \end{bmatrix}
 \end{array}
@@ -499,17 +498,17 @@ $$</p>
 \begin{bmatrix}
 2(1+1)
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 V_{1_{intermediate}}
-\end{bmatrix} 
+\end{bmatrix}
 &amp;=
-\begin{bmatrix} 
-\frac{3}{1 \cdot 1}[1^2(\pi/2-\pi/4)+1^2(\pi/4-0)]-2\cdot 0 
+\begin{bmatrix}
+\frac{3}{1 \cdot 1}[1^2(\pi/2-\pi/4)+1^2(\pi/4-0)]-2\cdot 0
 \end{bmatrix}
 \newline
 4 \cdot V_{1_{intermediate}}&amp;=
-\begin{bmatrix} 
-3[\pi/4+\pi/4] 
+\begin{bmatrix}
+3[\pi/4+\pi/4]
 \end{bmatrix}
 \newline
 V_{1_{intermediate}} &amp;= 3\pi/8 \ rad/s
@@ -540,7 +539,7 @@ $$</p>
 <iframe src="https://www.desmos.com/calculator/2vstdsov0i?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
 </center>
 <p><em>Figure: Two cubic splines for joint 1. Can you see where they meet? Hint: Each spline has 1s of duration.</em></p>
-<p>We only see one spline, but there are actually two. The first spline is valid on the interval \(t=(0,1)\), and the second spline is valid on the interval \(t=(1,2)\). The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline. </p>
+<p>We only see one spline, but there are actually two. The first spline is valid on the interval \(t=(0,1)\), and the second spline is valid on the interval \(t=(1,2)\). The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline.</p>
 <h5 id="joint-2">Joint 2</h5>
 <p>We solve for \(V_{2_{intermediate}}\).</p>
 <p>$$
@@ -548,17 +547,17 @@ $$</p>
 \begin{bmatrix}
 2(1+1)
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 V_{2_{intermediate}}
-\end{bmatrix} 
+\end{bmatrix}
 &amp;=
-\begin{bmatrix} 
-\frac{3}{1 \cdot 1}[1^2(-\pi/2-0)+1^2(0-\pi/2)]-2\cdot 0 
+\begin{bmatrix}
+\frac{3}{1 \cdot 1}[1^2(-\pi/2-0)+1^2(0-\pi/2)]-2\cdot 0
 \end{bmatrix}
 \newline
 4 \cdot V_{2_{intermediate}}&amp;=
-\begin{bmatrix} 
-3[-\pi/2-\pi/2] 
+\begin{bmatrix}
+3[-\pi/2-\pi/2]
 \end{bmatrix}
 \newline
 V_{2_{intermediate}} &amp;= -3\pi/4 \ rad/s
@@ -593,7 +592,7 @@ $$</p>
 </center>
 <p><em>Figure: Two cubic splines for joint 2. They meet at \(t=1s\).</em></p>
 <h4 id="scaling-longer-trajectories">Scaling Longer Trajectories</h4>
-<p>In order to satisfy joint-space and task-space velocity and acceleration limits, the \(m(n-1)\) resulting cubic splines (\(m=\) number of joints, \(n\) = number of control points) must each be scaled by the method described previously. </p>
+<p>In order to satisfy joint-space and task-space velocity and acceleration limits, the \(m(n-1)\) resulting cubic splines (\(m=\) number of joints, \(n\) = number of control points) must each be scaled by the method described previously.</p>
 <p><em>Pseudocode:</em></p>
 <pre data-lang="c" style="background-color:#1e1e1e;color:#dcdcdc;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#608b4e;">// segments: sequence of splines, lenth n - 1 
 </span><span style="color:#608b4e;">//          (n == number of interpolated points)
@@ -635,13 +634,13 @@ $$</p>
 </span><span>    next_segment= segment.next
 </span><span>    
 </span></code></pre>
-<p><em>Above:</em> When a segment is scaled, the following changes occur </p>
+<p><em>Above:</em> When a segment is scaled, the following changes occur</p>
 <ol>
-<li>the segment duration </li>
+<li>the segment duration</li>
 <li>the segment initial or final velocity (or both)</li>
 </ol>
 <p><em>Forward propagation</em>: All segments after the scaled segment are affected: the start time of each spline becomes the finishing time of the previous. These values propagate to the last spline.</p>
-<p>Finally, the resulting intermediate velocities and polynomial coefficients must be recomputed. </p>
+<p>Finally, the resulting intermediate velocities and polynomial coefficients must be recomputed.</p>
 <hr />
 <h3 id="references">References</h3>
 <p>[1] Biagiotti, L., &amp; Melchiorri, C. (2009). <em><a href="https://www.blogger.com/blog/post/edit/8646226552989795436/981000181203813289#">Trajectory Planning for Automatic Machines and Robots</a></em>. Berlin, Heidelberg: Springer Berlin Heidelberg.</p>
@@ -680,7 +679,7 @@ $$</p>
             <a href="mailto:blog@slater.dev" target="_blank" rel="me">Email</a>
                 <div class="copyright">
                         <span>© 
-    2024
+    2025
  Doug Slater</span>
                     </div>
             </div>

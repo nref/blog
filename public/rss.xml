@@ -14,7 +14,7 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/make-a-correct-judgement/</link>
           <guid>https://www.slater.dev/make-a-correct-judgement/</guid>
-          <description>&lt;p&gt;In this post I&#x27;ll make the following points: &lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/make-a-correct-judgement/">&lt;p&gt;In this post I&#x27;ll make the following points:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Correct judgments are rooted in upright character.&lt;&#x2F;li&gt;
 &lt;li&gt;Incorrect judgments harm the judge and the judged.&lt;&#x2F;li&gt;
@@ -26,11 +26,11 @@
 &lt;p&gt;I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character. -- Martin Luther King, August 28, 1963&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Neither Jesus nor Dr. King called for &lt;em&gt;no judgment&lt;&#x2F;em&gt;, but rather for &lt;em&gt;correct judgment&lt;&#x2F;em&gt;. I agree with them. The world has gotten off track: it is not somehow categorically virtuous to avoid making judgments.&lt;&#x2F;p&gt;
-&lt;p&gt;I should define what I mean by judgment. I can discern three behaviors people decry when they proclaim, &amp;quot;don&#x27;t judge!&amp;quot;:&lt;&#x2F;p&gt;
+&lt;p&gt;I should define what I mean by judgment. I can discern three behaviors people decry when they proclaim, &quot;don&#x27;t judge!&quot;:&lt;&#x2F;p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Observation&lt;&#x2F;strong&gt;. To see a situation. That is, to take notice of it. The opposite of &amp;quot;ignore&amp;quot;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Evaluation&lt;&#x2F;strong&gt;. Having seen, to make an assessment against your values. That is, to become invested. The opposite of &amp;quot;suppress&amp;quot;.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Action&lt;&#x2F;strong&gt;. To choose to intervene, being so moved by your evaluation. The opposite of &amp;quot;sweep it under the rug&amp;quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Observation&lt;&#x2F;strong&gt;. To see a situation. That is, to take notice of it. The opposite of &quot;ignore&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluation&lt;&#x2F;strong&gt;. Having seen, to make an assessment against your values. That is, to become invested. The opposite of &quot;suppress&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;&#x2F;strong&gt;. To choose to intervene, being so moved by your evaluation. The opposite of &quot;sweep it under the rug&quot;.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;All three forms of judgment have their place. Without observation, my body would collide with a passing bus in an intersection. A world without evaluation would make no distinction between war criminal and war hero, and a world without action would do nothing about Nazi death camps, even though we felt they were wrong.&lt;&#x2F;p&gt;
 &lt;p&gt;Sometimes, a wise judgment means taking no action, or taking restrained action. While we might feel strongly that Russia should not invade Ukraine, an all-out assault on Russia would cause greater harm. Sometimes the action is an exercise of grace, in which the grace-giver pays the cost of overlooking wrongdoing.&lt;&#x2F;p&gt;
@@ -57,8 +57,8 @@
 &lt;p&gt;The recruiter called me a few days later and said that the company had retracted their offer. My counteroffer had rubbed them the wrong way. Can you guess which of my requests offended them? It was the one that would have cost them nothing: the title. They perceived it as egotistical and a grab for power.&lt;&#x2F;p&gt;
 &lt;p&gt;In trying to understand what happened, the idea of &lt;em&gt;judgment&lt;&#x2F;em&gt; kept coming to mind.&lt;&#x2F;p&gt;
 &lt;p&gt;Clearly a character judgment was made, and if the judgment had been correct, withdrawing the offer was a reasonable mitigation. I can side with anyone who doesn&#x27;t want to work with an egotist.&lt;&#x2F;p&gt;
-&lt;p&gt;However, the judgment was incorrect. I am not an egotist. &lt;&#x2F;p&gt;
-&lt;p&gt;Consider the following points: &lt;&#x2F;p&gt;
+&lt;p&gt;However, the judgment was incorrect. I am not an egotist.&lt;&#x2F;p&gt;
+&lt;p&gt;Consider the following points:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;I wrote the counteroffer sitting together with my wife. Egotists don&#x27;t ask their wives for advice.&lt;&#x2F;li&gt;
 &lt;li&gt;My wife was shocked by their decision.&lt;&#x2F;li&gt;
@@ -75,18 +75,18 @@
 &lt;&#x2F;ul&gt;
 &lt;p&gt;I didn&#x27;t do anything objectively wrong. The error is on their side, but it still hurt. I wondered what I could have done differently, but the incorrect judgment says more about the company than me:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;In their location, company leadership had conceded as a last resort that the only way to hire technical talent was to hire remotely. &lt;&#x2F;li&gt;
+&lt;li&gt;In their location, company leadership had conceded as a last resort that the only way to hire technical talent was to hire remotely.&lt;&#x2F;li&gt;
 &lt;li&gt;The company has ~100 employees, of which 3 are remote.&lt;&#x2F;li&gt;
 &lt;li&gt;The company&#x27;s leadership is not remote.&lt;&#x2F;li&gt;
 &lt;li&gt;I expressed reservations about this situation.&lt;&#x2F;li&gt;
 &lt;li&gt;Despite their assurances, the company is not ready for a remote team.&lt;&#x2F;li&gt;
-&lt;li&gt;A company culture that is not used to remote workers will be not able to exercise self-moderation when events occur that give rise to suspicions of character. &lt;&#x2F;li&gt;
+&lt;li&gt;A company culture that is not used to remote workers will be not able to exercise self-moderation when events occur that give rise to suspicions of character.&lt;&#x2F;li&gt;
 &lt;li&gt;I used words which gave rise to such a suspicion.&lt;&#x2F;li&gt;
 &lt;li&gt;I could not walk into the office and use my words, tone, and behavior to contradict it.&lt;&#x2F;li&gt;
 &lt;li&gt;I observed that my hiring manager would easily lose his temper. I can only speculate, but maybe this happened when reading my counteroffer, and maybe he felt jealous of me.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;Who got hurt in this judgment? Everyone. The company lost a strong contributor, the recruiter lost a check, and I lost a growth opportunity. &lt;&#x2F;p&gt;
-&lt;p&gt;Overall, I feel grateful. If hired, I have would been facing down incorrect judgments with my family on the line. &lt;&#x2F;p&gt;
+&lt;p&gt;Who got hurt in this judgment? Everyone. The company lost a strong contributor, the recruiter lost a check, and I lost a growth opportunity.&lt;&#x2F;p&gt;
+&lt;p&gt;Overall, I feel grateful. If hired, I have would been facing down incorrect judgments with my family on the line.&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
@@ -95,15 +95,15 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/when-a-recruiter-asks-if-i-do-agile/</link>
           <guid>https://www.slater.dev/when-a-recruiter-asks-if-i-do-agile/</guid>
-          <description>&lt;div style=&quot;text-align: center; width: 60%; margin: 0 auto;&quot;&gt;
+          <description xml:base="https://www.slater.dev/when-a-recruiter-asks-if-i-do-agile/">&lt;div style=&quot;text-align: center; width: 60%; margin: 0 auto;&quot;&gt;
   &lt;img src=&quot;..&#x2F;img&#x2F;rembrandt.png&quot;&#x2F;&gt;
   &lt;p style=&quot;font-style: italic&quot;&gt;Image: Rembrandt prefers Crayola. Generated by Dall-E&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Tech Recruiter&lt;&#x2F;strong&gt;: So I see here that you do portraits? &lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tech Recruiter&lt;&#x2F;strong&gt;: So I see here that you do portraits?&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Rembrandt&lt;&#x2F;strong&gt; (famous painter): Yes&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Tech Recruiter&lt;&#x2F;strong&gt;: Great, our clients are looking for painters with Crayola experience. Do you have experience using Crayola? &lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Rembrandt&lt;&#x2F;strong&gt;: ... &lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tech Recruiter&lt;&#x2F;strong&gt;: Great, our clients are looking for painters with Crayola experience. Do you have experience using Crayola?&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rembrandt&lt;&#x2F;strong&gt;: ...&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </description>
       </item>
@@ -113,17 +113,17 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/why-programming-is-hard/</link>
           <guid>https://www.slater.dev/why-programming-is-hard/</guid>
-          <description>&lt;p&gt;Programming computers is hard because, as &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=-J_xL4IGhJA&quot;&gt;Hal put it&lt;&#x2F;a&gt;, it isn&#x27;t about programming, and it isn&#x27;t about computers. &lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/why-programming-is-hard/">&lt;p&gt;Programming computers is hard because, as &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=-J_xL4IGhJA&quot;&gt;Hal put it&lt;&#x2F;a&gt;, it isn&#x27;t about programming, and it isn&#x27;t about computers.&lt;&#x2F;p&gt;
 &lt;div style=&quot;text-align: center; width: 60%; margin: 0 auto;&quot;&gt;
   &lt;img src=&quot;..&#x2F;img&#x2F;wizard.png&quot;&#x2F;&gt;
   &lt;p style=&quot;font-style: italic&quot;&gt;A wizard conjuring a computer program. Generated by Dall-E&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;p&gt;Even the most mundane of programming issues are rooted in profound questions:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;quot;Why are my dependencies broken?&amp;quot; =&amp;gt; &amp;quot;What is causality?&amp;quot; &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;1&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&amp;quot;Should I check for null?&amp;quot; =&amp;gt; &amp;quot;When can we know a program is correct? Design time, compile time, or run time?&amp;quot;  &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;2,3&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&amp;quot;Why don&#x27;t I understand this code?&amp;quot; =&amp;gt; &amp;quot;What is memory, cognition, and language?&amp;quot; &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;4&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&amp;quot;Why is this program buggy?&amp;quot; =&amp;gt; &amp;quot;What is a proof?&amp;quot; &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;5,6&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&quot;Why are my dependencies broken?&quot; =&amp;gt; &quot;What is causality?&quot; &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;1&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&quot;Should I check for null?&quot; =&amp;gt; &quot;When can we know a program is correct? Design time, compile time, or run time?&quot;  &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;2,3&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&quot;Why don&#x27;t I understand this code?&quot; =&amp;gt; &quot;What is memory, cognition, and language?&quot; &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;4&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&quot;Why is this program buggy?&quot; =&amp;gt; &quot;What is a proof?&quot; &lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;why-programming-is-hard&#x2F;#References&quot;&gt;5,6&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;While you&#x27;ll overhear the questions on the left rising from the desks of developers on a Tuesday afternoon, their answers are surprisingly elusive and timeless.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
@@ -144,7 +144,7 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/grounded-programming-pedagogy/</link>
           <guid>https://www.slater.dev/grounded-programming-pedagogy/</guid>
-          <description>&lt;p&gt;In the alum chat for &lt;a href=&quot;https:&#x2F;&#x2F;www.mirdin.com&quot;&gt;Mirdin&lt;&#x2F;a&gt;, someone posted the following question, &amp;quot;Would it be better to start teaching beginners functional or imperative programming first?&amp;quot;&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/grounded-programming-pedagogy/">&lt;p&gt;In the alum chat for &lt;a href=&quot;https:&#x2F;&#x2F;www.mirdin.com&quot;&gt;Mirdin&lt;&#x2F;a&gt;, someone posted the following question, &quot;Would it be better to start teaching beginners functional or imperative programming first?&quot;&lt;&#x2F;p&gt;
 &lt;p&gt;Pretending for a second that &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Functional_programming&quot;&gt;FP&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Imperative_programming&quot;&gt;IP&lt;&#x2F;a&gt; are the only choices (they&#x27;re &lt;a href=&quot;https:&#x2F;&#x2F;info.ucl.ac.be&#x2F;~pvr&#x2F;VanRoyChapter.pdf&quot;&gt;not&lt;&#x2F;a&gt;), an answer depends on where your beginner comes from.&lt;&#x2F;p&gt;
 &lt;p&gt;A meta-pedagogical (teaching about teaching) answer acknowledges that learning starts in a place the learner feels &lt;a href=&quot;https:&#x2F;&#x2F;argumatronic.com&#x2F;posts&#x2F;2018-09-02-effective-metaphor.html&quot;&gt;grounded&lt;&#x2F;a&gt; and connects them from there to new knowledge. For example, &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Subitizing&quot;&gt;subitizing&lt;&#x2F;a&gt; is an innate ability. A developmentally normal child can instantly know how many objects are presented, for values up to about 5.&lt;&#x2F;p&gt;
 &lt;div style=&quot;text-align: center; width: 60%; margin: 0 auto;&quot;&gt;
@@ -152,9 +152,9 @@
   &lt;p style=&quot;font-style: italic&quot;&gt;Image: How many dots are there? You just subitized.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;p&gt;From there, you can teach a 5-year-old arithmetic, for example to add, by having them subitize groups of objects alongside numerals and the math symbol &lt;code&gt;+&lt;&#x2F;code&gt;. This connects their innate notion of quantity to the abstract notion of numbers.&lt;&#x2F;p&gt;
-&lt;p&gt;The MIT book and course &lt;a href=&quot;https:&#x2F;&#x2F;web.mit.edu&#x2F;6.001&#x2F;6.037&#x2F;sicp.pdf&quot;&gt;SICP&lt;&#x2F;a&gt; is a masterpiece in programming pedagogy, and it falls heavily on the FP side. Watch Professor Sussman absolutely rip apart side effects in &lt;a href=&quot;https:&#x2F;&#x2F;ocw.mit.edu&#x2F;courses&#x2F;6-001-structure-and-interpretation-of-computer-programs-spring-2005&#x2F;resources&#x2F;5a-assignment-state-and-side-effects&#x2F;&quot;&gt;lecture 5A&lt;&#x2F;a&gt;. But not everybody &amp;quot;gets&amp;quot; this approach easily. Even Hal acknowledges in this &lt;a href=&quot;https:&#x2F;&#x2F;corecursive.com&#x2F;039-hal-abelson-sicp&#x2F;&quot;&gt;Corecursive interview&lt;&#x2F;a&gt; that the FP approach didn&#x27;t work for everyone: &lt;&#x2F;p&gt;
+&lt;p&gt;The MIT book and course &lt;a href=&quot;https:&#x2F;&#x2F;web.mit.edu&#x2F;6.001&#x2F;6.037&#x2F;sicp.pdf&quot;&gt;SICP&lt;&#x2F;a&gt; is a masterpiece in programming pedagogy, and it falls heavily on the FP side. Watch Professor Sussman absolutely rip apart side effects in &lt;a href=&quot;https:&#x2F;&#x2F;ocw.mit.edu&#x2F;courses&#x2F;6-001-structure-and-interpretation-of-computer-programs-spring-2005&#x2F;resources&#x2F;5a-assignment-state-and-side-effects&#x2F;&quot;&gt;lecture 5A&lt;&#x2F;a&gt;. But not everybody &quot;gets&quot; this approach easily. Even Hal acknowledges in this &lt;a href=&quot;https:&#x2F;&#x2F;corecursive.com&#x2F;039-hal-abelson-sicp&#x2F;&quot;&gt;Corecursive interview&lt;&#x2F;a&gt; that the FP approach didn&#x27;t work for everyone:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;In the very beginning days, we would teach a sort of short courses for MIT faculty and some of the electrical engineers would just get stuck. &amp;quot;You haven’t showed us how the transistors work&amp;quot;. ...People think different ways. Some people have to be grounded on where they’re comfortable and for some people, well, it really is transistors. &lt;&#x2F;p&gt;
+&lt;p&gt;In the very beginning days, we would teach a sort of short courses for MIT faculty and some of the electrical engineers would just get stuck. &quot;You haven’t showed us how the transistors work&quot;. ...People think different ways. Some people have to be grounded on where they’re comfortable and for some people, well, it really is transistors.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Contrast that to somebody who knows what a function is, in the math sense. The machinery of a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Transistor&quot;&gt;transistor&lt;&#x2F;a&gt;, of gates, sources, drains, and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Transistor%E2%80%93transistor_logic&quot;&gt;TTL&lt;&#x2F;a&gt; will be an irritating detail, like multiplying matrices by hand.&lt;&#x2F;p&gt;
 &lt;p&gt;So in the dichotomy between introducing FP and IP first, the answer might depend on where the learner is coming from. I learned IP and OOP first because that&#x27;s what material was available. I was first exposed to FP in college in the form of Scheme. It was disorienting. I couldn&#x27;t count all the parentheses, let alone grok tail recursion. I wish it could have been presented to me grounded in terms of what I was already comfortable with, for example high school algebra.&lt;&#x2F;p&gt;
@@ -168,19 +168,19 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/a-design-is-a-mold-for-code/</link>
           <guid>https://www.slater.dev/a-design-is-a-mold-for-code/</guid>
-          <description>&lt;p&gt;I&#x27;m always in search of good metaphors for software design. Good or not, here&#x27;s one:&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/a-design-is-a-mold-for-code/">&lt;p&gt;I&#x27;m always in search of good metaphors for software design. Good or not, here&#x27;s one:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A Design is a Mold for Code&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;In manufacturing, a mold is a hollow shape that fills with fluid material which expands into the space and sets to form a casting. &lt;&#x2F;p&gt;
+&lt;p&gt;In manufacturing, a mold is a hollow shape that fills with fluid material which expands into the space and sets to form a casting.&lt;&#x2F;p&gt;
 &lt;div style=&quot;text-align: center; width: 60%; margin: 0 auto;&quot;&gt;
   &lt;img src=&quot;..&#x2F;img&#x2F;dall-e-muffin-pan.png&quot;&#x2F;&gt;
   &lt;p style=&quot;font-style: italic&quot;&gt;Image: A useful mold. Generated by Dall-E&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;p&gt;Like in manufacturing, code fills the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Negative_space&quot;&gt;negative space&lt;&#x2F;a&gt; of a software design. Over time, code sets and becomes harder to change.&lt;&#x2F;p&gt;
-&lt;p&gt;Imagine two engineering teams who independently &amp;quot;fill&amp;quot; (implement) a design, and the design is the set of standards for a web browser. The two implementations are Chrome and Firefox. The two browsers have independent codebases&lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;a-design-is-a-mold-for-code&#x2F;#notes&quot;&gt;1&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt; which take vastly different shapes, but as far as web standards are concerned, the two are equal. You could switch from Chrome to Firefox (which I &lt;a href=&quot;https:&#x2F;&#x2F;www.eff.org&#x2F;deeplinks&#x2F;2021&#x2F;12&#x2F;chrome-users-beware-manifest-v3-deceitful-and-threatening&quot;&gt;recommend&lt;&#x2F;a&gt;) and still browse compliant web pages with no discernible change. &lt;&#x2F;p&gt;
+&lt;p&gt;Imagine two engineering teams who independently &quot;fill&quot; (implement) a design, and the design is the set of standards for a web browser. The two implementations are Chrome and Firefox. The two browsers have independent codebases&lt;sup&gt;[&lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;a-design-is-a-mold-for-code&#x2F;#notes&quot;&gt;1&lt;&#x2F;a&gt;]&lt;&#x2F;sup&gt; which take vastly different shapes, but as far as web standards are concerned, the two are equal. You could switch from Chrome to Firefox (which I &lt;a href=&quot;https:&#x2F;&#x2F;www.eff.org&#x2F;deeplinks&#x2F;2021&#x2F;12&#x2F;chrome-users-beware-manifest-v3-deceitful-and-threatening&quot;&gt;recommend&lt;&#x2F;a&gt;) and still browse compliant web pages with no discernible change.&lt;&#x2F;p&gt;
 &lt;p&gt;Programmers who also like math sometimes call two pieces of code which can be swapped &lt;a href=&quot;https:&#x2F;&#x2F;blog.ploeh.dk&#x2F;2018&#x2F;01&#x2F;08&#x2F;software-design-isomorphisms&#x2F;&quot;&gt;isomorphic&lt;&#x2F;a&gt; with respect to the spec.&lt;&#x2F;p&gt;
-&lt;p&gt;It&#x27;s important not to reverse the causality: a design causes the work product, not the converse. A mold causes a casting, and a software design causes code. Nevertheless, to some extent, one can go in reverse, i.e. reconstruct a mold from a casting or infer a design from code. &lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s important not to reverse the causality: a design causes the work product, not the converse. A mold causes a casting, and a software design causes code. Nevertheless, to some extent, one can go in reverse, i.e. reconstruct a mold from a casting or infer a design from code.&lt;&#x2F;p&gt;
 &lt;p&gt;The reconstructed mold might lose some fidelity, like sharp edges or precise dimensions, but it&#x27;s far worse for code. Looking at code without supplemental information, a new dev can only infer a dim, vague notion of its design. She might even sense the mind(s) behind the design. However, it would be costly if even possible to losslessly reconstruct the design, i.e. to such a fidelity that it could be the basis for an isomorphic implementation.&lt;&#x2F;p&gt;
 &lt;p&gt;In pseudocode:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot;&gt;&lt;code&gt;&lt;span&gt;[Test]
@@ -215,7 +215,7 @@
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
 &lt;ol&gt;
-&lt;li&gt;Firefox and Chrome are not truly independent by this definition. Plenty of people who have worked on one browser have also worked on the other. Moreover, as open source projects, both teams can see the other&#x27;s code. &lt;a href=&quot;https:&#x2F;&#x2F;source.chromium.org&#x2F;chromium&#x2F;chromium&#x2F;src&#x2F;+&#x2F;main:&quot;&gt;Chromium source&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;searchfox.org&#x2F;mozilla-central&#x2F;source&quot;&gt;Firefox source&lt;&#x2F;a&gt; &lt;&#x2F;li&gt;
+&lt;li&gt;Firefox and Chrome are not truly independent by this definition. Plenty of people who have worked on one browser have also worked on the other. Moreover, as open source projects, both teams can see the other&#x27;s code. &lt;a href=&quot;https:&#x2F;&#x2F;source.chromium.org&#x2F;chromium&#x2F;chromium&#x2F;src&#x2F;+&#x2F;main:&quot;&gt;Chromium source&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;searchfox.org&#x2F;mozilla-central&#x2F;source&quot;&gt;Firefox source&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 </description>
       </item>
@@ -225,7 +225,7 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/reflections-on-a-diy-canova-method-marathon-training-cycle/</link>
           <guid>https://www.slater.dev/reflections-on-a-diy-canova-method-marathon-training-cycle/</guid>
-          <description>&lt;p&gt;From August-November 2019, I trained for the &lt;a href=&quot;https:&#x2F;&#x2F;monumentalmarathon.com&#x2F;&quot;&gt;Indianapolis Marathon&lt;&#x2F;a&gt; using the Renato Canova method. I composed training plan with information from both primary and secondary sources, including others&#x27; Canova-style training plans, descriptions of his method, video interviews, his own training plans for his athletes, and &lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;renato-canova-in-valencia&#x2F;&quot;&gt;one very useful talk in Valencia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/reflections-on-a-diy-canova-method-marathon-training-cycle/">&lt;p&gt;From August-November 2019, I trained for the &lt;a href=&quot;https:&#x2F;&#x2F;monumentalmarathon.com&#x2F;&quot;&gt;Indianapolis Marathon&lt;&#x2F;a&gt; using the Renato Canova method. I composed training plan with information from both primary and secondary sources, including others&#x27; Canova-style training plans, descriptions of his method, video interviews, his own training plans for his athletes, and &lt;a href=&quot;https:&#x2F;&#x2F;www.slater.dev&#x2F;renato-canova-in-valencia&#x2F;&quot;&gt;one very useful talk in Valencia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;My self-composed plan called for two quality runs a week: one of longer duration and one of shorter duration but more intensity. The remaining runs were easy miles ending with striders. I did not have time to do a Canova-style base phase, which is &lt;a href=&quot;https:&#x2F;&#x2F;nateruns.blogspot.com&#x2F;2015&#x2F;02&#x2F;throwback-thursday-meeting-canova.html&quot;&gt;arguably the most important part&lt;&#x2F;a&gt;, but I nailed the taper, executing some very aggressive speedwork as late as the week before the race.&lt;&#x2F;p&gt;
 &lt;p&gt;The cycle produced the following results:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -236,7 +236,7 @@
 &lt;p&gt;&lt;strong&gt;Was it hard work?&lt;&#x2F;strong&gt; Yes. It was a lot of training time and fairly monotonous.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Would I do it again?&lt;&#x2F;strong&gt; I would like to try other methods first, particularly ones with greater variety.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Is Canova better than method X?&lt;&#x2F;strong&gt; Based on what metrics? A sample size of one athlete-cycle does not provide much information. For a metric like Injury Rate, can say that I have completed several Lydiard-style cycles, during all of which I accrued at least one injury. I did not get injured this cycle, but in January 2020 I began another Canova-style cycle, and I strained my calf in February on an easy run the day after a quality workout.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Is it the best method?&lt;&#x2F;strong&gt; In what context? For amateur athletes, I would say &amp;quot;no&amp;quot;. Canova himself stated in Valencia that amateurs simply cannot produce the quality his style demands, and that holds true for this amateur. Canova starts with Elite athletes and aims to make them world class. It would be better to follow a plan made specifically for the type of athlete you are.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Is it the best method?&lt;&#x2F;strong&gt; In what context? For amateur athletes, I would say &quot;no&quot;. Canova himself stated in Valencia that amateurs simply cannot produce the quality his style demands, and that holds true for this amateur. Canova starts with Elite athletes and aims to make them world class. It would be better to follow a plan made specifically for the type of athlete you are.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;What will I do next?&lt;&#x2F;strong&gt; In June 2020 I returned to Bobby Holcombe of &lt;a href=&quot;http:&#x2F;&#x2F;www.knoxvilleendurance.com&#x2F;&quot;&gt;Knoxville Endurance&lt;&#x2F;a&gt; to get training more suited to my changing goals. Before 2020, I wanted to be as fast as possible, and now I want to be as consistent as possible.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -246,7 +246,7 @@
           <author>Unknown</author>
           <link>https://www.slater.dev/matrices-are-neural-networks/</link>
           <guid>https://www.slater.dev/matrices-are-neural-networks/</guid>
-          <description>&lt;p&gt;Chances are you&#x27;ve seen a neural network diagram like this one with circles and arrows:&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/matrices-are-neural-networks/">&lt;p&gt;Chances are you&#x27;ve seen a neural network diagram like this one with circles and arrows:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;miro.medium.com&#x2F;max&#x2F;496&#x2F;1*GTdVep66Ln4N4Zd2JnSXbQ.png&quot; alt=&quot;Image for post&quot; &#x2F;&gt;
 &lt;em&gt;Figure: A neural network. Source:&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@quantumsteinke&#x2F;whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c&quot;&gt;Medium&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;While that looks fancy, it&#x27;s basically a matrix. More generally, it&#x27;s a tensor, but a special kind of tensor which makes it &lt;a href=&quot;https:&#x2F;&#x2F;math.stackexchange.com&#x2F;a&#x2F;412429&quot;&gt;just a matrix&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -281,7 +281,7 @@ $$&lt;&#x2F;p&gt;
           <author>Unknown</author>
           <link>https://www.slater.dev/threadripper/</link>
           <guid>https://www.slater.dev/threadripper/</guid>
-          <description>&lt;p&gt;In April, I built a new PC out of these parts:&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/threadripper/">&lt;p&gt;In April, I built a new PC out of these parts:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Threadripper 3970x&lt;&#x2F;li&gt;
 &lt;li&gt;MSI TRX40 PRO&lt;&#x2F;li&gt;
@@ -293,7 +293,7 @@ $$&lt;&#x2F;p&gt;
 &lt;li&gt;Fractal Design Meshify C&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Total cost: &lt;strong&gt;$3863.98&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Why did I build it?&lt;&#x2F;strong&gt; I&#x27;m a software developer, and I spend all day in Visual Studio. I had just gotten hired at a new employer, and I expected to be doing a fair amount of C++ compilation. For the rest of my development tasks, I wanted to be comfortably over-provisioned. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Why did I build it?&lt;&#x2F;strong&gt; I&#x27;m a software developer, and I spend all day in Visual Studio. I had just gotten hired at a new employer, and I expected to be doing a fair amount of C++ compilation. For the rest of my development tasks, I wanted to be comfortably over-provisioned.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Do I like it?&lt;&#x2F;strong&gt; Emphatically yes. Developing on it is a dream. I am spoiled to work on any other machine. It is fun to watch all 64 logical processors max out in Task Manager during compilation. I love spinning up a virtual machine and whimsically assigning 16 cores and as many gigabytes of RAM. I feel like a teenager with a 500hp engine under his foot.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=view&amp;amp;id=1NUEqO5TG63nc1w3gjQOcWOb-4WBu8GsM&quot; alt=&quot;&quot; &#x2F;&gt;
 &lt;em&gt;Image: All cores maxed out compiling &lt;a href=&quot;https:&#x2F;&#x2F;www.researchgate.net&#x2F;publication&#x2F;259903810_The_open-radART_ion_ORAion_Software_Suite&quot;&gt;open-radART&lt;&#x2F;a&gt;. Vroom!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
@@ -308,14 +308,14 @@ $$&lt;&#x2F;p&gt;
           <author>Unknown</author>
           <link>https://www.slater.dev/christian-pull-requests/</link>
           <guid>https://www.slater.dev/christian-pull-requests/</guid>
-          <description>&lt;h3 id=&quot;christian-pull-requests&quot;&gt;Christian Pull Requests&lt;&#x2F;h3&gt;
+          <description xml:base="https://www.slater.dev/christian-pull-requests/">&lt;h3 id=&quot;christian-pull-requests&quot;&gt;Christian Pull Requests&lt;&#x2F;h3&gt;
 &lt;p&gt;I&#x27;m a software developer, so the terms &lt;a href=&quot;https:&#x2F;&#x2F;opensource.stackexchange.com&#x2F;a&#x2F;380&quot;&gt;pull request&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Code_review&quot;&gt;code review&lt;&#x2F;a&gt; are part of my daily vernacular.&lt;&#x2F;p&gt;
 &lt;p&gt;I&#x27;m also a Christian and go to a weekly Bible study.&lt;&#x2F;p&gt;
-&lt;p&gt;At Bible study,  after the lesson, and sometimes before, the group shares &amp;quot;prayer requests&amp;quot;. This is a chance for participants to pray for each other and for people outside the group.&lt;&#x2F;p&gt;
+&lt;p&gt;At Bible study,  after the lesson, and sometimes before, the group shares &quot;prayer requests&quot;. This is a chance for participants to pray for each other and for people outside the group.&lt;&#x2F;p&gt;
 &lt;p&gt;Unless requested not to, we record these prayer requests in a group messaging app. It can be hard to take down requests on a smartphone, so I often bring my laptop to keep up.&lt;&#x2F;p&gt;
-&lt;p&gt;At the end of Bible study one recent Sunday night, I pulled out my laptop and announced, &amp;quot;Ok, I am taking pull requests!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;At the end of Bible study one recent Sunday night, I pulled out my laptop and announced, &quot;Ok, I am taking pull requests!&quot;&lt;&#x2F;p&gt;
 &lt;p&gt;Not knowing what I had just said, I looked around and saw blank eyes looking back.&lt;&#x2F;p&gt;
-&lt;p&gt;&amp;quot;Guys, I mean &lt;em&gt;prayer&lt;&#x2F;em&gt; requests!&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;Guys, I mean &lt;em&gt;prayer&lt;&#x2F;em&gt; requests!&quot;&lt;&#x2F;p&gt;
 &lt;p&gt;Having my laptop open may have triggered something code-related in my brain.&lt;&#x2F;p&gt;
 </description>
       </item>
@@ -325,7 +325,7 @@ $$&lt;&#x2F;p&gt;
           <author>Unknown</author>
           <link>https://www.slater.dev/cubic-spline-joint-trajectories/</link>
           <guid>https://www.slater.dev/cubic-spline-joint-trajectories/</guid>
-          <description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h3&gt;
+          <description xml:base="https://www.slater.dev/cubic-spline-joint-trajectories/">&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h3&gt;
 &lt;p&gt;In robot kinematics, a &lt;em&gt;joint path&lt;&#x2F;em&gt; is a sequence of positions for one or more joints. A &lt;em&gt;joint trajectory&lt;&#x2F;em&gt; is the time function interpolating these positions.&lt;&#x2F;p&gt;
 &lt;p&gt;This post examines generating joint trajectories with cubic splines.&lt;&#x2F;p&gt;
 &lt;p&gt;Say we have a robotic arm with one revolute joint, and we want to rotate its joint position \(Q\) from \(0\) to \(90\) degrees.&lt;&#x2F;p&gt;
@@ -515,8 +515,8 @@ $$&lt;&#x2F;p&gt;
 &lt;p&gt;The maximum task space ratio is \(16.7\), which is less than the previous value of \(v_{scale} = 22.5\).  &lt;em&gt;The previous scaled trajectory duration of 22.5s also satisfies the given task space constraints.&lt;&#x2F;em&gt; \(\blacksquare\)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;multiple-joints&quot;&gt;Multiple Joints&lt;&#x2F;h3&gt;
-&lt;p&gt;The same approach applies to robots with more than one joint. &lt;&#x2F;p&gt;
-&lt;p&gt;In this case, if we have \(m\) joints, then we will have \(m\) cubic splines, and \(a_{scale}\) and \(v_{scale}\) must be calculated for each joint. &lt;&#x2F;p&gt;
+&lt;p&gt;The same approach applies to robots with more than one joint.&lt;&#x2F;p&gt;
+&lt;p&gt;In this case, if we have \(m\) joints, then we will have \(m\) cubic splines, and \(a_{scale}\) and \(v_{scale}\) must be calculated for each joint.&lt;&#x2F;p&gt;
 &lt;p&gt;The scale resulting from dividing the forward velocity by the task space limit is also calculated. The maximum of the joint space ratios and the task space ratio yields the optimal trajectory duration.&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;example&quot;&gt;Example&lt;&#x2F;h4&gt;
 &lt;p&gt;Consider adding a second joint to the previous example to create a two-joint manipulator. This joint has the same velocity and acceleration limits.&lt;&#x2F;p&gt;
@@ -540,7 +540,7 @@ V_{final_1} &amp;amp;= 0 &amp;amp; D_1 &amp;amp;= 0 \newline
 \end{aligned}
 \end{array}
 $$&lt;&#x2F;p&gt;
-&lt;p&gt;Here is the second spline. &lt;&#x2F;p&gt;
+&lt;p&gt;Here is the second spline.&lt;&#x2F;p&gt;
 &lt;p&gt;$$
 \begin{array}{c}
 \begin{aligned}
@@ -615,9 +615,9 @@ $$&lt;&#x2F;p&gt;
 &lt;p&gt;Since \(32.45 &amp;lt; 45\),  the joint space constraints dominate the task space constraints. &lt;em&gt;The time-optimal duration is \(1s \cdot max(45, 32.45, 15)=45s\).&lt;&#x2F;em&gt; \(\blacksquare\)&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;longer-paths&quot;&gt;Longer Paths&lt;&#x2F;h3&gt;
-&lt;p&gt;If a path  \(\pmb{Q}_j\) of length \(n | n&amp;gt;2\) is given for joint \(j\), i.e. intermediate points between \(Q_{init}\) and \(Q_{final}\) are given, and if the joint begins and ends with zero velocity (\(V_{init} = V_{final} = 0\)), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1]. &lt;&#x2F;p&gt;
+&lt;p&gt;If a path  \(\pmb{Q}_j\) of length \(n | n&amp;gt;2\) is given for joint \(j\), i.e. intermediate points between \(Q_{init}\) and \(Q_{final}\) are given, and if the joint begins and ends with zero velocity (\(V_{init} = V_{final} = 0\)), then by enforcing the constraints of continuity on velocity and acceleration, the intermediate point velocities can be calculated with a system of linear equations following the method described by Melchiorri [1].&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;example-1&quot;&gt;Example&lt;&#x2F;h4&gt;
-&lt;p&gt;Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position. &lt;&#x2F;p&gt;
+&lt;p&gt;Consider an extension of the previous 2-joint trajectory, where each joint passes through three positions: an initial position, an intermediate position, and a final position.&lt;&#x2F;p&gt;
 &lt;p&gt;$$
 \begin{aligned}
 \pmb{Q}_1 &amp;amp;= [Q_{1_{init}} Q_{1_{intermediate}} Q_{1_{final}}] \newline
@@ -678,7 +678,7 @@ V_n &amp;amp;= V_{n_{final}} &amp;amp; \text{ &#x2F;&#x2F; The final velocity of
 \end{aligned}
 $$&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Reminder&lt;&#x2F;em&gt;: There are \(n-1\) splines interpolating \(n\) control points (also called knots), and our indexing starts at \(1\), not \(0\). Therefore,  \(i==1\) refers to the first spline, and \(i == n-1\) refers to the last spline.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;em&gt;Aside:&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;roboticslibrary&#x2F;rl&#x2F;blob&#x2F;cba76ed3e54676d430205a0dfdf03ce33ed3850c&#x2F;src&#x2F;rl&#x2F;math&#x2F;Spline.h#L108&quot;&gt;Here&lt;&#x2F;a&gt; is an example implementation of the above algorithm. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Aside:&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;roboticslibrary&#x2F;rl&#x2F;blob&#x2F;cba76ed3e54676d430205a0dfdf03ce33ed3850c&#x2F;src&#x2F;rl&#x2F;math&#x2F;Spline.h#L108&quot;&gt;Here&lt;&#x2F;a&gt; is an example implementation of the above algorithm.&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;joint-1&quot;&gt;Joint 1&lt;&#x2F;h5&gt;
 &lt;p&gt;We solve for \(V_{1_{intermediate}}\).&lt;&#x2F;p&gt;
 &lt;p&gt;$$
@@ -686,11 +686,11 @@ $$&lt;&#x2F;p&gt;
 \begin{bmatrix}
 2(T_1+T_2)
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 V_{1_{intermediate}}
-\end{bmatrix} 
+\end{bmatrix}
 &amp;amp;=
-\begin{bmatrix} 
+\begin{bmatrix}
 \frac{3}{T_1T_2}[T_1^2(Q_{1_{final}}-Q_{1_{intermediate}})+T_2^2(Q_{1_{intermediate}}-Q_{1_{init}})]-T_2 \cdot V_{1_{init}}
 \end{bmatrix}
 \end{array}
@@ -701,17 +701,17 @@ $$&lt;&#x2F;p&gt;
 \begin{bmatrix}
 2(1+1)
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 V_{1_{intermediate}}
-\end{bmatrix} 
+\end{bmatrix}
 &amp;amp;=
-\begin{bmatrix} 
-\frac{3}{1 \cdot 1}[1^2(\pi&#x2F;2-\pi&#x2F;4)+1^2(\pi&#x2F;4-0)]-2\cdot 0 
+\begin{bmatrix}
+\frac{3}{1 \cdot 1}[1^2(\pi&#x2F;2-\pi&#x2F;4)+1^2(\pi&#x2F;4-0)]-2\cdot 0
 \end{bmatrix}
 \newline
 4 \cdot V_{1_{intermediate}}&amp;amp;=
-\begin{bmatrix} 
-3[\pi&#x2F;4+\pi&#x2F;4] 
+\begin{bmatrix}
+3[\pi&#x2F;4+\pi&#x2F;4]
 \end{bmatrix}
 \newline
 V_{1_{intermediate}} &amp;amp;= 3\pi&#x2F;8 \ rad&#x2F;s
@@ -742,7 +742,7 @@ $$&lt;&#x2F;p&gt;
 &lt;iframe src=&quot;https:&#x2F;&#x2F;www.desmos.com&#x2F;calculator&#x2F;2vstdsov0i?embed&quot; width=&quot;500px&quot; height=&quot;500px&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=0&gt;&lt;&#x2F;iframe&gt;
 &lt;&#x2F;center&gt;
 &lt;p&gt;&lt;em&gt;Figure: Two cubic splines for joint 1. Can you see where they meet? Hint: Each spline has 1s of duration.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;We only see one spline, but there are actually two. The first spline is valid on the interval \(t=(0,1)\), and the second spline is valid on the interval \(t=(1,2)\). The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline. &lt;&#x2F;p&gt;
+&lt;p&gt;We only see one spline, but there are actually two. The first spline is valid on the interval \(t=(0,1)\), and the second spline is valid on the interval \(t=(1,2)\). The two splines are identical because they have the same duration, displacement, and absolute change in velocity. Therefore, while we chose to use two splines, this movement could have been interpolated by a single spline.&lt;&#x2F;p&gt;
 &lt;h5 id=&quot;joint-2&quot;&gt;Joint 2&lt;&#x2F;h5&gt;
 &lt;p&gt;We solve for \(V_{2_{intermediate}}\).&lt;&#x2F;p&gt;
 &lt;p&gt;$$
@@ -750,17 +750,17 @@ $$&lt;&#x2F;p&gt;
 \begin{bmatrix}
 2(1+1)
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 V_{2_{intermediate}}
-\end{bmatrix} 
+\end{bmatrix}
 &amp;amp;=
-\begin{bmatrix} 
-\frac{3}{1 \cdot 1}[1^2(-\pi&#x2F;2-0)+1^2(0-\pi&#x2F;2)]-2\cdot 0 
+\begin{bmatrix}
+\frac{3}{1 \cdot 1}[1^2(-\pi&#x2F;2-0)+1^2(0-\pi&#x2F;2)]-2\cdot 0
 \end{bmatrix}
 \newline
 4 \cdot V_{2_{intermediate}}&amp;amp;=
-\begin{bmatrix} 
-3[-\pi&#x2F;2-\pi&#x2F;2] 
+\begin{bmatrix}
+3[-\pi&#x2F;2-\pi&#x2F;2]
 \end{bmatrix}
 \newline
 V_{2_{intermediate}} &amp;amp;= -3\pi&#x2F;4 \ rad&#x2F;s
@@ -795,7 +795,7 @@ $$&lt;&#x2F;p&gt;
 &lt;&#x2F;center&gt;
 &lt;p&gt;&lt;em&gt;Figure: Two cubic splines for joint 2. They meet at \(t=1s\).&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;h4 id=&quot;scaling-longer-trajectories&quot;&gt;Scaling Longer Trajectories&lt;&#x2F;h4&gt;
-&lt;p&gt;In order to satisfy joint-space and task-space velocity and acceleration limits, the \(m(n-1)\) resulting cubic splines (\(m=\) number of joints, \(n\) = number of control points) must each be scaled by the method described previously. &lt;&#x2F;p&gt;
+&lt;p&gt;In order to satisfy joint-space and task-space velocity and acceleration limits, the \(m(n-1)\) resulting cubic splines (\(m=\) number of joints, \(n\) = number of control points) must each be scaled by the method described previously.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Pseudocode:&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#1e1e1e;color:#dcdcdc;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F; segments: sequence of splines, lenth n - 1 
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#608b4e;&quot;&gt;&#x2F;&#x2F;          (n == number of interpolated points)
@@ -837,13 +837,13 @@ $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    next_segment= segment.next
 &lt;&#x2F;span&gt;&lt;span&gt;    
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;em&gt;Above:&lt;&#x2F;em&gt; When a segment is scaled, the following changes occur &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Above:&lt;&#x2F;em&gt; When a segment is scaled, the following changes occur&lt;&#x2F;p&gt;
 &lt;ol&gt;
-&lt;li&gt;the segment duration &lt;&#x2F;li&gt;
+&lt;li&gt;the segment duration&lt;&#x2F;li&gt;
 &lt;li&gt;the segment initial or final velocity (or both)&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;&lt;em&gt;Forward propagation&lt;&#x2F;em&gt;: All segments after the scaled segment are affected: the start time of each spline becomes the finishing time of the previous. These values propagate to the last spline.&lt;&#x2F;p&gt;
-&lt;p&gt;Finally, the resulting intermediate velocities and polynomial coefficients must be recomputed. &lt;&#x2F;p&gt;
+&lt;p&gt;Finally, the resulting intermediate velocities and polynomial coefficients must be recomputed.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;h3 id=&quot;references&quot;&gt;References&lt;&#x2F;h3&gt;
 &lt;p&gt;[1] Biagiotti, L., &amp;amp; Melchiorri, C. (2009). &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.blogger.com&#x2F;blog&#x2F;post&#x2F;edit&#x2F;8646226552989795436&#x2F;981000181203813289#&quot;&gt;Trajectory Planning for Automatic Machines and Robots&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;. Berlin, Heidelberg: Springer Berlin Heidelberg.&lt;&#x2F;p&gt;
@@ -855,7 +855,7 @@ $$&lt;&#x2F;p&gt;
           <author>Unknown</author>
           <link>https://www.slater.dev/edit-tcx-treadmill-runs-with-tcxmill/</link>
           <guid>https://www.slater.dev/edit-tcx-treadmill-runs-with-tcxmill/</guid>
-          <description>&lt;p&gt;Get tcxmill &lt;a href=&quot;https:&#x2F;&#x2F;www.github.com&#x2F;nref&#x2F;tcxmill&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/edit-tcx-treadmill-runs-with-tcxmill/">&lt;p&gt;Get tcxmill &lt;a href=&quot;https:&#x2F;&#x2F;www.github.com&#x2F;nref&#x2F;tcxmill&quot;&gt;here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Editing activity distance is one of the &lt;a href=&quot;https:&#x2F;&#x2F;support.strava.com&#x2F;hc&#x2F;en-us&#x2F;search?utf8=%E2%9C%93&amp;amp;query=edit+distance&amp;amp;commit=Search&quot;&gt;most requested Strava features&lt;&#x2F;a&gt;, and I created a way to do it for treadmill runs.&lt;&#x2F;p&gt;
 &lt;p&gt;If you, like me, track treadmill workouts with a Garmin watch which uploads to Strava, then you&#x27;ve likely experienced this kind of data:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;1.bp.blogspot.com&#x2F;-Hs1nLrF0jCo&#x2F;XaoMEmiFOdI&#x2F;AAAAAAAAJrc&#x2F;VUXjSj1I4-weLjjnnvmsb-dFK9yD0iS_wCLcBGAsYHQ&#x2F;s640&#x2F;summary-before.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
@@ -875,7 +875,7 @@ $$&lt;&#x2F;p&gt;
           <author>Unknown</author>
           <link>https://www.slater.dev/renato-canova-in-valencia/</link>
           <guid>https://www.slater.dev/renato-canova-in-valencia/</guid>
-          <description>&lt;p&gt;Several sites link to Renato Canova&#x27;s 2017 talk in Valencia. The video is still on YouTube, but the original link to the slides is broken.&lt;&#x2F;p&gt;
+          <description xml:base="https://www.slater.dev/renato-canova-in-valencia/">&lt;p&gt;Several sites link to Renato Canova&#x27;s 2017 talk in Valencia. The video is still on YouTube, but the original link to the slides is broken.&lt;&#x2F;p&gt;
 &lt;p&gt;I contacted the Serrano athletics club on Facebook, which happily procured the file within a day. Thanks, guys!&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;file&#x2F;d&#x2F;1g__fXGd8wsMsBsH02fzDwSvTDXsw-I2w&#x2F;view&quot;&gt;Here is the PDF&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </description>
