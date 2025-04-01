@@ -558,6 +558,32 @@ video {
   margin: 0 auto;
 }
 
+.styled-input {
+  background-color: var(--bg-dark);
+  border: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 80%;
+}
+
+.cta-button {
+	display: block;
+	width: 80%;
+	background-color: var(--primary-color);
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	border: none;
+	margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+	text-decoration: none;
+	text-align: center;
+}
+
+.cta-button:hover {
+	font-weight: bold
+}
+
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
 [hidden]:where(:not([hidden="until-found"])) {
