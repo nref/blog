@@ -34,7 +34,7 @@ Here's how financial debt could be like tech debt. Imagine a hypothetical dystop
 
 Tech debt is like a detonating mortgage. Its payment becomes due unpredictably. Its timing is not fair or uniformly distributed.
 
-The people who [investigated](https://en.wikipedia.org/wiki/Rogers_Commission_Report) the Challenger explosion didn't have the term tech debt, but they listed quality shortcuts among the root causes. These quality shortcuts exposed the program to risk. It was an intentional decision to fly on a cold day with faulty O-rings. If NASA could have had at their disposal a spreadsheet predicting when seven astronauts would crash into the Atlantic ocean, they would have engineered right up to that point but not past it. 
+The people who [investigated](https://en.wikipedia.org/wiki/Rogers_Commission_Report) the Challenger explosion didn't have the term tech debt, but they listed quality shortcuts among the root causes. These quality shortcuts exposed the space program to risk. It was an intentional decision to fly on a cold day with faulty O-rings. If NASA could have had at their disposal a spreadsheet predicting when seven astronauts would crash into the Atlantic ocean, they would have engineered right up to that point but not past it. 
 
 In software development, quality shortcuts expose future delivery to risk. An engineer starts working on a ticket, updates a business rule, get the code reviewed, and ships it to production. Lo and behold, a year ago another engineer who doesn't even work here anymore duplicated the business rule in another service. The mismatch cost customers money, and now they switching to a competitor.
 
