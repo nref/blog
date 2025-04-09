@@ -20,7 +20,7 @@ We all know how financial debt works: you pay to use someone else's money. The a
 
 Wardites hold that tech debt, like financial debt, incurs a penalty which over time compounds the amount of labor required to continue delivering. Etiologies [vary](https://waynehale.wordpress.com/2024/01/10/the-most-important-thing/): Some folks hold that tech debt originates when stakeholders intentionally trade quality for delivery speed. Others say it happens inadvertently. Some distinguish between *reckless* and *prudent* tech debt.
 
-## Tech Debt Is Not Like Financial Debt
+## Financial Debt is Predictable
 
 The tech debt metaphor appeals because it is easy to explain. Unfortunately, the metaphor is strained. *Tech debt is not like financial debt*. Let's see why not.
 
