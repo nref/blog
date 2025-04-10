@@ -43,11 +43,11 @@ Here's how financial debt could be like tech debt. Imagine a hypothetical dystop
 
 Tech debt is like a detonating mortgage. Its payment becomes due unpredictably. Its timing is not fair or uniformly distributed.
 
-## How much Risk?
-
-Quality shortcuts create risk. The people who investigated the Challenger explosion<sup>[5](#references)</sup> didn't have the term tech debt, but they listed quality shortcuts among the root causes. These quality shortcuts exposed the space program to risk. Some risk is necessary to reach our goals; how much we can tolerate depends on the expected reward<sup>[6](#references)</sup>. If NASA could have had at their disposal a spreadsheet predicting that the O-ring would fail on January 28, 1986, they would have decided not to fly.
+The people who investigated the Challenger distaster<sup>[5](#references)</sup> didn't have the term tech debt, but they listed quality shortcuts among the root causes. These quality shortcuts exposed the space program to risk. If NASA could have had at their disposal a spreadsheet predicting that the O-ring would fail on January 28, 1986, they would have decided not to fly.
 
 ## Conclusion
+
+Quality shortcuts create risk. Some risk is necessary to reach our goals; how much we can tolerate depends on the expected reward<sup>[6](#references)</sup>. 
 
 Let's not delude ourselves when we're taking risks. Deferred tech quality is not like a loan. The cost of quality shortcuts doesn't manifest on a schedule. 
 
