@@ -5,10 +5,12 @@ date = 2025-04-09
 tags = ['risk']
 +++
 
-![Challenger Explosion](../challenger_explosion.jpg)
+*Tech Debt becomes due swiftly and chaotically. Tech Risk is a better metaphor.*
+
+![Space Shuttle Challenger, 1986](../challenger_explosion.jpg "Space Shuttle Challenger, 1986")
 <div class="text-center">
   <p style="font-style: italic">
-    Tech Debt becomes due swiftly and chaotically. Tech Risk is a better metaphor.
+    Space Shuttle Challenger, 1986. 
   </p>
 </div>
 
@@ -32,7 +34,12 @@ Mortgages and other loan products are *predictable*, for both the lender and the
 
 Here's how financial debt could be like tech debt. Imagine a hypothetical dystopian financial system in which banks could demand full mortgage repayment on a whim. We'll call these *detonating mortgages*<sup>[4](#references)</sup> — If you can't pay a few hundred thousand dollars *right now*, you lose your home. No, you didn't do anything wrong, but the bank needs some liquidity today, so you and your children are now living in a hotel.
 
-![Banker on the Phone and Family in a Hotel](../bank_and_family.jpg)
+![Banker on the Phone and Family in a Hotel](../bank_and_family.jpg "Banker on the Phone and Family in a Hotel")
+<div class="text-center">
+  <p style="font-style: italic">
+    A detonating mortgage
+  </p>
+</div>
 
 Tech debt is like a detonating mortgage. Its payment becomes due unpredictably. Its timing is not fair or uniformly distributed.
 
