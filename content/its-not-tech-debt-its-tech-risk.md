@@ -43,7 +43,7 @@ Here's how financial debt could be like tech debt. Imagine a hypothetical dystop
 
 Tech debt is like a detonating mortgage. Its payment becomes due unpredictably. Its timing is not fair or uniformly distributed.
 
-The people who investigated the Challenger distaster<sup>[5](#references)</sup> didn't have the term tech debt, but they listed quality shortcuts among the root causes. These quality shortcuts exposed the space program to risk. If NASA could have had at their disposal a spreadsheet predicting that the O-ring would fail on January 28, 1986, they would have decided not to fly.
+The people who investigated the Challenger disaster<sup>[5](#references)</sup> didn't have the term tech debt, but they listed quality shortcuts among the root causes. These quality shortcuts exposed the space program to risk. If NASA could have had at their disposal a spreadsheet predicting that the O-ring would fail on January 28, 1986, they would have decided not to fly.
 
 ## Conclusion
 
