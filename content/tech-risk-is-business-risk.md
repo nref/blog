@@ -5,7 +5,7 @@ date = 2025-04-25
 tags = ['risk']
 +++
 
-*Tech risk is a business concern. Instead of vaguely bemoaning "tech debt" and hoping to do "do things right", explain its potential costs with words the business understands.*
+*Tech risk is a business concern. Instead of vaguely bemoaning "tech debt" and hoping to "do things right", explain its potential costs with words the business understands.*
 
 ![Diagram Mapping Tech Risks to Business Metrics](../tech_risk_mapping.png "Tech Risks mapped onto Business Metrics")
 <div class="text-center">
