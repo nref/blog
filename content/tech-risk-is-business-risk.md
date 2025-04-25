@@ -5,7 +5,7 @@ date = 2025-04-25
 tags = ['risk']
 +++
 
-*Tech risk is a business concern. Instead of griping vaguely about "tech debt", explain its potential costs with words the business understands.*
+*Tech risk is a business concern. Instead of vaguely bemoaning "tech debt" and hoping to do "do things right", explain its potential costs with words the business understands.*
 
 ![Diagram Mapping Tech Risks to Business Metrics](../tech_risk_mapping.png "Tech Risks mapped onto Business Metrics")
 <div class="text-center">
@@ -20,7 +20,7 @@ tags = ['risk']
 
 > Why are so many companies so ambivalent or uncommitted to addressing tech-debt?
 
-I think most engineers can empathize with this problem. We've all worked in codebases or infrastructures that smelled worse than a dirty diaper, yet few of us were able to do much to improve it.
+I think most engineers can empathize with this problem. We've all worked in codebases or infrastructures that smelled worse than a dirty diaper while our organization seemed unmoved or even resisted remediation.
 
 The responses enumerated the many disincentives for addressing tech debt and presented only a few tenuous solutions. The top response succinctly captures the diagnosis:
 
