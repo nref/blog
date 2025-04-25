@@ -32,7 +32,7 @@ Note that for the rest of this article, I will use the term *tech risk* instead 
 
 ## What a Business Values
 
-Boardrooms always optimize for business metrics, and in capitalism, all business processes reduce to revenue and profit. If technical issues have no _anticipated_ effect on the bottom line, then leadership will readily prioritize other capitalizable work. 
+Boardrooms always optimize for business metrics, and in capitalism, all business processes reduce to revenue and profit\*. If technical issues have no _anticipated_ effect on the bottom line, then leadership will readily prioritize other capitalizable work. 
 
 It would be ludicrous for a CTO to stand up in a board meeting and declare, "I'm happy to share that engineering has closed all open bugs in the backlog." This statement conveys no meaning to the board. It is unactionable techno-babble. Rather, the CTO knows to translate to business-speak: "I'm happy to share that this quarter we'll able to deploy 100% of our resources to new feature development, and because of this efficiency we will not renew our offshore QA contract, saving $3M over last quarter."
 
@@ -44,9 +44,11 @@ Let's now focus on how you, a technical person, can present engineering concerns
 2. Identify tech risks
 3. Map tech risks onto business metrics
 
+\* Funded startups, nonprofits, and businesses with philanthropic goals may have more nuanced motives than just net profit.
+
 ## Identify Business Metrics
 
-If you're not sure what metrics your business is tracking, ask. They will usually\* be instantiations of "make more money" or "spend less money". However, revenues and profit may be linked to business processes with second-order metrics and performance indicators. For example, a food distributor must:
+If you're not sure what metrics your business is tracking, ask. They will usually be instantiations of "make more money" or "spend less money". However, revenues and profit may be linked to business processes with second-order metrics and performance indicators. For example, a food distributor must:
 
 - procure raw foods from producers
 - store raw foods cleanly
@@ -55,8 +57,6 @@ If you're not sure what metrics your business is tracking, ask. They will usuall
 - distribute food quickly to customers via truck, rail, or air before it spoils.
 
 The overall business metric "net profit" will be a complex result of its many business processes.
-
-\* Funded startups, nonprofits, and businesses with philanthropic goals may have more nuanced motives than just net profit.
 
 ## Identify Tech Risks
 
