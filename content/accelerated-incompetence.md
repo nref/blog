@@ -92,7 +92,7 @@ If you had hoped that AI would launch your engineering career to the next level,
 
 If you're a skilled, experienced engineer and you fear that AI will make you unemployable, adopt a more nuanced view. *LLMs can't replace human engineering.*
 
-The business allure of AI is reduced costs through commoditized engineering, but just like offshore engineering talent brings forth mixed fruit, LLMs are not quite the asset boardrooms want them to be.
+The business allure of AI is reduced costs through commoditized engineering, but just like offshore engineering talent brings forth mixed fruit, LLMs fall short and open risks.
 
 The AI hype cycle will eventually peak<sup>[10](#references)</sup>. Companies which overuse AI now will inherit a long tail of costs, and they'll either pivot or go extinct. As such, the long-term value proposition for humans in engineering remains unchanged. The world still needs and will pay for technical skills and deep thinking in engineering. 
 
