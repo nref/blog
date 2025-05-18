@@ -33,7 +33,7 @@ Engineers who view LLMs as an ally invariably prioritize or feel pressured to pr
 	- As senior engineers are deprived of the opportunity to learn through productive struggle, their existing problem solving and critical thinking skills atrophy:
 		- "Microsoft research on knowledge workers found that AI-driven confidence often comes at the expense of critical thinking"<sup>[3](#references)</sup>
 		- "In a world pushing for “reflexive AI usage,” I’m advocating for something different: thoughtful, intentional collaboration with AI that preserves the essence of coding as a craft"<sup>[5](#references)</sup>
-		- "LLMs give me finished thoughts, polished and convincing, but none of the intellectual growth that comes from developing them myself"n <sup>[6](#references)</sup>
+		- "LLMs give me finished thoughts, polished and convincing, but none of the intellectual growth that comes from developing them myself" <sup>[6](#references)</sup>
 	- Junior engineers never develop such skills to begin with and so can never in turn mentor future junior engineers.
 - **Loss of Joy**. Many developers are reporting that using AI robs them of flow state and the joy of creation.<sup>[7](#references)</sup> AI-generated code is miserable to read and change.
 
