@@ -9,10 +9,10 @@ tags = ['code']
 
 *The text in this essay was written without any use of AI.*
 
-<img class="mx-auto" src="../llm_use.jpg" alt="A chart showing a speculative inverse correlation between LLM use and IQ"/>
+<img class="mx-auto" src="../llm_dependence.jpg" alt="A chart showing a speculative inverse correlation between LLM dependence and IQ"/>
 <div class="text-center">
   <p style="font-style: italic">
-    A speculative inverse correlation between LLM use and IQ
+    A speculative inverse correlation between LLM dependence and IQ
   </p>
 </div>
 
