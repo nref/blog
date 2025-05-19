@@ -5,7 +5,7 @@ date = 2025-05-19
 tags = ['code']
 +++
 
-*In software engineering, over-reliance on LLMs accelerates incompetence. LLMs can't replace humans.*
+*In software engineering, over-reliance on LLMs accelerates incompetence. LLMs can't replace human critical thinking.*
 
 *The text in this essay was written without any use of AI.*
 
