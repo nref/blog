@@ -3,7 +3,7 @@ base_url = "https://www.slater.dev/"
 
 # The site title and description; used in feeds by default.
 title = "Doug Slater"
-description = "Software Engineering Leader and Mentor"
+description = "Software Engineering Leader and Mentor. Jesus follower"
 
 # The default site author.
 author = "Doug"
@@ -74,7 +74,7 @@ primary_color = "#37afe1"
 # The profile on home page.
 [extra.profile]
 name = "Doug Slater"
-bio = "Software Engineering Leader and Mentor"
+bio = "Software Engineering Leader and Mentor. Jesus follower."
 # The URL of avatar.
 avatar_url = "images/doug.jpg"
 # Invert color in dark mode.
