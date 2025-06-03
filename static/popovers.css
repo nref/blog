@@ -1,0 +1,42 @@
+.popover[data-popover] {
+  position: relative;
+  display: inline-block;
+}
+
+.popover__trigger {
+  cursor: pointer;
+  list-style: none;
+  text-decoration: underline dotted var(--primary-color);
+
+  /* --- Just for Safari which does not support dotted text */
+  text-decoration-color: var(--primary-color);
+  -webkit-text-decoration-line: underline;
+  /* --- */
+}
+
+.popover__panel {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 10px;
+  background: var(--bg);
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;          /* ignore clicks while hidden */
+  transition: opacity 200ms;
+}
+
+.dark .popover__panel { background: var(--bg-dark); }
+
+/* Show on hover */
+.popover:hover .popover__panel,
+.popover__panel:hover {
+  opacity: 1;
+  pointer-events: auto;          /* allow interaction inside panel */
+}
+
+.popover[data-popover="up"]    .popover__panel { bottom: 100%;  right: 50%; transform: translateX(50%); }
+.popover[data-popover="down"]  .popover__panel { top:    100%;  right: 50%; transform: translateX(50%); }
+.popover[data-popover="left"]  .popover__panel { right:  100%;  bottom: 50%; transform: translateY(50%); }
+.popover[data-popover="right"] .popover__panel { left:   100%;  bottom: 50%; transform: translateY(50%); }

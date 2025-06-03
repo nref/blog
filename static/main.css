@@ -1849,7 +1849,7 @@ article {
 }
 
 .dark .header {
-  background: var(--header-dark);
+  background-color: var(--header-dark);
 }
 
 .blur-header {
