@@ -14,7 +14,7 @@ tags = ['llm', 'ai']
   </p>
 </div>
 
-In last post *AI: Accelerated Incompetence*<sup>[1](#references)</sup>, I claimed that LLMs can't replace human software developers, but I also wrote "there are certainly things you can do to further differentiate yourself from an LLM". In this post, I want to elaborate on the things I am doing to keep myself indispensable in the LLM age. 
+In my last post, *AI: Accelerated Incompetence*<sup>[1](#references)</sup>, I claimed that LLMs can't replace human software developers, but I also wrote "there are certainly things you can do to further differentiate yourself from an LLM". In this post, I want to elaborate on the things I am doing to keep myself indispensable in the LLM age. 
 
 Chronologically, my focused journey to develop these skills began in 2023, before LLMs were quite as ubiquitous as today. In 2025, I have redoubled these efforts.
 
