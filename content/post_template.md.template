@@ -1,0 +1,35 @@
++++
+title = "TITLE HERE"
+date = 0000-00-00
+[taxonomies]
+tags = ['code']
++++
+
+*Tagline here*
+
+<img class="mx-auto" src="../IMAGE_HERE.jpg" alt="ALT TEXT HERE"/>
+<div class="text-center">
+  <p style="font-style: italic">
+    IMAGE CAPTION HERE
+  </p>
+</div>
+
+# Heading 1
+
+Text here
+
+## Heading 2
+
+Reference<sup>[1](#references)</sup>
+
+> Quote here
+
+# Conclusion
+
+# Next...
+
+Subscribe to my email list below. I plan to write more.
+
+# References
+
+1. [A reference](https://www.example.com)

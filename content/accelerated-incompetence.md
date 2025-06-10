@@ -2,7 +2,7 @@
 title = "AI: Accelerated Incompetence"
 date = 2025-05-19
 [taxonomies]
-tags = ['code']
+tags = ['llm', 'ai']
 +++
 
 *In software engineering, over-reliance on LLMs accelerates incompetence. LLMs can't replace human critical thinking.*
