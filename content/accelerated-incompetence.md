@@ -43,7 +43,7 @@ In a future post, I plan to write about mitigations for each of these risks. Be 
 
 Source<sup>[7](#references)</sup>
 
-No, you won't. That said, there are certainly things you can do to further differentiate yourself from an LLM. To stay on topic, I'll defer that to a future post. *(Update: I wrote [that post](https://www.slater.dev/accelerated-incompetence/))*.
+No, you won't. That said, there are certainly things you can do to further differentiate yourself from an LLM. To stay on topic, I'll defer that to a future post. *(Update: I wrote [that post](https://www.slater.dev/dev-skills-for-the-llm-era/))*.
 
 There are two programming competences that LLMs cannot furnish: *program theory* and *program entropy*.
 
